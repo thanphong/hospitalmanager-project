@@ -94,6 +94,7 @@
     <Content Include="View\personnel\login\dangnhap.aspx" />
     <Content Include="View\personnel\login\Login.aspx" />
     <Content Include="View\personnel\login\WebForm1.aspx" />
+    <Content Include="View\personnel\page\quanliNhanVien.aspx" />
     <Content Include="View\personnel\page\WebForm1.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="View\personnel\login\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\personnel\page\quanliNhanVien.aspx.cs">
+      <DependentUpon>quanliNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\personnel\page\quanliNhanVien.aspx.designer.cs">
+      <DependentUpon>quanliNhanVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\personnel\page\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

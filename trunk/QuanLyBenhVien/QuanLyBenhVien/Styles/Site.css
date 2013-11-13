@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6
     color: #666666;
     font-variant: small-caps;
     text-transform: none;
-    font-weight: 200;
+    font-weight: 700;
     margin-bottom: 0px;
 }
 
@@ -105,11 +105,12 @@ first child of the left and right table columns */
 
 .header h1
 {
-    font-weight: 700;
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
     margin: 0px;
     padding: 0px 0px 0px 20px;
-    color: #f9f9f9;
-    border: none;
+color: #FFFFFF;
     line-height: 2em;
     font-size: 2em;
 }

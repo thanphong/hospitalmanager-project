@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using QuanLyBenhVien.Control;
+using System.Data.SqlClient;
+using System.Data;
 
 
 namespace QuanLyBenhVien.View.personnel.login
@@ -32,31 +34,25 @@ namespace QuanLyBenhVien.View.personnel.login
 
         protected void btInsert_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO taikhoan(username,pass)values('" + txtU.Text + "' , '" + mahoa(txtP.Text) + "')";
-            data.ExeCuteNonQuery(sql);
+         //   string sql = "INSERT INTO taikhoan(username,pass)values('" + txtU.Text + "' , '" + mahoa(txtP.Text) + "')";
+            string us =txtU.Text;
+            string p = txtP.Text;
+            //dùng cái này bảo mật dc dữ liệu
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into taikhoan(username,pass) values(@username,@pass)";
+            cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = us;
+            cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = mahoa(p);
+            gvtkhoan.DataSource = data.GetData(cmd);
+
+            //          data.ExeCuteNonQuery(sql);
             load_data();
         }
 
-        ////
-        //protected void gvtkhoan_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        //{
-        //    if (((LinkButton)gvtkhoan.Rows[0].Cells[0].Controls[0]).Text == "Insert")
-        //    {
-        //        string sql = "INSERT INTO taikhoan(username,pass)values('" + txtU.Text + "' , '" + mahoa(txtP.Text) + "')";
-        //        data.ExeCuteNonQuery(sql);
-        //        load_data();
-        //    }
-        //    else
-        //    {
-        //        string sql = "UPDATE taikhoan SET username=@username WHERE id=@id";
-        //        data.ExeCuteNonQuery(sql);
-        //        load_data();
-        //    }
-
-
-        //    gvtkhoan.EditIndex = -1;
-        //    load_data();
-        //}
+        private string mahoa(object p)
+        {
+            throw new NotImplementedException();
+        }
 
         protected void gvtkhoan_Editing(object sender, GridViewEditEventArgs e)
         {
@@ -67,8 +63,16 @@ namespace QuanLyBenhVien.View.personnel.login
         protected void gvtkhoan_Deleting(object sender, GridViewDeleteEventArgs e)
         {
             string id = ((Label)gvtkhoan.Rows[e.RowIndex].FindControl("lbId")).Text;
-            string sql = "delete from  taikhoan where id='"+id+"'";
-            data.ExeCuteNonQuery(sql);
+         //   string sql = "delete from  taikhoan where id='"+id+"'";
+            //dùng cái này bảo mật dc dữ liệu
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "DELETE FROM  taikhoan WHERE id=@id";
+            cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
+           
+            gvtkhoan.DataSource = data.GetData(cmd);
+
+  //          data.ExeCuteNonQuery(sql);
             load_data();
         }
 
@@ -84,8 +88,19 @@ namespace QuanLyBenhVien.View.personnel.login
             string us = ((TextBox)gvtkhoan.Rows[e.RowIndex].FindControl("txtUS")).Text;
             string p = ((TextBox)gvtkhoan.Rows[e.RowIndex].FindControl("txtPass")).Text;
             string sql = "update taikhoan set username='"+us+"',pass='"+mahoa(p)+"' where id='"+id+"'";
-             data.ExeCuteNonQuery(sql);
-             load_data();
+
+            //dùng cái này bảo mật dc dữ liệu
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE  taikhoan SET username=@username, pass = @pass WHERE id=@id";
+            cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
+            cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = us;
+            cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = mahoa(p);
+            gvtkhoan.DataSource = data.GetData(cmd);
+
+            //          data.ExeCuteNonQuery(sql);
+            load_data();
+ //           data.ExeCuteNonQuery(sql);
         }
     }
 }
