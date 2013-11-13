@@ -1,0 +1,9 @@
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\bin\QuanLyBenhVien.dll
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\bin\QuanLyBenhVien.pdb
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\obj\Debug\QuanLyBenhVien.dll
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\obj\Debug\QuanLyBenhVien.pdb
+D:\Visual Studio 2010\Projects\QuanLyBenhVien\QuanLyBenhVien\bin\QuanLyBenhVien.dll
+D:\Visual Studio 2010\Projects\QuanLyBenhVien\QuanLyBenhVien\bin\QuanLyBenhVien.pdb
+D:\Visual Studio 2010\Projects\QuanLyBenhVien\QuanLyBenhVien\obj\Debug\ResolveAssemblyReference.cache
+D:\Visual Studio 2010\Projects\QuanLyBenhVien\QuanLyBenhVien\obj\Debug\QuanLyBenhVien.dll
+D:\Visual Studio 2010\Projects\QuanLyBenhVien\QuanLyBenhVien\obj\Debug\QuanLyBenhVien.pdb
