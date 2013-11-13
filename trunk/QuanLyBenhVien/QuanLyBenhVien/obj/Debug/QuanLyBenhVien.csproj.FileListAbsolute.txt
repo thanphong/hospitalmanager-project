@@ -1,0 +1,4 @@
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\bin\QuanLyBenhVien.dll
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\bin\QuanLyBenhVien.pdb
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\obj\Debug\QuanLyBenhVien.dll
+E:\hoctap\DH\CD3\THUCHANH\asp.net\QuanLyBenhVien\QuanLyBenhVien\obj\Debug\QuanLyBenhVien.pdb
