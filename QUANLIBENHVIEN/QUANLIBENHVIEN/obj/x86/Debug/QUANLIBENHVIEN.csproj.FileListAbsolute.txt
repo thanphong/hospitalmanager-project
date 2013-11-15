@@ -1,0 +1,16 @@
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\bin\Debug\QUANLIBENHVIEN.exe
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\bin\Debug\QUANLIBENHVIEN.pdb
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.FormChinh.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.Properties.Resources.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.exe
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.pdb
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.ChucVu.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.ChuyenMon.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.HopDong.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.KinhNghiem.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.TrinhDo.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.NhanVien.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Phong.resources
