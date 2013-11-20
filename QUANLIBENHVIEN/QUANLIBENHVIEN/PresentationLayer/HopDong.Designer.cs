@@ -42,9 +42,10 @@
             this.lbSogio = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.grbCapnhat = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grbThongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvHopdong)).BeginInit();
             this.grbCapnhat.SuspendLayout();
@@ -76,14 +77,14 @@
             this.lbTieude.Location = new System.Drawing.Point(0, 0);
             this.lbTieude.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbTieude.Name = "lbTieude";
-            this.lbTieude.Size = new System.Drawing.Size(1150, 106);
+            this.lbTieude.Size = new System.Drawing.Size(1139, 106);
             this.lbTieude.TabIndex = 50;
             this.lbTieude.Text = "HỢP ĐỒNG";
             this.lbTieude.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(439, 300);
+            this.btnThoat.Location = new System.Drawing.Point(428, 332);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(92, 40);
@@ -103,7 +104,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(439, 133);
+            this.btnAdd.Location = new System.Drawing.Point(428, 152);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 34);
@@ -115,7 +116,7 @@
             // 
             this.grbThongtin.Controls.Add(this.dgrvHopdong);
             this.grbThongtin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grbThongtin.Location = new System.Drawing.Point(545, 112);
+            this.grbThongtin.Location = new System.Drawing.Point(534, 113);
             this.grbThongtin.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.grbThongtin.Name = "grbThongtin";
             this.grbThongtin.Padding = new System.Windows.Forms.Padding(14, 13, 14, 13);
@@ -146,7 +147,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(439, 254);
+            this.btnSave.Location = new System.Drawing.Point(428, 293);
             this.btnSave.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(92, 39);
@@ -156,7 +157,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(439, 171);
+            this.btnEdit.Location = new System.Drawing.Point(428, 186);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(92, 35);
@@ -176,7 +177,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(439, 211);
+            this.btnDelete.Location = new System.Drawing.Point(428, 258);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(92, 36);
@@ -194,7 +195,7 @@
             this.grbCapnhat.Controls.Add(this.lbTenNV);
             this.grbCapnhat.Controls.Add(this.lbLuong);
             this.grbCapnhat.Controls.Add(this.lbSogio);
-            this.grbCapnhat.Location = new System.Drawing.Point(27, 112);
+            this.grbCapnhat.Location = new System.Drawing.Point(15, 113);
             this.grbCapnhat.Margin = new System.Windows.Forms.Padding(6);
             this.grbCapnhat.Name = "grbCapnhat";
             this.grbCapnhat.Padding = new System.Windows.Forms.Padding(6);
@@ -203,12 +204,12 @@
             this.grbCapnhat.TabStop = false;
             this.grbCapnhat.Text = "Cập nhật hợp đồng";
             // 
-            // textBox1
+            // textBox3
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 26);
-            this.textBox1.TabIndex = 29;
+            this.textBox3.Location = new System.Drawing.Point(290, 164);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(98, 26);
+            this.textBox3.TabIndex = 29;
             // 
             // textBox2
             // 
@@ -217,19 +218,30 @@
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 29;
             // 
-            // textBox3
+            // textBox1
             // 
-            this.textBox3.Location = new System.Drawing.Point(290, 164);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(98, 26);
-            this.textBox3.TabIndex = 29;
+            this.textBox1.Location = new System.Drawing.Point(160, 78);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(228, 26);
+            this.textBox1.TabIndex = 29;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(428, 222);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 37);
+            this.btnCancel.TabIndex = 105;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // HopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1150, 404);
+            this.ClientSize = new System.Drawing.Size(1139, 404);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lbTieude);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnAdd);
@@ -239,7 +251,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.grbCapnhat);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HopDong";
             this.Text = "Hợp đồng";
             this.grbThongtin.ResumeLayout(false);
@@ -269,5 +281,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

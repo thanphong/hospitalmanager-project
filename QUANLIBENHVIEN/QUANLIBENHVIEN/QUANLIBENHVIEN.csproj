@@ -52,12 +52,14 @@
     <Compile Include="BusinessLayer\KinhNghiem.cs" />
     <Compile Include="BusinessLayer\Phong.cs" />
     <Compile Include="BusinessLayer\TrinhDo.cs" />
+    <Compile Include="BusinessLayer\YeuCauPhong.cs" />
     <Compile Include="DataLayer\ChucVuData.cs" />
     <Compile Include="DataLayer\ChuyenMonData.cs" />
     <Compile Include="DataLayer\HopDongData.cs" />
     <Compile Include="DataLayer\KinhNghiemData.cs" />
     <Compile Include="DataLayer\PhongData.cs" />
     <Compile Include="DataLayer\TrinhDoData.cs" />
+    <Compile Include="DataLayer\YeuCauPhongData.cs" />
     <Compile Include="PresentationLayer\ChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +77,12 @@
     </Compile>
     <Compile Include="PresentationLayer\FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Giuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Giuong.Designer.cs">
+      <DependentUpon>Giuong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\HopDong.cs">
       <SubType>Form</SubType>
@@ -100,11 +108,35 @@
     <Compile Include="PresentationLayer\Phong.Designer.cs">
       <DependentUpon>Phong.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\tkHopdong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\tkHopdong.Designer.cs">
+      <DependentUpon>tkHopdong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\tkNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\tkNhanvien.Designer.cs">
+      <DependentUpon>tkNhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\tkPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\tkPhong.Designer.cs">
+      <DependentUpon>tkPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\TrinhDo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\TrinhDo.Designer.cs">
       <DependentUpon>TrinhDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\YeuCauPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\YeuCauPhong.Designer.cs">
+      <DependentUpon>YeuCauPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Giuong.resx">
+      <DependentUpon>Giuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\HopDong.resx">
       <DependentUpon>HopDong.cs</DependentUpon>
@@ -129,8 +164,20 @@
     <EmbeddedResource Include="PresentationLayer\Phong.resx">
       <DependentUpon>Phong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\tkHopdong.resx">
+      <DependentUpon>tkHopdong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\tkNhanvien.resx">
+      <DependentUpon>tkNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\tkPhong.resx">
+      <DependentUpon>tkPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\TrinhDo.resx">
       <DependentUpon>TrinhDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\YeuCauPhong.resx">
+      <DependentUpon>YeuCauPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

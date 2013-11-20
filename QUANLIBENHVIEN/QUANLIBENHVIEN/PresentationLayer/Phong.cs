@@ -16,10 +16,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
             InitializeComponent();
         }
 
-        private void Phong_Load(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }
