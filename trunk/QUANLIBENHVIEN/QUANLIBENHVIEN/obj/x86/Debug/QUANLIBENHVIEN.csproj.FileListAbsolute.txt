@@ -16,3 +16,6 @@ E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Deb
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Phong.resources
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Giuong.resources
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.YeuCauPhong.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.tkHopdong.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.tkNhanvien.resources
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.tkPhong.resources
