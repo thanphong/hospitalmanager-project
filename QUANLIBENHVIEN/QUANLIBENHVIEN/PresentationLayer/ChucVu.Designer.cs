@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbTieudeCV = new System.Windows.Forms.Label();
             this.btnThoatCV = new System.Windows.Forms.Button();
             this.btnSaveCV = new System.Windows.Forms.Button();
@@ -80,6 +80,7 @@
             this.btnSaveCV.TabIndex = 23;
             this.btnSaveCV.Text = "Lưu";
             this.btnSaveCV.UseVisualStyleBackColor = true;
+            this.btnSaveCV.Click += new System.EventHandler(this.btnSaveCV_Click);
             // 
             // btnDeleteCV
             // 
@@ -90,6 +91,7 @@
             this.btnDeleteCV.TabIndex = 22;
             this.btnDeleteCV.Text = "Xóa";
             this.btnDeleteCV.UseVisualStyleBackColor = true;
+            this.btnDeleteCV.Click += new System.EventHandler(this.btnDeleteCV_Click);
             // 
             // btnEditCV
             // 
@@ -104,9 +106,9 @@
             // 
             // dgrvChucVu
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgrvChucVu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgrvChucVu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgrvChucVu.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgrvChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrvChucVu.Location = new System.Drawing.Point(12, 30);
@@ -125,6 +127,7 @@
             this.btnAddCV.TabIndex = 20;
             this.btnAddCV.Text = "Thêm";
             this.btnAddCV.UseVisualStyleBackColor = true;
+            this.btnAddCV.Click += new System.EventHandler(this.btnAddCV_Click);
             // 
             // grbChucvu
             // 

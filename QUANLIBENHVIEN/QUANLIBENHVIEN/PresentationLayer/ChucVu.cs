@@ -22,6 +22,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
 
         private void ChucVu_Load(object sender, EventArgs e)
         {
+            txtMaCV.Enabled = false;
             chucvu = new BusinessLayer.ChucVuBsn();
             dt = chucvu.Select();
             curRecord = 0;
@@ -52,9 +53,57 @@ namespace QUANLIBENHVIEN.PresentationLayer
             dt = chucvu.Select();
             dgrvChucVu.DataSource = dt.DefaultView;
         }
+        private void processControls(Control ctrl)
+        {
+            if (ctrl.GetType() == typeof(TextBox))
+            {
+                ctrl.Text = "";
+            }
+            //xu ly cac dieu khien theo phuong phap de quy
+            foreach (Control ctrlChild in ctrl.Controls)
+            {
+                processControls(ctrlChild);
+            }
+        }
+        private void btnAddCV_Click(object sender, EventArgs e)
+        {
+           
+            processControls(this);
+            DataRow row = dt.NewRow();
+            dt.Rows.Add(row);
+            totalRecord = dt.Rows.Count - 1;
+            curRecord = totalRecord - 1;
+        }
 
-    
+        private void btnSaveCV_Click(object sender, EventArgs e)
+        {
+            if (txtTenCV.Text == "")
+            {
+                MessageBox.Show("Mời bạn nhập tên chức vụ!", "Thông báo");
+            }
+            else
+            {
+                chucvu = new BusinessLayer.ChucVuBsn(txtTenCV.Text);
+                chucvu.Insert();
+                dt = chucvu.Select();
+                dgrvChucVu.DataSource = dt.DefaultView;
+            }
+        }
 
-       
+        private void btnDeleteCV_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Ban co muon xoa dong nay khong? ",
+                "Xac nhan viec xoa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes) //if 
+            {
+                chucvu = new BusinessLayer.ChucVuBsn();
+                chucvu.Delete(int.Parse(txtMaCV.Text));
+                totalRecord--;
+                fillControls(dt, 0);
+                dt = chucvu.Select();
+                dgrvChucVu.DataSource = dt.DefaultView;
+            }
+        }
+  
     }
 }

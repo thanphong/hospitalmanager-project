@@ -13,13 +13,13 @@ namespace QUANLIBENHVIEN.DataLayer
     class ChucVuData:Data
     {
         Data data = new Data(); // Khởi tạo đối tượng connect
-
+        DataTable dt;
         public ChucVuData()
         {
             this.tableName = "ChucVu";
-            this.fieldList = "MaCV,TenCV";
+            this.fieldList = "TenCV";
         }
-        public DataTable SelectChucvu()
+        public DataTable Select()
         {
             //DataSet ds = null;
             //try
@@ -41,17 +41,28 @@ namespace QUANLIBENHVIEN.DataLayer
             //     //       conn.Close();
             //}
             //return ds.Tables["ChucVu"];
-            string sql = "SELECT * FROM ChucVu";
-            DataTable dt = new DataTable();
-            dt=data.get(sql);
+            try
+            {
+                string sql = "SELECT * FROM ChucVu";
+                dt = new DataTable();
+                dt = data.get(sql);        
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi");
+            }
+            finally
+            {
+                data.closeConnect();
+                //       conn.Close();
+            }
             return dt;
         }
-        public void UpdateChucvu(BusinessLayer.ChucVuBsn chucvu)
+        public void Update(BusinessLayer.ChucVuBsn chucvu)
         {
             try{
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-
                 cmd.CommandText = "update " + this.tableName
                     + " set TenCV = '" + chucvu.TenCV + "' where MaCV = '"
                     + chucvu.MaCV + "' ";
@@ -71,17 +82,15 @@ namespace QUANLIBENHVIEN.DataLayer
         public void Insert(BusinessLayer.ChucVuBsn chucvu)
         {
             try
-            {
-                    data.openConnect();
-               // conn.Open();
+            {                 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO" + this.tableName
+                cmd.CommandText = "insert into " + this.tableName
                     + "(" + this.fieldList + ") values ('"
-                    + chucvu.MaCV + "','" + chucvu.TenCV + "')";
-                cmd.ExecuteNonQuery();
+                    + chucvu.TenCV + "')";
+                dt = new DataTable();
+                dt = data.GetData(cmd);
                 MessageBox.Show("thêm mới thành công", "Thông báo");
-                       data.closeConnect();
                 //conn.Close();
             }
             catch (Exception)
@@ -92,6 +101,26 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                   data.closeConnect();
                // conn.Close();
+            }
+        }
+        public void Delete(int ma)
+        {
+            try
+            {                
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from " + this.tableName 
+                    + " where MaCV ='" +ma+"'";
+                 dt = new DataTable();
+                dt = data.GetData(cmd);
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Dữ liệu đang được sử dụng");
+            }
+            finally
+            {
+                 data.closeConnect();
             }
         }
     }
