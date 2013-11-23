@@ -38,7 +38,9 @@
             this.btnAddCV = new System.Windows.Forms.Button();
             this.grbChucvu = new System.Windows.Forms.GroupBox();
             this.grbUdChucvu = new System.Windows.Forms.GroupBox();
+            this.txtMaCV = new System.Windows.Forms.TextBox();
             this.txtTenCV = new System.Windows.Forms.TextBox();
+            this.lbMaCV = new System.Windows.Forms.Label();
             this.lbTenCV = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvChucVu)).BeginInit();
@@ -98,6 +100,7 @@
             this.btnEditCV.TabIndex = 21;
             this.btnEditCV.Text = "Sửa";
             this.btnEditCV.UseVisualStyleBackColor = true;
+            this.btnEditCV.Click += new System.EventHandler(this.btnEditCV_Click);
             // 
             // dgrvChucVu
             // 
@@ -111,6 +114,7 @@
             this.dgrvChucVu.Name = "dgrvChucVu";
             this.dgrvChucVu.Size = new System.Drawing.Size(377, 205);
             this.dgrvChucVu.TabIndex = 7;
+            this.dgrvChucVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvChucVu_CellContentClick);
             // 
             // btnAddCV
             // 
@@ -138,27 +142,47 @@
             // 
             // grbUdChucvu
             // 
+            this.grbUdChucvu.Controls.Add(this.txtMaCV);
             this.grbUdChucvu.Controls.Add(this.txtTenCV);
+            this.grbUdChucvu.Controls.Add(this.lbMaCV);
             this.grbUdChucvu.Controls.Add(this.lbTenCV);
             this.grbUdChucvu.Location = new System.Drawing.Point(30, 98);
             this.grbUdChucvu.Name = "grbUdChucvu";
-            this.grbUdChucvu.Size = new System.Drawing.Size(294, 135);
+            this.grbUdChucvu.Size = new System.Drawing.Size(294, 250);
             this.grbUdChucvu.TabIndex = 25;
             this.grbUdChucvu.TabStop = false;
             this.grbUdChucvu.Text = "Cập nhật chức vụ";
             // 
+            // txtMaCV
+            // 
+            this.txtMaCV.Location = new System.Drawing.Point(13, 65);
+            this.txtMaCV.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMaCV.Name = "txtMaCV";
+            this.txtMaCV.Size = new System.Drawing.Size(245, 26);
+            this.txtMaCV.TabIndex = 20;
+            // 
             // txtTenCV
             // 
-            this.txtTenCV.Location = new System.Drawing.Point(27, 65);
+            this.txtTenCV.Location = new System.Drawing.Point(13, 132);
             this.txtTenCV.Margin = new System.Windows.Forms.Padding(6);
             this.txtTenCV.Name = "txtTenCV";
             this.txtTenCV.Size = new System.Drawing.Size(245, 26);
             this.txtTenCV.TabIndex = 20;
             // 
+            // lbMaCV
+            // 
+            this.lbMaCV.AutoSize = true;
+            this.lbMaCV.Location = new System.Drawing.Point(9, 40);
+            this.lbMaCV.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbMaCV.Name = "lbMaCV";
+            this.lbMaCV.Size = new System.Drawing.Size(89, 19);
+            this.lbMaCV.TabIndex = 19;
+            this.lbMaCV.Text = "Mã chức vụ";
+            // 
             // lbTenCV
             // 
             this.lbTenCV.AutoSize = true;
-            this.lbTenCV.Location = new System.Drawing.Point(23, 40);
+            this.lbTenCV.Location = new System.Drawing.Point(9, 107);
             this.lbTenCV.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbTenCV.Name = "lbTenCV";
             this.lbTenCV.Size = new System.Drawing.Size(91, 19);
@@ -217,7 +241,7 @@
         private System.Windows.Forms.TextBox txtTenCV;
         private System.Windows.Forms.Label lbTenCV;
         private System.Windows.Forms.Button btnCancel;
-
-        public System.Windows.Forms.DataGridViewCellEventHandler dgrvChucVu_CellContentClick { get; set; }
+        private System.Windows.Forms.TextBox txtMaCV;
+        private System.Windows.Forms.Label lbMaCV;
     }
 }

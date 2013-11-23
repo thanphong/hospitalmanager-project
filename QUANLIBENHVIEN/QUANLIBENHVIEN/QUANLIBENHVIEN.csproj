@@ -46,15 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLayer\ChucVu.cs" />
-    <Compile Include="BusinessLayer\ChuyenMon.cs" />
-    <Compile Include="BusinessLayer\HopDong.cs" />
-    <Compile Include="BusinessLayer\KinhNghiem.cs" />
-    <Compile Include="BusinessLayer\Phong.cs" />
-    <Compile Include="BusinessLayer\TrinhDo.cs" />
-    <Compile Include="BusinessLayer\YeuCauPhong.cs" />
+    <Compile Include="BusinessLayer\ChucVuBsn.cs" />
+    <Compile Include="BusinessLayer\ChuyenMonBsn.cs" />
+    <Compile Include="BusinessLayer\HopDongBsn.cs" />
+    <Compile Include="BusinessLayer\KinhNghiemBsn.cs" />
+    <Compile Include="BusinessLayer\PhongBsn.cs" />
+    <Compile Include="BusinessLayer\TrinhDoBsn.cs" />
+    <Compile Include="BusinessLayer\YeuCauPhongBsn.cs" />
     <Compile Include="DataLayer\ChucVuData.cs" />
     <Compile Include="DataLayer\ChuyenMonData.cs" />
+    <Compile Include="DataLayer\Data.cs" />
     <Compile Include="DataLayer\HopDongData.cs" />
     <Compile Include="DataLayer\KinhNghiemData.cs" />
     <Compile Include="DataLayer\PhongData.cs" />
