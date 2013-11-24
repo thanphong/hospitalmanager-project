@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbTieudeCV = new System.Windows.Forms.Label();
             this.btnThoatCV = new System.Windows.Forms.Button();
             this.btnSaveCV = new System.Windows.Forms.Button();
@@ -107,9 +107,10 @@
             // 
             // dgrvChucVu
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgrvChucVu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgrvChucVu.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgrvChucVu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgrvChucVu.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgrvChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrvChucVu.Location = new System.Drawing.Point(12, 30);
