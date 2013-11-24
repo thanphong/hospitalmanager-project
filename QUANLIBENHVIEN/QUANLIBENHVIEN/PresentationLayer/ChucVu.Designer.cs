@@ -63,17 +63,18 @@
             // 
             // btnThoatCV
             // 
-            this.btnThoatCV.Location = new System.Drawing.Point(353, 311);
+            this.btnThoatCV.Location = new System.Drawing.Point(353, 301);
             this.btnThoatCV.Margin = new System.Windows.Forms.Padding(6);
             this.btnThoatCV.Name = "btnThoatCV";
             this.btnThoatCV.Size = new System.Drawing.Size(86, 37);
             this.btnThoatCV.TabIndex = 24;
             this.btnThoatCV.Text = "Thoát";
             this.btnThoatCV.UseVisualStyleBackColor = true;
+            this.btnThoatCV.Click += new System.EventHandler(this.btnThoatCV_Click);
             // 
             // btnSaveCV
             // 
-            this.btnSaveCV.Location = new System.Drawing.Point(353, 232);
+            this.btnSaveCV.Location = new System.Drawing.Point(353, 228);
             this.btnSaveCV.Margin = new System.Windows.Forms.Padding(6);
             this.btnSaveCV.Name = "btnSaveCV";
             this.btnSaveCV.Size = new System.Drawing.Size(86, 37);
@@ -84,7 +85,7 @@
             // 
             // btnDeleteCV
             // 
-            this.btnDeleteCV.Location = new System.Drawing.Point(353, 269);
+            this.btnDeleteCV.Location = new System.Drawing.Point(353, 264);
             this.btnDeleteCV.Margin = new System.Windows.Forms.Padding(6);
             this.btnDeleteCV.Name = "btnDeleteCV";
             this.btnDeleteCV.Size = new System.Drawing.Size(86, 38);
@@ -95,7 +96,7 @@
             // 
             // btnEditCV
             // 
-            this.btnEditCV.Location = new System.Drawing.Point(353, 157);
+            this.btnEditCV.Location = new System.Drawing.Point(353, 156);
             this.btnEditCV.Margin = new System.Windows.Forms.Padding(6);
             this.btnEditCV.Name = "btnEditCV";
             this.btnEditCV.Size = new System.Drawing.Size(86, 37);
@@ -194,13 +195,14 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(353, 196);
+            this.btnCancel.Location = new System.Drawing.Point(353, 192);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(86, 37);
             this.btnCancel.TabIndex = 105;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ChucVu
             // 
