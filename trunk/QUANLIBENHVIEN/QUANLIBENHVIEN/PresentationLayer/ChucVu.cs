@@ -21,8 +21,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
         }
 
         private void ChucVu_Load(object sender, EventArgs e)
-        {
-          
+        {         
             txtMaCV.Enabled = false;
             btnSaveCV.Enabled = false;
             btnCancel.Enabled = false;
@@ -61,8 +60,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
             }
             if (dr == DialogResult.No)
             {
-                //int index =dgrvChucVu.CurrentRow.Index;
-                //fillControls(dt, index);
+                dt = chucvu.Select();
+                dgrvChucVu.DataSource = dt.DefaultView;
             }
         }
         private void processControls(Control ctrl)
