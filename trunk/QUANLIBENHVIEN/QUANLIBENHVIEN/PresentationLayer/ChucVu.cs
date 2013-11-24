@@ -25,6 +25,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
           
             txtMaCV.Enabled = false;
             btnSaveCV.Enabled = false;
+            btnCancel.Enabled = false;
             chucvu = new BusinessLayer.ChucVuBsn();
             dt = chucvu.Select();
             curRecord = 0;
@@ -60,8 +61,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
             }
             if (dr == DialogResult.No)
             {
-                int index = dgrvChucVu.CurrentRow.Index;
-                fillControls(dt, index);
+                //int index =dgrvChucVu.CurrentRow.Index;
+                //fillControls(dt, index);
             }
         }
         private void processControls(Control ctrl)
