@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.grbUdCM = new System.Windows.Forms.GroupBox();
+            this.txtMaCM = new System.Windows.Forms.TextBox();
             this.txtTenCM = new System.Windows.Forms.TextBox();
+            this.lbMaCM = new System.Windows.Forms.Label();
             this.lbTenCM = new System.Windows.Forms.Label();
             this.grbChuyenmon = new System.Windows.Forms.GroupBox();
             this.dgrvChuyenmon = new System.Windows.Forms.DataGridView();
@@ -46,29 +48,49 @@
             // 
             // grbUdCM
             // 
+            this.grbUdCM.Controls.Add(this.txtMaCM);
             this.grbUdCM.Controls.Add(this.txtTenCM);
+            this.grbUdCM.Controls.Add(this.lbMaCM);
             this.grbUdCM.Controls.Add(this.lbTenCM);
             this.grbUdCM.Location = new System.Drawing.Point(14, 107);
             this.grbUdCM.Margin = new System.Windows.Forms.Padding(4);
             this.grbUdCM.Name = "grbUdCM";
             this.grbUdCM.Padding = new System.Windows.Forms.Padding(4);
-            this.grbUdCM.Size = new System.Drawing.Size(302, 149);
+            this.grbUdCM.Size = new System.Drawing.Size(302, 219);
             this.grbUdCM.TabIndex = 28;
             this.grbUdCM.TabStop = false;
             this.grbUdCM.Text = "Cập nhật chuyên môn";
             // 
+            // txtMaCM
+            // 
+            this.txtMaCM.Location = new System.Drawing.Point(17, 63);
+            this.txtMaCM.Margin = new System.Windows.Forms.Padding(9);
+            this.txtMaCM.Name = "txtMaCM";
+            this.txtMaCM.Size = new System.Drawing.Size(270, 26);
+            this.txtMaCM.TabIndex = 20;
+            // 
             // txtTenCM
             // 
-            this.txtTenCM.Location = new System.Drawing.Point(17, 73);
+            this.txtTenCM.Location = new System.Drawing.Point(17, 134);
             this.txtTenCM.Margin = new System.Windows.Forms.Padding(9);
             this.txtTenCM.Name = "txtTenCM";
             this.txtTenCM.Size = new System.Drawing.Size(270, 26);
             this.txtTenCM.TabIndex = 20;
             // 
+            // lbMaCM
+            // 
+            this.lbMaCM.AutoSize = true;
+            this.lbMaCM.Location = new System.Drawing.Point(13, 35);
+            this.lbMaCM.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.lbMaCM.Name = "lbMaCM";
+            this.lbMaCM.Size = new System.Drawing.Size(116, 19);
+            this.lbMaCM.TabIndex = 19;
+            this.lbMaCM.Text = "Mã chuyên môn";
+            // 
             // lbTenCM
             // 
             this.lbTenCM.AutoSize = true;
-            this.lbTenCM.Location = new System.Drawing.Point(13, 42);
+            this.lbTenCM.Location = new System.Drawing.Point(13, 103);
             this.lbTenCM.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.lbTenCM.Name = "lbTenCM";
             this.lbTenCM.Size = new System.Drawing.Size(118, 19);
@@ -97,6 +119,7 @@
             this.dgrvChuyenmon.Name = "dgrvChuyenmon";
             this.dgrvChuyenmon.Size = new System.Drawing.Size(435, 226);
             this.dgrvChuyenmon.TabIndex = 7;
+            this.dgrvChuyenmon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvChuyenmon_CellContentClick);
             // 
             // lbTieudeCM
             // 
@@ -120,6 +143,7 @@
             this.btnThoat.TabIndex = 33;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnSave
             // 
@@ -130,6 +154,7 @@
             this.btnSave.TabIndex = 32;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -140,6 +165,7 @@
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -150,6 +176,7 @@
             this.btnEdit.TabIndex = 30;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -160,6 +187,7 @@
             this.btnAdd.TabIndex = 29;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // ChuyenMon
             // 
@@ -179,6 +207,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChuyenMon";
             this.Text = "Chuyên môn";
+            this.Load += new System.EventHandler(this.ChuyenMon_Load);
             this.grbUdCM.ResumeLayout(false);
             this.grbUdCM.PerformLayout();
             this.grbChuyenmon.ResumeLayout(false);
@@ -200,5 +229,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtMaCM;
+        private System.Windows.Forms.Label lbMaCM;
     }
 }

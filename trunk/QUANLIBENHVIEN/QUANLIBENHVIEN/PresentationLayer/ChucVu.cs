@@ -22,7 +22,9 @@ namespace QUANLIBENHVIEN.PresentationLayer
 
         private void ChucVu_Load(object sender, EventArgs e)
         {
+          
             txtMaCV.Enabled = false;
+            btnSaveCV.Enabled = false;
             chucvu = new BusinessLayer.ChucVuBsn();
             dt = chucvu.Select();
             curRecord = 0;
@@ -33,9 +35,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
         }
         private void fillControls(DataTable dataTable, int curRec)
         {
-            txtMaCV.Text = dataTable.Rows[0][0].ToString();
-            txtTenCV.Text = dataTable.Rows[0][1].ToString();
-
+            txtMaCV.Text = dataTable.Rows[curRec][0].ToString();
+            txtTenCV.Text = dataTable.Rows[curRec][1].ToString();
         }
         private void dgrvChucVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -48,10 +49,20 @@ namespace QUANLIBENHVIEN.PresentationLayer
 
         private void btnEditCV_Click(object sender, EventArgs e)
         {
-            chucvu = new BusinessLayer.ChucVuBsn(int.Parse(txtMaCV.Text),txtTenCV.Text);
-            chucvu.Update();
-            dt = chucvu.Select();
-            dgrvChucVu.DataSource = dt.DefaultView;
+            DialogResult dr = MessageBox.Show("Bạn có muốn sửa dòng này? ",
+                "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                chucvu = new BusinessLayer.ChucVuBsn(int.Parse(txtMaCV.Text), txtTenCV.Text);
+                chucvu.Update();
+                dt = chucvu.Select();
+                dgrvChucVu.DataSource = dt.DefaultView;
+            }
+            if (dr == DialogResult.No)
+            {
+                int index = dgrvChucVu.CurrentRow.Index;
+                fillControls(dt, index);
+            }
         }
         private void processControls(Control ctrl)
         {
@@ -66,13 +77,18 @@ namespace QUANLIBENHVIEN.PresentationLayer
             }
         }
         private void btnAddCV_Click(object sender, EventArgs e)
-        {
-           
+        {         
             processControls(this);
+            //thêm 1 dòng mới cho datagrid
             DataRow row = dt.NewRow();
             dt.Rows.Add(row);
             totalRecord = dt.Rows.Count - 1;
             curRecord = totalRecord - 1;
+            btnAddCV.Enabled = false;
+            btnEditCV.Enabled = false;
+            btnDeleteCV.Enabled = false;
+            btnSaveCV.Enabled = true;
+            btnCancel.Enabled = true;
         }
 
         private void btnSaveCV_Click(object sender, EventArgs e)
@@ -87,14 +103,42 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 chucvu.Insert();
                 dt = chucvu.Select();
                 dgrvChucVu.DataSource = dt.DefaultView;
+                btnAddCV.Enabled = true;
+                btnEditCV.Enabled = true;
+                btnDeleteCV.Enabled = true;
+                btnSaveCV.Enabled = false;
+                btnCancel.Enabled = false;
             }
+        }
+
+        public void removeEmptyrow(DataGridView dgv)
+        {
+            for (int i = 1; i < dgv.RowCount - 1; i++)
+            {
+                if (dgv.Rows[i].Cells[0].Value.ToString() == "")
+                {
+                    dgv.Rows.RemoveAt(i);
+                    i--;
+                }
+
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnEditCV.Enabled = true;
+            btnAddCV.Enabled = true;
+            btnSaveCV.Enabled = false;
+            removeEmptyrow(dgrvChucVu);
+            int curRow=dgrvChucVu.RowCount - 2;
+            fillControls(dt, curRow);
         }
 
         private void btnDeleteCV_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Ban co muon xoa dong nay khong? ",
-                "Xac nhan viec xoa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes) //if 
+            DialogResult dr = MessageBox.Show("Bạn có muốn xóa dòng này? ",
+                "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes) 
             {
                 chucvu = new BusinessLayer.ChucVuBsn();
                 chucvu.Delete(int.Parse(txtMaCV.Text));
@@ -103,6 +147,10 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 dt = chucvu.Select();
                 dgrvChucVu.DataSource = dt.DefaultView;
             }
+        }
+        private void btnThoatCV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
   
     }

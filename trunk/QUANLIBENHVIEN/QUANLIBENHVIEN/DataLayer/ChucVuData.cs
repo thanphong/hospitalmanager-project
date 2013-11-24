@@ -21,26 +21,6 @@ namespace QUANLIBENHVIEN.DataLayer
         }
         public DataTable Select()
         {
-            //DataSet ds = null;
-            //try
-            //{
-            //    data.openConnect();
-            //        //conn.Open();
-            //    string command = "select " + this.fieldList + " from " + this.tableName;
-            //    SqlDataAdapter dataAdapter = new SqlDataAdapter(command, con);
-            //    ds = new DataSet();
-            //    dataAdapter.Fill(ds, "ChucVu");
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Loi");
-            //}
-            //finally
-            //{
-            //   data.closeConnect();
-            //     //       conn.Close();
-            //}
-            //return ds.Tables["ChucVu"];
             try
             {
                 string sql = "SELECT * FROM ChucVu";
