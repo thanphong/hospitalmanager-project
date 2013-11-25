@@ -29,28 +29,9 @@ namespace QUANLIBENHVIEN.PresentationLayer
             cm.Show();
         }
 
-        private void câpNhâtTrinhĐôToolStripMenuItem_Click(object sender, EventArgs e)
+        private void đơnThuốcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TrinhDo td = new TrinhDo();
-            td.Show();
-        }
 
-        private void câpNhâtHơpĐôngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HopDong hd = new HopDong();
-            hd.Show();
-        }
-
-        private void câpNhâtNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NhanVien nv = new NhanVien();
-            nv.Show();
-        }
-
-        private void câpNhâtPhongToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Phong p = new Phong();
-            p.Show();
         }
 
        
