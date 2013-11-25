@@ -62,18 +62,13 @@ namespace QUANLIBENHVIEN.PresentationLayer
             this.Cursor = Cursors.Default;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có muốn sửa dòng này? ",
                "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                trinhdo = new BusinessLayer.TrinhDoBsn(int.Parse(txtMaTD.Text), int.Parse(cbbTenCM.ValueMember), txtLoaiTD.Text, txtTenTochuc.Text);
+                trinhdo = new BusinessLayer.TrinhDoBsn(int.Parse(txtMaTD.Text), int.Parse(cbbTenCM.Text), txtLoaiTD.Text, txtTenTochuc.Text);
                 trinhdo.Update();
                 dt = trinhdo.Select();
                 dgrvTrinhdo.DataSource = dt.DefaultView;
