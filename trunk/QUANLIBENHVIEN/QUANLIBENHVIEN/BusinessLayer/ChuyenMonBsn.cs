@@ -8,18 +8,18 @@ using System.Data.SqlClient;
 
 namespace QUANLIBENHVIEN.BusinessLayer
 {
-    class ChuyenMonBsn
+    class KinhNghiemBsn
     {
         private int maCM;
         private string tenCM;
-        public ChuyenMonBsn()
+        public KinhNghiemBsn()
         { }
-        public ChuyenMonBsn(int maCM, string tenCM)
+        public KinhNghiemBsn(int maCM, string tenCM)
         {
             this.maCM = maCM;
             this.tenCM = tenCM;
         }
-        public ChuyenMonBsn(string tenCM)
+        public KinhNghiemBsn(string tenCM)
         {
             this.tenCM = tenCM;
         }

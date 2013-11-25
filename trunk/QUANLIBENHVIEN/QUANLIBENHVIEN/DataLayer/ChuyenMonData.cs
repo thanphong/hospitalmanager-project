@@ -42,7 +42,7 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             return dt;
         }
-        public void Update(BusinessLayer.ChuyenMonBsn chuyenmon)
+        public void Update(BusinessLayer.KinhNghiemBsn chuyenmon)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 data.closeConnect();
             }
         }
-        public void Insert(BusinessLayer.ChuyenMonBsn chuyenmon)
+        public void Insert(BusinessLayer.KinhNghiemBsn chuyenmon)
         {
             try
             {

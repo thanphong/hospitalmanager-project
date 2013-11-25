@@ -13,7 +13,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
     public partial class TrinhDo : Form
     {
         BusinessLayer.TrinhDoBsn trinhdo;
-        BusinessLayer.ChuyenMonBsn chuyenmon;
+        BusinessLayer.KinhNghiemBsn chuyenmon;
         DataTable dt;
         DataSet ds  = new DataSet();
         int curRecord = 0;
@@ -43,12 +43,12 @@ namespace QUANLIBENHVIEN.PresentationLayer
             btnCancel.Enabled = false;
 
             SqlDataAdapter da;
-            chuyenmon =new BusinessLayer.ChuyenMonBsn();
+            chuyenmon =new BusinessLayer.KinhNghiemBsn();
             da = chuyenmon.GetDataAdapter();
             da.Fill(ds, "ChuyenMon");
             cbbTenCM.DataSource = ds;
             //Nội dung sẽ hiển thị lên combobox
-            cbbTenCM.DisplayMember = "ChuyenMon.TenChuyenMon";
+            cbbTenCM.DisplayMember = "ChuyenMon.MaChuyenMon";
             //Giá trị nhận được ứng với từng nội dung được chọn trên combobox
             cbbTenCM.ValueMember = "ChuyenMon.MaChuyenMon";
 
