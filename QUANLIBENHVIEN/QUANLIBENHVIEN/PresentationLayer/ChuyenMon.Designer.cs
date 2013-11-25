@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbUdCM = new System.Windows.Forms.GroupBox();
             this.txtMaCM = new System.Windows.Forms.TextBox();
             this.txtTenCM = new System.Windows.Forms.TextBox();
@@ -41,6 +42,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grbUdCM.SuspendLayout();
             this.grbChuyenmon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvChuyenmon)).BeginInit();
@@ -59,7 +61,7 @@
             this.grbUdCM.Size = new System.Drawing.Size(302, 219);
             this.grbUdCM.TabIndex = 28;
             this.grbUdCM.TabStop = false;
-            this.grbUdCM.Text = "Cập nhật chuyên môn";
+            this.grbUdCM.Text = "Thông tin chuyên môn";
             // 
             // txtMaCM
             // 
@@ -109,10 +111,14 @@
             this.grbChuyenmon.Size = new System.Drawing.Size(454, 268);
             this.grbChuyenmon.TabIndex = 27;
             this.grbChuyenmon.TabStop = false;
-            this.grbChuyenmon.Text = "Thông tin chuyên môn";
+            this.grbChuyenmon.Text = "Danh sách chuyên môn";
             // 
             // dgrvChuyenmon
             // 
+            this.dgrvChuyenmon.AllowUserToAddRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgrvChuyenmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgrvChuyenmon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrvChuyenmon.Location = new System.Drawing.Point(10, 28);
             this.dgrvChuyenmon.Margin = new System.Windows.Forms.Padding(9);
@@ -136,7 +142,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(328, 288);
+            this.btnThoat.Location = new System.Drawing.Point(329, 299);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(9);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(81, 38);
@@ -147,7 +153,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(329, 249);
+            this.btnSave.Location = new System.Drawing.Point(329, 233);
             this.btnSave.Margin = new System.Windows.Forms.Padding(9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 35);
@@ -158,7 +164,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(328, 210);
+            this.btnDelete.Location = new System.Drawing.Point(329, 267);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(9);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 33);
@@ -169,7 +175,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(329, 173);
+            this.btnEdit.Location = new System.Drawing.Point(329, 167);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(9);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(80, 33);
@@ -189,6 +195,17 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(329, 199);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(9);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(80, 35);
+            this.btnCancel.TabIndex = 32;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // ChuyenMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -197,6 +214,7 @@
             this.ClientSize = new System.Drawing.Size(899, 413);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
@@ -231,5 +249,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtMaCM;
         private System.Windows.Forms.Label lbMaCM;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

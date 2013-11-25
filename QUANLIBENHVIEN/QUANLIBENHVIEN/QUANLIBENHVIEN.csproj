@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BusinessLayer\ChucVuBsn.cs" />
     <Compile Include="BusinessLayer\ChuyenMonBsn.cs" />
+    <Compile Include="BusinessLayer\GiuongBsn.cs" />
     <Compile Include="BusinessLayer\HopDongBsn.cs" />
     <Compile Include="BusinessLayer\KinhNghiemBsn.cs" />
     <Compile Include="BusinessLayer\PhongBsn.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="DataLayer\ChucVuData.cs" />
     <Compile Include="DataLayer\ChuyenMonData.cs" />
     <Compile Include="DataLayer\Data.cs" />
+    <Compile Include="DataLayer\GiuongData.cs" />
     <Compile Include="DataLayer\HopDongData.cs" />
     <Compile Include="DataLayer\KinhNghiemData.cs" />
     <Compile Include="DataLayer\PhongData.cs" />

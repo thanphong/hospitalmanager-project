@@ -93,7 +93,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
 
         private void btnSaveCV_Click(object sender, EventArgs e)
         {
-            if (txtTenCV.Text == "")
+            if (txtTenCV.Text == "" || txtTenCV.Text == " ")
             {
                 MessageBox.Show("Mời bạn nhập tên chức vụ!", "Thông báo");
             }
@@ -120,7 +120,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
                     dgv.Rows.RemoveAt(i);
                     i--;
                 }
-
             }
         }
 
@@ -128,6 +127,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
         {
             btnEditCV.Enabled = true;
             btnAddCV.Enabled = true;
+            btnDeleteCV.Enabled = true;
             btnSaveCV.Enabled = false;
             removeEmptyrow(dgrvChucVu);
             int curRow=dgrvChucVu.RowCount - 2;

@@ -143,7 +143,7 @@
             this.grbChucvu.Size = new System.Drawing.Size(401, 247);
             this.grbChucvu.TabIndex = 19;
             this.grbChucvu.TabStop = false;
-            this.grbChucvu.Text = "Thông tin chức vụ";
+            this.grbChucvu.Text = "Danh sách chức vụ";
             // 
             // grbUdChucvu
             // 
@@ -156,7 +156,7 @@
             this.grbUdChucvu.Size = new System.Drawing.Size(294, 250);
             this.grbUdChucvu.TabIndex = 25;
             this.grbUdChucvu.TabStop = false;
-            this.grbUdChucvu.Text = "Cập nhật chức vụ";
+            this.grbUdChucvu.Text = "Thông tin chức vụ";
             // 
             // txtMaCV
             // 
