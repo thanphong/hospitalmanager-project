@@ -13,7 +13,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
     public partial class TrinhDo : Form
     {
         BusinessLayer.TrinhDoBsn trinhdo;
-        BusinessLayer.KinhNghiemBsn chuyenmon;
+        BusinessLayer.ChuyenMonBsn chuyenmon;
         DataTable dt;
         DataSet ds  = new DataSet();
         int curRecord = 0;
@@ -43,7 +43,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             btnCancel.Enabled = false;
 
             SqlDataAdapter da;
-            chuyenmon =new BusinessLayer.KinhNghiemBsn();
+            chuyenmon =new BusinessLayer.ChuyenMonBsn();
             da = chuyenmon.GetDataAdapter();
             da.Fill(ds, "ChuyenMon");
             cbbTenCM.DataSource = ds;

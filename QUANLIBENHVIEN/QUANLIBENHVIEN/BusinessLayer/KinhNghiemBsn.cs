@@ -2,66 +2,86 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
-using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace QUANLIBENHVIEN.BusinessLayer
 {
     class KinhNghiemBsn
     {
-        private int maKN;
-        private string tenCM;
+        private int maKN, maNV, maCM, maTD;
+        private DateTime ngayBD, ngayKT;
+
         public KinhNghiemBsn()
         { }
-        public KinhNghiemBsn(int maCM, string tenCM)
+        public KinhNghiemBsn(int maKN, int maNV, int maCM, int maTD, DateTime ngayBD, DateTime ngayKT)
         {
-            this.maKN = maCM;
-            this.tenCM = tenCM;
+            this.maKN = maKN;
+            this.maNV = maNV;
+            this.maCM = maCM;
+            this.maTD = maTD;
+            this.ngayBD = ngayBD;
+            this.ngayKT = ngayKT;
         }
-        public KinhNghiemBsn(string tenCM)
+        public int MaKN
         {
-            this.tenCM = tenCM;
+            get { return maKN; }
+            set { maKN = value; }
+        }
+        public int MaNV
+        {
+            get { return maNV; }
+            set { maNV = value; }
         }
         public int MaCM
         {
             get { return maCM; }
             set { maCM = value; }
         }
-        public String TenCM
+        public int MaTD
         {
-            get { return tenCM; }
-            set { tenCM = value; }
+            get { return maTD; }
+            set { maTD = value; }
         }
+        public DateTime NgayBD
+        {
+            get { return ngayBD; }
+            set { ngayBD = value; }
+        }
+        public DateTime NgayKT
+        {
+            get { return ngayKT; }
+            set { ngayKT = value; }
+        }
+
         public DataTable Select()
         {
-            DataLayer.ChuyenMonData chuyenmondata = new DataLayer.ChuyenMonData();
-            //chuyenmondata.connect();
-            chuyenmondata.openConnect();
-            return chuyenmondata.Select();
+            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+            //KinhNghiemData.connect();
+            kinhnghiemdata.openConnect();
+            return kinhnghiemdata.Select();
         }
         public void Update()
         {
-            DataLayer.ChuyenMonData ChuyenMonData = new DataLayer.ChuyenMonData();
-            ChuyenMonData.openConnect();
-            ChuyenMonData.Update(this);
+            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+            kinhnghiemdata.openConnect();
+            kinhnghiemdata.Update(this);
         }
         public void Insert()
         {
-            DataLayer.ChuyenMonData ChuyenMonData = new DataLayer.ChuyenMonData();
-            ChuyenMonData.openConnect();
-            ChuyenMonData.Insert(this);
+            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+            kinhnghiemdata.openConnect();
+            kinhnghiemdata.Insert(this);
         }
         public void Delete(int mcv)
         {
-            DataLayer.ChuyenMonData ChuyenMonData = new DataLayer.ChuyenMonData();
-            ChuyenMonData.openConnect();
-            ChuyenMonData.Delete(mcv);
+            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+            kinhnghiemdata.openConnect();
+            kinhnghiemdata.Delete(mcv);
         }
         public SqlDataAdapter GetDataAdapter()
         {
-            DataLayer.ChuyenMonData chuyenmondata = new DataLayer.ChuyenMonData();
-            return chuyenmondata.GetDataAdapter();
+            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+            return kinhnghiemdata.GetDataAdapter();
         }
     }
 }
+

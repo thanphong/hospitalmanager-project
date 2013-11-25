@@ -135,12 +135,12 @@
             // 
             this.grbChucvu.Controls.Add(this.dgrvChucVu);
             this.grbChucvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grbChucvu.Location = new System.Drawing.Point(471, 101);
+            this.grbChucvu.Location = new System.Drawing.Point(471, 98);
             this.grbChucvu.Margin = new System.Windows.Forms.Padding(6);
             this.grbChucvu.Name = "grbChucvu";
             this.grbChucvu.Padding = new System.Windows.Forms.Padding(6);
             this.grbChucvu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grbChucvu.Size = new System.Drawing.Size(401, 247);
+            this.grbChucvu.Size = new System.Drawing.Size(401, 250);
             this.grbChucvu.TabIndex = 19;
             this.grbChucvu.TabStop = false;
             this.grbChucvu.Text = "Danh sách chức vụ";
