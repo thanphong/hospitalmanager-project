@@ -10,13 +10,13 @@ namespace QUANLIBENHVIEN.BusinessLayer
 {
     class KinhNghiemBsn
     {
-        private int maCM;
+        private int maKN;
         private string tenCM;
         public KinhNghiemBsn()
         { }
         public KinhNghiemBsn(int maCM, string tenCM)
         {
-            this.maCM = maCM;
+            this.maKN = maCM;
             this.tenCM = tenCM;
         }
         public KinhNghiemBsn(string tenCM)
