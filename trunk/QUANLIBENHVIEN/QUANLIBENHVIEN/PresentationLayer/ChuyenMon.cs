@@ -11,7 +11,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
 {
     public partial class ChuyenMon : Form
     {
-        BusinessLayer.KinhNghiemBsn chuyenmon;
+        BusinessLayer.ChuyenMonBsn chuyenmon;
         DataTable dt;
         int curRecord = 0;
         int totalRecord = 0;
@@ -33,7 +33,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             txtMaCM.Enabled = false;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
-            chuyenmon = new BusinessLayer.KinhNghiemBsn();
+            chuyenmon = new BusinessLayer.ChuyenMonBsn();
             dt = chuyenmon.Select();
             curRecord = 0;
             totalRecord = dt.Rows.Count - 1;
@@ -49,7 +49,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            chuyenmon = new BusinessLayer.KinhNghiemBsn(int.Parse(txtMaCM.Text),txtTenCM.Text);
+            chuyenmon = new BusinessLayer.ChuyenMonBsn(int.Parse(txtMaCM.Text),txtTenCM.Text);
             chuyenmon.Update();
             dt = chuyenmon.Select();
             dgrvChuyenmon.DataSource = dt.DefaultView;
@@ -88,7 +88,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             }
             else
             {
-                chuyenmon = new BusinessLayer.KinhNghiemBsn(txtTenCM.Text);
+                chuyenmon = new BusinessLayer.ChuyenMonBsn(txtTenCM.Text);
                 chuyenmon.Insert();
                 dt = chuyenmon.Select();
                 dgrvChuyenmon.DataSource = dt.DefaultView;
@@ -105,7 +105,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes) //if 
             {
-                chuyenmon = new BusinessLayer.KinhNghiemBsn();
+                chuyenmon = new BusinessLayer.ChuyenMonBsn();
                 chuyenmon.Delete(int.Parse(txtMaCM.Text));
                 totalRecord--;
                 fillControls(dt, 0);

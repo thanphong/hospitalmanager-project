@@ -45,11 +45,11 @@
             this.dTimePNgayBT = new System.Windows.Forms.DateTimePicker();
             this.dTimePNgayKT = new System.Windows.Forms.DateTimePicker();
             this.grbCapnhat = new System.Windows.Forms.GroupBox();
+            this.txtMaKN = new System.Windows.Forms.TextBox();
+            this.lbMaKN = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.lbTieude = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grbThongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvKinhnghiem)).BeginInit();
             this.grbCapnhat.SuspendLayout();
@@ -214,10 +214,10 @@
             this.grbCapnhat.Controls.Add(this.cbbTenNV);
             this.grbCapnhat.Controls.Add(this.lbTenNV);
             this.grbCapnhat.Controls.Add(this.cbbTenCM);
-            this.grbCapnhat.Controls.Add(this.textBox1);
+            this.grbCapnhat.Controls.Add(this.txtMaKN);
             this.grbCapnhat.Controls.Add(this.txtTenTochuc);
             this.grbCapnhat.Controls.Add(this.lbNgayBD);
-            this.grbCapnhat.Controls.Add(this.label1);
+            this.grbCapnhat.Controls.Add(this.lbMaKN);
             this.grbCapnhat.Controls.Add(this.lbTenCM);
             this.grbCapnhat.Controls.Add(this.lbTenTochuc);
             this.grbCapnhat.Location = new System.Drawing.Point(18, 76);
@@ -228,6 +228,24 @@
             this.grbCapnhat.TabIndex = 44;
             this.grbCapnhat.TabStop = false;
             this.grbCapnhat.Text = "Thông tin kinh nghiệm";
+            // 
+            // txtMaKN
+            // 
+            this.txtMaKN.Location = new System.Drawing.Point(138, 28);
+            this.txtMaKN.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.txtMaKN.Name = "txtMaKN";
+            this.txtMaKN.Size = new System.Drawing.Size(272, 26);
+            this.txtMaKN.TabIndex = 24;
+            // 
+            // lbMaKN
+            // 
+            this.lbMaKN.AutoSize = true;
+            this.lbMaKN.Location = new System.Drawing.Point(12, 31);
+            this.lbMaKN.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lbMaKN.Name = "lbMaKN";
+            this.lbMaKN.Size = new System.Drawing.Size(118, 19);
+            this.lbMaKN.TabIndex = 19;
+            this.lbMaKN.Text = "Mã kinh nghiệm";
             // 
             // btnThoat
             // 
@@ -261,24 +279,6 @@
             this.btnCancel.TabIndex = 104;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 19);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Mã kinh nghiệm";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(138, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 26);
-            this.textBox1.TabIndex = 24;
             // 
             // KinhNghiem
             // 
@@ -329,8 +329,8 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label lbTieude;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMaKN;
+        private System.Windows.Forms.Label lbMaKN;
 
     }
 }
