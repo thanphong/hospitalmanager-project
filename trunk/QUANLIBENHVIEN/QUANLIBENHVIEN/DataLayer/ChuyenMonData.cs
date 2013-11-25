@@ -12,6 +12,7 @@ namespace QUANLIBENHVIEN.DataLayer
     {
         Data data = new Data(); // Khởi tạo đối tượng connect
         DataTable dt;
+        SqlCommand cmd;
         public ChuyenMonData()
         {
             this.tableName = "ChuyenMon";
@@ -21,9 +22,14 @@ namespace QUANLIBENHVIEN.DataLayer
         {
             try
             {
-                string sql = "SELECT * FROM ChuyenMon";
+                //string sql = "SELECT * FROM ChuyenMon";
+                //dt = new DataTable();
+                //dt = data.get(sql);
+                cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM ChuyenMon";
                 dt = new DataTable();
-                dt = data.get(sql);
+                dt = data.GetData(cmd);
             }
             catch (Exception)
             {
@@ -102,5 +108,6 @@ namespace QUANLIBENHVIEN.DataLayer
                 data.closeConnect();
             }
         }
+      
     }
 }

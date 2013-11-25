@@ -32,6 +32,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
         {
             txtMaCM.Enabled = false;
             btnSave.Enabled = false;
+            btnCancel.Enabled = false;
             chuyenmon = new BusinessLayer.ChuyenMonBsn();
             dt = chuyenmon.Select();
             curRecord = 0;
@@ -76,6 +77,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
             btnSave.Enabled = true;
+            btnCancel.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -111,12 +113,32 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 dgrvChuyenmon.DataSource = dt.DefaultView;
             }
         }
+       
+        public void removeEmptyrow(DataGridView dgv)
+        {
+            for (int i = 1; i < dgv.RowCount - 1; i++)
+            {
+                if (dgv.Rows[i].Cells[0].Value.ToString() == "")
+                {
+                    dgv.Rows.RemoveAt(i);
+                    i--;
+                }
+
+            }
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = true;
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            removeEmptyrow(dgrvChuyenmon);
+            int curRow = dgrvChuyenmon.RowCount - 2;
+            fillControls(dt, curRow);
+        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-
-       
     }
 }
