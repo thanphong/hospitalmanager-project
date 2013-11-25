@@ -42,12 +42,11 @@
             this.lbTenTochuc = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.grbCapnhat = new System.Windows.Forms.GroupBox();
-            this.dTimePNgayKT = new System.Windows.Forms.DateTimePicker();
-            this.dTimePNgayBT = new System.Windows.Forms.DateTimePicker();
-            this.lbNgayKT = new System.Windows.Forms.Label();
             this.cbbTenNV = new System.Windows.Forms.ComboBox();
             this.lbTenNV = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.lbNgayKT = new System.Windows.Forms.Label();
+            this.dTimePNgayBT = new System.Windows.Forms.DateTimePicker();
+            this.dTimePNgayKT = new System.Windows.Forms.DateTimePicker();
             this.grbThongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvKinhnghiem)).BeginInit();
             this.grbCapnhat.SuspendLayout();
@@ -63,7 +62,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(449, 136);
+            this.btnAdd.Location = new System.Drawing.Point(446, 165);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 34);
@@ -137,7 +136,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(449, 317);
+            this.btnThoat.Location = new System.Drawing.Point(446, 332);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(92, 40);
@@ -147,7 +146,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(449, 170);
+            this.btnEdit.Location = new System.Drawing.Point(446, 203);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(92, 35);
@@ -157,7 +156,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(449, 241);
+            this.btnSave.Location = new System.Drawing.Point(446, 286);
             this.btnSave.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(92, 39);
@@ -177,7 +176,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(449, 280);
+            this.btnDelete.Location = new System.Drawing.Point(446, 243);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(92, 36);
@@ -206,30 +205,6 @@
             this.grbCapnhat.TabStop = false;
             this.grbCapnhat.Text = "Cập nhật kinh nghiệm";
             // 
-            // dTimePNgayKT
-            // 
-            this.dTimePNgayKT.Location = new System.Drawing.Point(136, 149);
-            this.dTimePNgayKT.Name = "dTimePNgayKT";
-            this.dTimePNgayKT.Size = new System.Drawing.Size(250, 26);
-            this.dTimePNgayKT.TabIndex = 30;
-            // 
-            // dTimePNgayBT
-            // 
-            this.dTimePNgayBT.Location = new System.Drawing.Point(136, 114);
-            this.dTimePNgayBT.Name = "dTimePNgayBT";
-            this.dTimePNgayBT.Size = new System.Drawing.Size(250, 26);
-            this.dTimePNgayBT.TabIndex = 29;
-            // 
-            // lbNgayKT
-            // 
-            this.lbNgayKT.AutoSize = true;
-            this.lbNgayKT.Location = new System.Drawing.Point(11, 155);
-            this.lbNgayKT.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.lbNgayKT.Name = "lbNgayKT";
-            this.lbNgayKT.Size = new System.Drawing.Size(103, 19);
-            this.lbNgayKT.TabIndex = 28;
-            this.lbNgayKT.Text = "Ngày kết thúc";
-            // 
             // cbbTenNV
             // 
             this.cbbTenNV.FormattingEnabled = true;
@@ -248,15 +223,29 @@
             this.lbTenNV.TabIndex = 26;
             this.lbTenNV.Text = "Tên nhân viên";
             // 
-            // btnCancel
+            // lbNgayKT
             // 
-            this.btnCancel.Location = new System.Drawing.Point(449, 204);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 37);
-            this.btnCancel.TabIndex = 104;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.lbNgayKT.AutoSize = true;
+            this.lbNgayKT.Location = new System.Drawing.Point(11, 155);
+            this.lbNgayKT.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lbNgayKT.Name = "lbNgayKT";
+            this.lbNgayKT.Size = new System.Drawing.Size(103, 19);
+            this.lbNgayKT.TabIndex = 28;
+            this.lbNgayKT.Text = "Ngày kết thúc";
+            // 
+            // dTimePNgayBT
+            // 
+            this.dTimePNgayBT.Location = new System.Drawing.Point(136, 114);
+            this.dTimePNgayBT.Name = "dTimePNgayBT";
+            this.dTimePNgayBT.Size = new System.Drawing.Size(250, 26);
+            this.dTimePNgayBT.TabIndex = 29;
+            // 
+            // dTimePNgayKT
+            // 
+            this.dTimePNgayKT.Location = new System.Drawing.Point(136, 149);
+            this.dTimePNgayKT.Name = "dTimePNgayKT";
+            this.dTimePNgayKT.Size = new System.Drawing.Size(250, 26);
+            this.dTimePNgayKT.TabIndex = 30;
             // 
             // KinhNghiem
             // 
@@ -264,7 +253,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1150, 404);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grbThongtin);
             this.Controls.Add(this.lbTieude);
@@ -306,6 +294,5 @@
         private System.Windows.Forms.DateTimePicker dTimePNgayKT;
         private System.Windows.Forms.DateTimePicker dTimePNgayBT;
         private System.Windows.Forms.Label lbNgayKT;
-        private System.Windows.Forms.Button btnCancel;
     }
 }

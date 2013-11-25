@@ -46,23 +46,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLayer\ChucVuBsn.cs" />
-    <Compile Include="BusinessLayer\ChuyenMonBsn.cs" />
-    <Compile Include="BusinessLayer\GiuongBsn.cs" />
-    <Compile Include="BusinessLayer\HopDongBsn.cs" />
-    <Compile Include="BusinessLayer\KinhNghiemBsn.cs" />
-    <Compile Include="BusinessLayer\PhongBsn.cs" />
-    <Compile Include="BusinessLayer\TrinhDoBsn.cs" />
-    <Compile Include="BusinessLayer\YeuCauPhongBsn.cs" />
+    <Compile Include="BusinessLayer\BacSiDiaPhuong.cs" />
+    <Compile Include="BusinessLayer\BNNgoaiTru.cs" />
+    <Compile Include="BusinessLayer\BNNoiTru.cs" />
+    <Compile Include="BusinessLayer\ChucVu.cs" />
+    <Compile Include="BusinessLayer\ChuyenMon.cs" />
+    <Compile Include="BusinessLayer\CTBenhNhan.cs" />
+    <Compile Include="BusinessLayer\CTDonthuoc.cs" />
+    <Compile Include="BusinessLayer\DonThuoc.cs" />
+    <Compile Include="BusinessLayer\HopDong.cs" />
+    <Compile Include="BusinessLayer\KinhNghiem.cs" />
+    <Compile Include="BusinessLayer\LichKham.cs" />
+    <Compile Include="BusinessLayer\Loaithuoc.cs" />
+    <Compile Include="BusinessLayer\LoaiVattu.cs" />
+    <Compile Include="BusinessLayer\Nhacungcap.cs" />
+    <Compile Include="BusinessLayer\ThanNhan.cs" />
+    <Compile Include="BusinessLayer\Thongkebaocao.cs" />
+    <Compile Include="BusinessLayer\Thuoc.cs" />
+    <Compile Include="BusinessLayer\Timkiemdungcu.cs" />
+    <Compile Include="BusinessLayer\TrinhDo.cs" />
+    <Compile Include="BusinessLayer\Vattudungcu.cs" />
+    <Compile Include="DataLayer\BacSiDiaPhuongData.cs" />
+    <Compile Include="DataLayer\BNNgoaiTruData.cs" />
+    <Compile Include="DataLayer\BNNoiTruData.cs" />
     <Compile Include="DataLayer\ChucVuData.cs" />
     <Compile Include="DataLayer\ChuyenMonData.cs" />
-    <Compile Include="DataLayer\Data.cs" />
-    <Compile Include="DataLayer\GiuongData.cs" />
+    <Compile Include="DataLayer\CTBenhNhanData.cs" />
+    <Compile Include="DataLayer\CTDonthuocData.cs" />
+    <Compile Include="DataLayer\DonThuocData.cs" />
     <Compile Include="DataLayer\HopDongData.cs" />
     <Compile Include="DataLayer\KinhNghiemData.cs" />
-    <Compile Include="DataLayer\PhongData.cs" />
+    <Compile Include="DataLayer\LichKhamData.cs" />
+    <Compile Include="DataLayer\LoaithuocData.cs" />
+    <Compile Include="DataLayer\LoaivattuData.cs" />
+    <Compile Include="DataLayer\NhacungcapData.cs" />
+    <Compile Include="DataLayer\ThanNhanData.cs" />
+    <Compile Include="DataLayer\ThongkebaocaoData.cs" />
+    <Compile Include="DataLayer\ThuocData.cs" />
+    <Compile Include="DataLayer\TimkiemdungcuData.cs" />
     <Compile Include="DataLayer\TrinhDoData.cs" />
-    <Compile Include="DataLayer\YeuCauPhongData.cs" />
+    <Compile Include="DataLayer\VattudungcuData1.cs" />
+    <Compile Include="PresentationLayer\BacSiDiaPhuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\BacSiDiaPhuong.Designer.cs">
+      <DependentUpon>BacSiDiaPhuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\BNNgoaiTru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\BNNgoaiTru.Designer.cs">
+      <DependentUpon>BNNgoaiTru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\BNNoiTru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\BNNoiTru.Designer.cs">
+      <DependentUpon>BNNoiTru.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\ChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,17 +116,29 @@
     <Compile Include="PresentationLayer\ChuyenMon.Designer.cs">
       <DependentUpon>ChuyenMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\CTBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CTBenhNhan.Designer.cs">
+      <DependentUpon>CTBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\CTDonthuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CTDonthuoc.Designer.cs">
+      <DependentUpon>CTDonthuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\DonThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\DonThuoc.Designer.cs">
+      <DependentUpon>DonThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FormChinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\Giuong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Giuong.Designer.cs">
-      <DependentUpon>Giuong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\HopDong.cs">
       <SubType>Form</SubType>
@@ -99,35 +152,59 @@
     <Compile Include="PresentationLayer\KinhNghiem.Designer.cs">
       <DependentUpon>KinhNghiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\NhanVien.cs">
+    <Compile Include="PresentationLayer\LichKham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <Compile Include="PresentationLayer\LichKham.Designer.cs">
+      <DependentUpon>LichKham.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Phong.cs">
+    <Compile Include="PresentationLayer\LoaiThuoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Phong.Designer.cs">
-      <DependentUpon>Phong.cs</DependentUpon>
+    <Compile Include="PresentationLayer\LoaiThuoc.Designer.cs">
+      <DependentUpon>LoaiThuoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\tkHopdong.cs">
+    <Compile Include="PresentationLayer\LoaiVatTu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\tkHopdong.Designer.cs">
-      <DependentUpon>tkHopdong.cs</DependentUpon>
+    <Compile Include="PresentationLayer\LoaiVatTu.Designer.cs">
+      <DependentUpon>LoaiVatTu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\tkNhanvien.cs">
+    <Compile Include="PresentationLayer\Nhacungcap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\tkNhanvien.Designer.cs">
-      <DependentUpon>tkNhanvien.cs</DependentUpon>
+    <Compile Include="PresentationLayer\Nhacungcap.Designer.cs">
+      <DependentUpon>Nhacungcap.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\tkPhong.cs">
+    <Compile Include="PresentationLayer\ThanNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\tkPhong.Designer.cs">
-      <DependentUpon>tkPhong.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ThanNhan.Designer.cs">
+      <DependentUpon>ThanNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Thongkebaocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Thongkebaocao.Designer.cs">
+      <DependentUpon>Thongkebaocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Thuoc.Designer.cs">
+      <DependentUpon>Thuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Timkiembenhnhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Timkiembenhnhan.Designer.cs">
+      <DependentUpon>Timkiembenhnhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Timkiemdungcu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Timkiemdungcu.Designer.cs">
+      <DependentUpon>Timkiemdungcu.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\TrinhDo.cs">
       <SubType>Form</SubType>
@@ -135,25 +212,40 @@
     <Compile Include="PresentationLayer\TrinhDo.Designer.cs">
       <DependentUpon>TrinhDo.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\YeuCauPhong.cs">
+    <Compile Include="PresentationLayer\Vattudungcu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\YeuCauPhong.Designer.cs">
-      <DependentUpon>YeuCauPhong.cs</DependentUpon>
+    <Compile Include="PresentationLayer\Vattudungcu.Designer.cs">
+      <DependentUpon>Vattudungcu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\BacSiDiaPhuong.resx">
+      <DependentUpon>BacSiDiaPhuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\BNNgoaiTru.resx">
+      <DependentUpon>BNNgoaiTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\BNNoiTru.resx">
+      <DependentUpon>BNNoiTru.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ChucVu.resx">
       <DependentUpon>ChucVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ChuyenMon.resx">
       <DependentUpon>ChuyenMon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\CTBenhNhan.resx">
+      <DependentUpon>CTBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\CTDonthuoc.resx">
+      <DependentUpon>CTDonthuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\DonThuoc.resx">
+      <DependentUpon>DonThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Giuong.resx">
-      <DependentUpon>Giuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\HopDong.resx">
       <DependentUpon>HopDong.cs</DependentUpon>
@@ -161,26 +253,38 @@
     <EmbeddedResource Include="PresentationLayer\KinhNghiem.resx">
       <DependentUpon>KinhNghiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\LichKham.resx">
+      <DependentUpon>LichKham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Phong.resx">
-      <DependentUpon>Phong.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\LoaiThuoc.resx">
+      <DependentUpon>LoaiThuoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\tkHopdong.resx">
-      <DependentUpon>tkHopdong.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\LoaiVatTu.resx">
+      <DependentUpon>LoaiVatTu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\tkNhanvien.resx">
-      <DependentUpon>tkNhanvien.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\Nhacungcap.resx">
+      <DependentUpon>Nhacungcap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\tkPhong.resx">
-      <DependentUpon>tkPhong.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ThanNhan.resx">
+      <DependentUpon>ThanNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Thongkebaocao.resx">
+      <DependentUpon>Thongkebaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Thuoc.resx">
+      <DependentUpon>Thuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Timkiembenhnhan.resx">
+      <DependentUpon>Timkiembenhnhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Timkiemdungcu.resx">
+      <DependentUpon>Timkiemdungcu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\TrinhDo.resx">
       <DependentUpon>TrinhDo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\YeuCauPhong.resx">
-      <DependentUpon>YeuCauPhong.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\Vattudungcu.resx">
+      <DependentUpon>Vattudungcu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
