@@ -10,24 +10,25 @@ namespace QUANLIBENHVIEN.DataLayer
 {
     class TrinhDoData:Data
     {
-        Data data = new Data();
-        DataTable dt;
-        SqlCommand cmd;
+        //Data data = new Data();
+        //DataTable dt;
+        //SqlCommand cmd;
         public TrinhDoData()
         {
             this.tableName = "TrinhDo";
-            this.fieldList = "MaChuyenMon, LoaiTrinhDo, TenToChuc";
+            this.fieldList = "LoaiTrinhDo, TenToChuc, MaChuyenMon";
         }
   
         public DataTable Select()
         {
             try
             {
+
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText="SELECT MaTrinhDo,TenChuyenMon,LoaiTrinhDo,TenToChuc FROM TrinhDo,ChuyenMon Where TrinhDo.MaChuyenMon=ChuyenMon.MaChuyenMon";
+                cmd.CommandText="SELECT * FROM TrinhDo";
                 dt = new DataTable();
-                dt = data.GetData(cmd);
+                dt = GetData(cmd);
             }
             catch
             {
@@ -35,7 +36,7 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             finally
             {
-                data.closeConnect();
+                closeConnect();
             }
             return dt;
         }
@@ -49,7 +50,7 @@ namespace QUANLIBENHVIEN.DataLayer
                     + " SET MaChuyenMon= '" + trinhdo.MaCM+"', LoaiTrinhDo= '"+trinhdo.LoaiTD+"' , TenToChuc ='"+trinhdo.TenTochuc+"' WHERE MaTrinhDo = '"
                     + trinhdo.MaTD+ "' ";
                 dt = new DataTable();
-                dt = data.GetData(cmd);
+                dt = GetData(cmd);
                 MessageBox.Show("Sửa thành công");
             }
             catch (Exception)
@@ -58,7 +59,7 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             finally
             {
-                data.closeConnect();
+                closeConnect();
             }
         }
         public void Insert(BusinessLayer.TrinhDoBsn trinhdo)
@@ -68,10 +69,9 @@ namespace QUANLIBENHVIEN.DataLayer
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO " + this.tableName
-                    + "(" + this.fieldList + ") values ('"
-                    + trinhdo.MaCM+ "', '"+trinhdo.LoaiTD+"','"+trinhdo.TenTochuc+"')";
+                    + "(" + this.fieldList + ") values ( '"+trinhdo.LoaiTD+"','"+trinhdo.TenTochuc+"',"+trinhdo.MaCM+")";
                 dt = new DataTable();
-                dt = data.GetData(cmd);
+                dt = GetData(cmd);
                 MessageBox.Show("thêm mới thành công", "Thông báo");
                 //conn.Close();
             }
@@ -81,7 +81,7 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             finally
             {
-                data.closeConnect();
+                closeConnect();
                 // conn.Close();
             }
         }
@@ -94,7 +94,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 cmd.CommandText = "DELETE FROM " + this.tableName
                     + " where MaTrinhDo ='" + ma + "'";
                 dt = new DataTable();
-                dt = data.GetData(cmd);
+                dt = GetData(cmd);
             }
             catch (Exception)
             {
@@ -102,7 +102,7 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             finally
             {
-                data.closeConnect();
+                closeConnect();
             }
         }
     }

@@ -13,8 +13,6 @@ namespace QUANLIBENHVIEN.DataLayer
     class ChucVuData:Data
     {
         Data data = new Data(); // Khởi tạo đối tượng connect
-        DataTable dt;
-        SqlCommand cmd;
         public ChucVuData()
         {
             this.tableName = "ChucVu";

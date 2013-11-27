@@ -30,8 +30,8 @@
         {
             this.lbLoaithuoc = new System.Windows.Forms.Label();
             this.grbCapnhatLoaithuoc = new System.Windows.Forms.GroupBox();
+            this.txtTenLT = new System.Windows.Forms.TextBox();
             this.lbtenloaithuoc = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btThem = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -39,6 +39,8 @@
             this.btThoat = new System.Windows.Forms.Button();
             this.grbTTLoaithuoc = new System.Windows.Forms.GroupBox();
             this.dgvLoaithuoc = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaLT = new System.Windows.Forms.TextBox();
             this.grbCapnhatLoaithuoc.SuspendLayout();
             this.grbTTLoaithuoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaithuoc)).BeginInit();
@@ -57,30 +59,32 @@
             // 
             // grbCapnhatLoaithuoc
             // 
-            this.grbCapnhatLoaithuoc.Controls.Add(this.textBox1);
+            this.grbCapnhatLoaithuoc.Controls.Add(this.txtMaLT);
+            this.grbCapnhatLoaithuoc.Controls.Add(this.txtTenLT);
+            this.grbCapnhatLoaithuoc.Controls.Add(this.label1);
             this.grbCapnhatLoaithuoc.Controls.Add(this.lbtenloaithuoc);
-            this.grbCapnhatLoaithuoc.Location = new System.Drawing.Point(195, 117);
+            this.grbCapnhatLoaithuoc.Location = new System.Drawing.Point(63, 117);
             this.grbCapnhatLoaithuoc.Name = "grbCapnhatLoaithuoc";
-            this.grbCapnhatLoaithuoc.Size = new System.Drawing.Size(377, 127);
+            this.grbCapnhatLoaithuoc.Size = new System.Drawing.Size(509, 127);
             this.grbCapnhatLoaithuoc.TabIndex = 1;
             this.grbCapnhatLoaithuoc.TabStop = false;
             this.grbCapnhatLoaithuoc.Text = "Cập nhật loại thuốc";
             // 
+            // txtTenLT
+            // 
+            this.txtTenLT.Location = new System.Drawing.Point(183, 72);
+            this.txtTenLT.Name = "txtTenLT";
+            this.txtTenLT.Size = new System.Drawing.Size(100, 26);
+            this.txtTenLT.TabIndex = 1;
+            // 
             // lbtenloaithuoc
             // 
             this.lbtenloaithuoc.AutoSize = true;
-            this.lbtenloaithuoc.Location = new System.Drawing.Point(49, 56);
+            this.lbtenloaithuoc.Location = new System.Drawing.Point(28, 79);
             this.lbtenloaithuoc.Name = "lbtenloaithuoc";
             this.lbtenloaithuoc.Size = new System.Drawing.Size(103, 19);
             this.lbtenloaithuoc.TabIndex = 0;
             this.lbtenloaithuoc.Text = "Tên loại thuốc";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(204, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 1;
             // 
             // btThem
             // 
@@ -145,12 +149,28 @@
             this.dgvLoaithuoc.Size = new System.Drawing.Size(485, 150);
             this.dgvLoaithuoc.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã loại thuốc";
+            // 
+            // txtMaLT
+            // 
+            this.txtMaLT.Location = new System.Drawing.Point(183, 38);
+            this.txtMaLT.Name = "txtMaLT";
+            this.txtMaLT.Size = new System.Drawing.Size(100, 26);
+            this.txtMaLT.TabIndex = 1;
+            // 
             // LoaiThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(726, 584);
+            this.ClientSize = new System.Drawing.Size(888, 584);
             this.Controls.Add(this.grbTTLoaithuoc);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btLuu);
@@ -160,9 +180,9 @@
             this.Controls.Add(this.grbCapnhatLoaithuoc);
             this.Controls.Add(this.lbLoaithuoc);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoaiThuoc";
-            this.Text = "LoaiThuoc";
+            this.Text = "Loại Thuốc";
             this.grbCapnhatLoaithuoc.ResumeLayout(false);
             this.grbCapnhatLoaithuoc.PerformLayout();
             this.grbTTLoaithuoc.ResumeLayout(false);
@@ -176,7 +196,7 @@
 
         private System.Windows.Forms.Label lbLoaithuoc;
         private System.Windows.Forms.GroupBox grbCapnhatLoaithuoc;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenLT;
         private System.Windows.Forms.Label lbtenloaithuoc;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btSua;
@@ -185,5 +205,7 @@
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.GroupBox grbTTLoaithuoc;
         private System.Windows.Forms.DataGridView dgvLoaithuoc;
+        private System.Windows.Forms.TextBox txtMaLT;
+        private System.Windows.Forms.Label label1;
     }
 }

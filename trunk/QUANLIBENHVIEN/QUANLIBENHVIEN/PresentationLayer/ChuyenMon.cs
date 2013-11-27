@@ -43,8 +43,11 @@ namespace QUANLIBENHVIEN.PresentationLayer
         }
         private void fillControls(DataTable dataTable, int curRec)
         {
-            txtMaCM.Text = dataTable.Rows[0][0].ToString();
-            txtTenCM.Text = dataTable.Rows[0][1].ToString();
+            if (dataTable.Rows.Count != 0)
+            {
+                txtMaCM.Text = dataTable.Rows[0][0].ToString();
+                txtTenCM.Text = dataTable.Rows[0][1].ToString();
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

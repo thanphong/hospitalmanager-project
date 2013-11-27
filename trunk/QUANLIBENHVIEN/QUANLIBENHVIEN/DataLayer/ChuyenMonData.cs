@@ -11,8 +11,7 @@ namespace QUANLIBENHVIEN.DataLayer
     class ChuyenMonData:Data
     {
         Data data = new Data(); // Khởi tạo đối tượng connect
-        DataTable dt;
-        SqlCommand cmd;
+        
         public ChuyenMonData()
         {
             this.tableName = "ChuyenMon";
@@ -27,7 +26,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 //dt = data.get(sql);
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM ChuyenMon";
+                cmd.CommandText = "SELECT * FROM" + this.tableName;
                 dt = new DataTable();
                 dt = data.GetData(cmd);
             }

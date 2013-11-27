@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.label1 = new System.Windows.Forms.Label();
             this.hêThôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngNhâpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đôiMâtKhâuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.câpNhâtTrinhĐôToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.câpNhâtHơpĐôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.câpNhâtChuyênMônToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Capnhapluong = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.timKiêmNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timKiêmHơpĐôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +68,7 @@
             this.taoBaoCaothôngKêToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLiTaiKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.câpNhâtTaiKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,18 +87,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(746, 243);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "QUẢN LÍ BỆNH VIỆN";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // hêThôngToolStripMenuItem
             // 
             this.hêThôngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -113,22 +102,23 @@
             // 
             this.đăngNhâpToolStripMenuItem.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
             this.đăngNhâpToolStripMenuItem.Name = "đăngNhâpToolStripMenuItem";
-            this.đăngNhâpToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đăngNhâpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.đăngNhâpToolStripMenuItem.Text = "Đăng nhập";
             // 
             // đôiMâtKhâuToolStripMenuItem
             // 
             this.đôiMâtKhâuToolStripMenuItem.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
             this.đôiMâtKhâuToolStripMenuItem.Name = "đôiMâtKhâuToolStripMenuItem";
-            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.đôiMâtKhâuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.thoatToolStripMenuItem.Text = "Thoát";
+            this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
@@ -184,6 +174,7 @@
             this.câpNhâtTrinhĐôToolStripMenuItem,
             this.câpNhâtHơpĐôngToolStripMenuItem,
             this.câpNhâtChuyênMônToolStripMenuItem,
+            this.Capnhapluong,
             this.toolStripSeparator1,
             this.timKiêmNhânViênToolStripMenuItem,
             this.timKiêmHơpĐôngToolStripMenuItem,
@@ -232,6 +223,14 @@
             this.câpNhâtChuyênMônToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.câpNhâtChuyênMônToolStripMenuItem.Text = "Cập nhật chuyên môn";
             this.câpNhâtChuyênMônToolStripMenuItem.Click += new System.EventHandler(this.câpNhâtChuyênMônToolStripMenuItem_Click);
+            // 
+            // Capnhapluong
+            // 
+            this.Capnhapluong.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
+            this.Capnhapluong.Name = "Capnhapluong";
+            this.Capnhapluong.Size = new System.Drawing.Size(192, 22);
+            this.Capnhapluong.Text = "Cập nhập lương";
+            this.Capnhapluong.Click += new System.EventHandler(this.Capnhapluong_Click);
             // 
             // toolStripSeparator1
             // 
@@ -400,6 +399,18 @@
             this.câpNhâtTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.câpNhâtTaiKhoanToolStripMenuItem.Text = "Cập nhật tài khoản";
             // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(746, 243);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "QUẢN LÍ BỆNH VIỆN";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,5 +472,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem Capnhapluong;
     }
 }
