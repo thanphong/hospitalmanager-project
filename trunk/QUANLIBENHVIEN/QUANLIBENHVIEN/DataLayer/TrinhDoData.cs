@@ -23,10 +23,9 @@ namespace QUANLIBENHVIEN.DataLayer
         {
             try
             {
-
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText="SELECT * FROM TrinhDo";
+                cmd.CommandText="SELECT * FROM" + this.tableName;
                 dt = new DataTable();
                 dt = GetData(cmd);
             }

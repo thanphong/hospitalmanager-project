@@ -41,70 +41,70 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             return dt;
         }
-        public void Update(BusinessLayer.KinhNghiemBsn kinhnghiem)
-        {
-            try{
-                cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE " + this.tableName
-                    + " SET TenCV = '" + kinhnghiem.TenCV + "' WHERE MaCV = '"
-                    + kinhnghiem.MaCV + "' ";
-                dt = new DataTable();
-                dt = data.GetData(cmd);
-                MessageBox.Show("Sửa thành công");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Sửa thất bại");
-            }
-            finally
-            {
-                data.closeConnect();
-            }
-        }
-        public void Insert(BusinessLayer.KinhNghiemBsn kinhnghiem)
-        {
-            try
-            {                 
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO " + this.tableName
-                    + "(" + this.fieldList + ") VALUES ('"
-                    + chucvu.TenCV + "')";
-                dt = new DataTable();
-                dt = data.GetData(cmd);
-                MessageBox.Show("thêm mới thành công", "Thông báo");
-                //conn.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bị trùng khóa, thêm mới thất bại", "Thông báo");
-            }
-            finally
-            {
-                  data.closeConnect();
-               // conn.Close();
-            }
-        }
-        public void Delete(int ma)
-        {
-            try
-            {                
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "DELETE FROM " + this.tableName
-                    + " WHERE MaKN ='" + ma + "'";
-                 dt = new DataTable();
-                dt = data.GetData(cmd);
-            }
-            catch (Exception )
-            {
-                MessageBox.Show("Dữ liệu đang được sử dụng");
-            }
-            finally
-            {
-                 data.closeConnect();
-            }
-        }
+        //public void Update(BusinessLayer.KinhNghiemBsn kinhnghiem)
+        //{
+        //    try{
+        //        cmd = new SqlCommand();
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.CommandText = "UPDATE " + this.tableName
+        //            + " SET TenCV = '" + kinhnghiem.TenCV + "' WHERE MaCV = '"
+        //            + kinhnghiem.MaCV + "' ";
+        //        dt = new DataTable();
+        //        dt = data.GetData(cmd);
+        //        MessageBox.Show("Sửa thành công");
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Sửa thất bại");
+        //    }
+        //    finally
+        //    {
+        //        data.closeConnect();
+        //    }
+        //}
+        //public void Insert(BusinessLayer.KinhNghiemBsn kinhnghiem)
+        //{
+        //    try
+        //    {                 
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.CommandText = "INSERT INTO " + this.tableName
+        //            + "(" + this.fieldList + ") VALUES ('"
+        //            + chucvu.TenCV + "')";
+        //        dt = new DataTable();
+        //        dt = data.GetData(cmd);
+        //        MessageBox.Show("thêm mới thành công", "Thông báo");
+        //        //conn.Close();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Bị trùng khóa, thêm mới thất bại", "Thông báo");
+        //    }
+        //    finally
+        //    {
+        //          data.closeConnect();
+        //       // conn.Close();
+        //    }
+        //}
+        //public void Delete(int ma)
+        //{
+        //    try
+        //    {                
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.CommandText = "DELETE FROM " + this.tableName
+        //            + " WHERE MaKN ='" + ma + "'";
+        //         dt = new DataTable();
+        //        dt = data.GetData(cmd);
+        //    }
+        //    catch (Exception )
+        //    {
+        //        MessageBox.Show("Dữ liệu đang được sử dụng");
+        //    }
+        //    finally
+        //    {
+        //         data.closeConnect();
+        //    }
+        //}
     }
 }

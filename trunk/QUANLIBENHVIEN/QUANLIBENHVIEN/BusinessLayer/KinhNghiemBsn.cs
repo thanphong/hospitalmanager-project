@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace QUANLIBENHVIEN.BusinessLayer
 {
@@ -55,33 +57,32 @@ namespace QUANLIBENHVIEN.BusinessLayer
         public DataTable Select()
         {
             DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-            //KinhNghiemData.connect();
             kinhnghiemdata.openConnect();
             return kinhnghiemdata.Select();
         }
-        public void Update()
-        {
-            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-            kinhnghiemdata.openConnect();
-            kinhnghiemdata.Update(this);
-        }
-        public void Insert()
-        {
-            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-            kinhnghiemdata.openConnect();
-            kinhnghiemdata.Insert(this);
-        }
-        public void Delete(int mcv)
-        {
-            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-            kinhnghiemdata.openConnect();
-            kinhnghiemdata.Delete(mcv);
-        }
-        public SqlDataAdapter GetDataAdapter()
-        {
-            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-            return kinhnghiemdata.GetDataAdapter();
-        }
+        //public void Update()
+        //{
+        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+        //    kinhnghiemdata.openConnect();
+        //    kinhnghiemdata.Update(this);
+        //}
+        //public void Insert()
+        //{
+        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+        //    kinhnghiemdata.openConnect();
+        //    kinhnghiemdata.Insert(this);
+        //}
+        //public void Delete(int mcv)
+        //{
+        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+        //    kinhnghiemdata.openConnect();
+        //    kinhnghiemdata.Delete(mcv);
+        //}
+        //public SqlDataAdapter GetDataAdapter()
+        //{
+        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
+        //    return kinhnghiemdata.GetDataAdapter();
+        //}
     }
 }
 

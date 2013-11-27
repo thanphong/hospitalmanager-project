@@ -5,7 +5,13 @@ using System.Text;
 
 namespace QUANLIBENHVIEN.DataLayer
 {
-    class PhongData
+    class PhongData:Data
     {
+        public PhongData()
+        {
+            this.tableName = "Phong";
+            this.fieldList = "MaPhong";
+        }
+
     }
 }

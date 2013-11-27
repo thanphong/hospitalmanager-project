@@ -9,8 +9,53 @@ namespace QUANLIBENHVIEN.BusinessLayer
 {
     class GiuongBsn
     {
-        private int maG;
-        private string tenG;
-
+        private int maG, maP;
+        DataLayer.GiuongData giuongdata;
+        public GiuongBsn()
+        { }
+        public GiuongBsn(int maG, int maP)
+        {
+            this.maG = maG;
+            this.maP = maP;
+        }
+        public int MaG
+        {
+            get { return maG; }
+            set { maG = value; }
+        }
+        public int MaP
+        {
+            get { return maP; }
+            set { maP = value; }
+        }
+        public DataTable Select()
+        {
+            giuongdata = new DataLayer.GiuongData();
+            giuongdata.openConnect();
+            return giuongdata.Select();
+        }
+        public void Update()
+        {
+            giuongdata = new DataLayer.GiuongData();
+            giuongdata.openConnect();
+            giuongdata.Update(this);
+        }
+        public void Insert()
+        {
+            giuongdata = new DataLayer.GiuongData();
+            giuongdata.openConnect();
+            giuongdata.Insert(this);
+        }
+        public void Delete(int mcv)
+        {
+            giuongdata = new DataLayer.GiuongData();
+            giuongdata.openConnect();
+            giuongdata.Delete(mcv);
+        }
+        public SqlDataAdapter GetDataAdapter()
+        {
+            giuongdata = new DataLayer.GiuongData();
+            return giuongdata.GetDataAdapter();
+        }
     }
 }
