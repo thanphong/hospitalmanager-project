@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbCapnhat = new System.Windows.Forms.GroupBox();
+            this.lbMagiuong = new System.Windows.Forms.Label();
             this.cbbTenphong = new System.Windows.Forms.ComboBox();
             this.lbTenphong = new System.Windows.Forms.Label();
             this.dgrvGiuong = new System.Windows.Forms.DataGridView();
@@ -41,8 +42,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lbMagiuong = new System.Windows.Forms.Label();
-            this.cbbMagiuong = new System.Windows.Forms.ComboBox();
+            this.txtMaG = new System.Windows.Forms.TextBox();
             this.grbCapnhat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvGiuong)).BeginInit();
             this.grbThongtin.SuspendLayout();
@@ -50,59 +50,70 @@
             // 
             // grbCapnhat
             // 
-            this.grbCapnhat.Controls.Add(this.cbbMagiuong);
+            this.grbCapnhat.Controls.Add(this.txtMaG);
             this.grbCapnhat.Controls.Add(this.lbMagiuong);
             this.grbCapnhat.Controls.Add(this.cbbTenphong);
             this.grbCapnhat.Controls.Add(this.lbTenphong);
-            this.grbCapnhat.Location = new System.Drawing.Point(26, 97);
+            this.grbCapnhat.Location = new System.Drawing.Point(15, 97);
             this.grbCapnhat.Margin = new System.Windows.Forms.Padding(6);
             this.grbCapnhat.Name = "grbCapnhat";
             this.grbCapnhat.Padding = new System.Windows.Forms.Padding(6);
-            this.grbCapnhat.Size = new System.Drawing.Size(389, 144);
+            this.grbCapnhat.Size = new System.Drawing.Size(389, 225);
             this.grbCapnhat.TabIndex = 44;
             this.grbCapnhat.TabStop = false;
             this.grbCapnhat.Text = "Thông tin giường";
             // 
+            // lbMagiuong
+            // 
+            this.lbMagiuong.AutoSize = true;
+            this.lbMagiuong.Location = new System.Drawing.Point(20, 67);
+            this.lbMagiuong.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lbMagiuong.Name = "lbMagiuong";
+            this.lbMagiuong.Size = new System.Drawing.Size(84, 19);
+            this.lbMagiuong.TabIndex = 21;
+            this.lbMagiuong.Text = "Mã giường";
+            // 
             // cbbTenphong
             // 
             this.cbbTenphong.FormattingEnabled = true;
-            this.cbbTenphong.Location = new System.Drawing.Point(122, 77);
+            this.cbbTenphong.Location = new System.Drawing.Point(123, 112);
             this.cbbTenphong.Name = "cbbTenphong";
             this.cbbTenphong.Size = new System.Drawing.Size(242, 27);
             this.cbbTenphong.TabIndex = 25;
+            this.cbbTenphong.SelectedIndexChanged += new System.EventHandler(this.cbbTenP_SelectedIndexChanged);
             // 
             // lbTenphong
             // 
             this.lbTenphong.AutoSize = true;
-            this.lbTenphong.Location = new System.Drawing.Point(19, 77);
+            this.lbTenphong.Location = new System.Drawing.Point(20, 112);
             this.lbTenphong.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbTenphong.Name = "lbTenphong";
-            this.lbTenphong.Size = new System.Drawing.Size(84, 19);
+            this.lbTenphong.Size = new System.Drawing.Size(79, 19);
             this.lbTenphong.TabIndex = 21;
-            this.lbTenphong.Text = "Mã giường";
+            this.lbTenphong.Text = "Tên phòng";
             // 
             // dgrvGiuong
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgrvGiuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgrvGiuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgrvGiuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrvGiuong.Location = new System.Drawing.Point(18, 32);
+            this.dgrvGiuong.Location = new System.Drawing.Point(10, 32);
             this.dgrvGiuong.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.dgrvGiuong.Name = "dgrvGiuong";
-            this.dgrvGiuong.Size = new System.Drawing.Size(564, 219);
+            this.dgrvGiuong.Size = new System.Drawing.Size(375, 179);
             this.dgrvGiuong.TabIndex = 7;
             // 
             // grbThongtin
             // 
             this.grbThongtin.Controls.Add(this.dgrvGiuong);
             this.grbThongtin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grbThongtin.Location = new System.Drawing.Point(434, 97);
+            this.grbThongtin.Location = new System.Drawing.Point(510, 97);
             this.grbThongtin.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.grbThongtin.Name = "grbThongtin";
             this.grbThongtin.Padding = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.grbThongtin.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grbThongtin.Size = new System.Drawing.Size(593, 266);
+            this.grbThongtin.Size = new System.Drawing.Size(394, 225);
             this.grbThongtin.TabIndex = 43;
             this.grbThongtin.TabStop = false;
             this.grbThongtin.Text = "Danh sách giường";
@@ -115,14 +126,14 @@
             this.lbTieude.Location = new System.Drawing.Point(0, 0);
             this.lbTieude.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbTieude.Name = "lbTieude";
-            this.lbTieude.Size = new System.Drawing.Size(1039, 110);
+            this.lbTieude.Size = new System.Drawing.Size(922, 84);
             this.lbTieude.TabIndex = 42;
             this.lbTieude.Text = "GIƯỜNG";
             this.lbTieude.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(343, 313);
+            this.btnThoat.Location = new System.Drawing.Point(424, 287);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(72, 35);
@@ -132,27 +143,28 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(124, 259);
+            this.btnEdit.Location = new System.Drawing.Point(423, 148);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(73, 35);
+            this.btnEdit.Size = new System.Drawing.Size(72, 35);
             this.btnEdit.TabIndex = 51;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(270, 259);
+            this.btnSave.Location = new System.Drawing.Point(424, 182);
             this.btnSave.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(74, 36);
+            this.btnSave.Size = new System.Drawing.Size(71, 36);
             this.btnSave.TabIndex = 53;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(343, 259);
+            this.btnDelete.Location = new System.Drawing.Point(424, 252);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 36);
@@ -162,48 +174,38 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(49, 260);
+            this.btnAdd.Location = new System.Drawing.Point(424, 115);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(71, 34);
             this.btnAdd.TabIndex = 50;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(197, 259);
+            this.btnCancel.Location = new System.Drawing.Point(424, 217);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(73, 36);
+            this.btnCancel.Size = new System.Drawing.Size(71, 36);
             this.btnCancel.TabIndex = 105;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // lbMagiuong
+            // txtMaG
             // 
-            this.lbMagiuong.AutoSize = true;
-            this.lbMagiuong.Location = new System.Drawing.Point(19, 32);
-            this.lbMagiuong.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.lbMagiuong.Name = "lbMagiuong";
-            this.lbMagiuong.Size = new System.Drawing.Size(84, 19);
-            this.lbMagiuong.TabIndex = 21;
-            this.lbMagiuong.Text = "Mã giường";
-            // 
-            // cbbMagiuong
-            // 
-            this.cbbMagiuong.FormattingEnabled = true;
-            this.cbbMagiuong.Location = new System.Drawing.Point(122, 32);
-            this.cbbMagiuong.Name = "cbbMagiuong";
-            this.cbbMagiuong.Size = new System.Drawing.Size(242, 27);
-            this.cbbMagiuong.TabIndex = 25;
+            this.txtMaG.Location = new System.Drawing.Point(122, 65);
+            this.txtMaG.Name = "txtMaG";
+            this.txtMaG.Size = new System.Drawing.Size(243, 26);
+            this.txtMaG.TabIndex = 26;
             // 
             // Giuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1039, 412);
+            this.ClientSize = new System.Drawing.Size(922, 386);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnEdit);
@@ -217,6 +219,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Giuong";
             this.Text = "Nhập thông tin giường";
+            this.Load += new System.EventHandler(this.Giuong_Load);
             this.grbCapnhat.ResumeLayout(false);
             this.grbCapnhat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvGiuong)).EndInit();
@@ -239,7 +242,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox cbbMagiuong;
         private System.Windows.Forms.Label lbMagiuong;
+        private System.Windows.Forms.TextBox txtMaG;
     }
 }

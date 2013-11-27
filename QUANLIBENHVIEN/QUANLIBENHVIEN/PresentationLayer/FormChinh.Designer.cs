@@ -102,21 +102,21 @@
             // 
             this.đăngNhâpToolStripMenuItem.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
             this.đăngNhâpToolStripMenuItem.Name = "đăngNhâpToolStripMenuItem";
-            this.đăngNhâpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đăngNhâpToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đăngNhâpToolStripMenuItem.Text = "Đăng nhập";
             // 
             // đôiMâtKhâuToolStripMenuItem
             // 
             this.đôiMâtKhâuToolStripMenuItem.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
             this.đôiMâtKhâuToolStripMenuItem.Name = "đôiMâtKhâuToolStripMenuItem";
-            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đôiMâtKhâuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.thoatToolStripMenuItem.Text = "Thoát";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
@@ -286,6 +286,7 @@
             this.câpNhâtGiươngToolStripMenuItem.Name = "câpNhâtGiươngToolStripMenuItem";
             this.câpNhâtGiươngToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.câpNhâtGiươngToolStripMenuItem.Text = "Cập nhật giường";
+            this.câpNhâtGiươngToolStripMenuItem.Click += new System.EventHandler(this.câpNhâtGiươngToolStripMenuItem_Click);
             // 
             // câpNhâtToolStripMenuItem
             // 

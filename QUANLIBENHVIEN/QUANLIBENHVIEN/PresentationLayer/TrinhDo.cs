@@ -12,8 +12,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
 {
     public partial class TrinhDo : Form
     {
-        BusinessLayer.TrinhDoBsn trinhdo;
-        BusinessLayer.ChuyenMonBsn chuyenmon;
+        BusinessLayer.TrinhDoBsn trinhdo = new BusinessLayer.TrinhDoBsn();
+        BusinessLayer.ChuyenMonBsn chuyenmon =new BusinessLayer.ChuyenMonBsn();
         DataTable dt;
         DataSet ds  = new DataSet();
         int curRecord = 0;
@@ -58,7 +58,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
             //Giá trị nhận được ứng với từng nội dung được chọn trên combobox
             cbbTenCM.ValueMember = "ChuyenMon.MaChuyenMon";
 
-            trinhdo = new BusinessLayer.TrinhDoBsn();
             dt = trinhdo.Select();
             curRecord = 0;
             totalRecord = dt.Rows.Count - 1;
@@ -141,7 +140,46 @@ namespace QUANLIBENHVIEN.PresentationLayer
             }
         }
 
-       
-       
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có muốn xóa dòng này? ",
+               "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                trinhdo.Delete(int.Parse(txtMaTD.Text));
+                totalRecord--;
+                fillControls(dt, 0);
+                dt = trinhdo.Select();
+                dgrvTrinhdo.DataSource = dt.DefaultView;
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        //xóa dòng trống khi thêm mà hủy
+        public void removeEmptyrow(DataGridView dgv)
+        {
+            for (int i = 1; i < dgv.RowCount - 1; i++)
+            {
+                if (dgv.Rows[i].Cells[0].Value.ToString() == "")
+                {
+                    dgv.Rows.RemoveAt(i);
+                    i--;
+                }
+            }
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = true;
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnSave.Enabled = false;
+            removeEmptyrow(dgrvTrinhdo);
+            int curRow = dgrvTrinhdo.RowCount - 2;
+            fillControls(dt, curRow);
+        }      
     }
 }
