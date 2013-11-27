@@ -13,7 +13,7 @@ namespace QUANLIBENHVIEN.DataLayer
         //SqlConnection con;//Dùng để kết nối vào cơ sở dữ liệu
         //SqlDataAdapter da;//Là đối tượng trung gian lấy dữ liệu FIll vào trong các đối tương Data
         ////DataSet ds;//Kho chứa dữ liệu tạm thời để xử lý
-        SqlCommand cmd;// Các xử lý truy vấn SQL thêm, xóa, sửa
+        protected SqlCommand cmd;// Các xử lý truy vấn SQL thêm, xóa, sửa
         //DataTable dt;
         ////khởi tạo kêt nối
         ////Nếu connection là null thì mới tạo kết nối, và trạng thái kết nối là đóng thì ta sẽ mở nó lên.
@@ -60,16 +60,16 @@ namespace QUANLIBENHVIEN.DataLayer
         SqlDataAdapter da;//Là đối tượng trung gian lấy dữ liệu FIll vào trong các đối tương Data
        // DataSet ds;//Kho chứa dữ liệu tạm thời để xử lý
         //SqlCommand cmd;// Các xử lý truy vấn SQL thêm, xóa, sửa
-        DataTable dt;
+        protected DataTable dt;
         protected string fieldList;
         protected string tableName;
-        protected SqlConnection conn =  new SqlConnection("server=WIN-R4LGL0DC68V\\SQL;database=QLBV;User ID =sa;Password =123;integrated security = true;");
+        protected SqlConnection conn = new SqlConnection(@"server=.\SQL;database=QLBV;User ID =sa;Password =123;integrated security = true;");
         //khởi tạo kêt nối
         //Nếu connection là null thì mới tạo kết nối, và trạng thái kết nối là đóng thì ta sẽ mở nó lên.
         public void openConnect()
         {
             if (con == null)
-                con = new SqlConnection("server=WIN-R4LGL0DC68V\\SQL;database=QLBV;User ID =sa;Password =123;integrated security = true;");
+                con = new SqlConnection(@"server=.\SQL;database=QLBV;User ID =sa;Password =123;integrated security = true;");
             if (con.State == ConnectionState.Closed)
                 con.Open();
         }
@@ -77,7 +77,7 @@ namespace QUANLIBENHVIEN.DataLayer
         //Nếu connection là khac null và trang thái là mở thì mình sẽ đóng lại.
         public void closeConnect()
         {
-            if ((con != null) && (con.State == ConnectionState.Open))
+            if ((con != null) || (con.State == ConnectionState.Open))
                 con.Close();
         }
         public Data()

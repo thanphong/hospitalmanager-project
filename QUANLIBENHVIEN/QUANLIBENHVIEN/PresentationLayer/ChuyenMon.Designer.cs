@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbUdCM = new System.Windows.Forms.GroupBox();
             this.txtMaCM = new System.Windows.Forms.TextBox();
             this.txtTenCM = new System.Windows.Forms.TextBox();
@@ -116,9 +116,9 @@
             // dgrvChuyenmon
             // 
             this.dgrvChuyenmon.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgrvChuyenmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgrvChuyenmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgrvChuyenmon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrvChuyenmon.Location = new System.Drawing.Point(10, 28);
             this.dgrvChuyenmon.Margin = new System.Windows.Forms.Padding(9);
@@ -236,19 +236,20 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbUdCM;
-        private System.Windows.Forms.TextBox txtTenCM;
-        private System.Windows.Forms.Label lbTenCM;
-        private System.Windows.Forms.GroupBox grbChuyenmon;
-        private System.Windows.Forms.DataGridView dgrvChuyenmon;
-        private System.Windows.Forms.Label lbTieudeCM;
-        private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtMaCM;
-        private System.Windows.Forms.Label lbMaCM;
-        private System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.TextBox txtTenCM;
+        public System.Windows.Forms.Label lbTenCM;
+        public System.Windows.Forms.GroupBox grbChuyenmon;
+        public System.Windows.Forms.DataGridView dgrvChuyenmon;
+        public System.Windows.Forms.Label lbTieudeCM;
+        public System.Windows.Forms.Button btnThoat;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnEdit;
+        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.TextBox txtMaCM;
+        public System.Windows.Forms.Label lbMaCM;
+        public System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.GroupBox grbUdCM;
+
     }
 }

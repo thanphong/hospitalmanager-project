@@ -61,6 +61,8 @@
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.grbCapnhat = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cmbChuyenMon = new System.Windows.Forms.ComboBox();
+            this.lbChuyenmon = new System.Windows.Forms.Label();
             this.grbThongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvNhanvien)).BeginInit();
             this.grbCapnhat.SuspendLayout();
@@ -197,7 +199,7 @@
             // 
             // dTimePThoidiem
             // 
-            this.dTimePThoidiem.Location = new System.Drawing.Point(641, 141);
+            this.dTimePThoidiem.Location = new System.Drawing.Point(611, 177);
             this.dTimePThoidiem.Name = "dTimePThoidiem";
             this.dTimePThoidiem.Size = new System.Drawing.Size(241, 26);
             this.dTimePThoidiem.TabIndex = 30;
@@ -252,7 +254,7 @@
             // lbMucluong
             // 
             this.lbMucluong.AutoSize = true;
-            this.lbMucluong.Location = new System.Drawing.Point(499, 42);
+            this.lbMucluong.Location = new System.Drawing.Point(499, 47);
             this.lbMucluong.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbMucluong.Name = "lbMucluong";
             this.lbMucluong.Size = new System.Drawing.Size(85, 19);
@@ -262,7 +264,7 @@
             // lbThoidiem
             // 
             this.lbThoidiem.AutoSize = true;
-            this.lbThoidiem.Location = new System.Drawing.Point(499, 141);
+            this.lbThoidiem.Location = new System.Drawing.Point(474, 181);
             this.lbThoidiem.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbThoidiem.Name = "lbThoidiem";
             this.lbThoidiem.Size = new System.Drawing.Size(135, 19);
@@ -272,7 +274,7 @@
             // lbKinhnghiem
             // 
             this.lbKinhnghiem.AutoSize = true;
-            this.lbKinhnghiem.Location = new System.Drawing.Point(499, 107);
+            this.lbKinhnghiem.Location = new System.Drawing.Point(499, 152);
             this.lbKinhnghiem.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbKinhnghiem.Name = "lbKinhnghiem";
             this.lbKinhnghiem.Size = new System.Drawing.Size(93, 19);
@@ -282,7 +284,7 @@
             // lbTrinhdo
             // 
             this.lbTrinhdo.AutoSize = true;
-            this.lbTrinhdo.Location = new System.Drawing.Point(499, 74);
+            this.lbTrinhdo.Location = new System.Drawing.Point(499, 82);
             this.lbTrinhdo.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbTrinhdo.Name = "lbTrinhdo";
             this.lbTrinhdo.Size = new System.Drawing.Size(64, 19);
@@ -307,7 +309,7 @@
             // cbbKinhnghiem
             // 
             this.cbbKinhnghiem.FormattingEnabled = true;
-            this.cbbKinhnghiem.Location = new System.Drawing.Point(611, 107);
+            this.cbbKinhnghiem.Location = new System.Drawing.Point(609, 144);
             this.cbbKinhnghiem.Name = "cbbKinhnghiem";
             this.cbbKinhnghiem.Size = new System.Drawing.Size(271, 27);
             this.cbbKinhnghiem.TabIndex = 45;
@@ -359,10 +361,12 @@
             this.grbCapnhat.Controls.Add(this.lbDiachi);
             this.grbCapnhat.Controls.Add(this.textBox1);
             this.grbCapnhat.Controls.Add(this.cbbMucluong);
+            this.grbCapnhat.Controls.Add(this.cmbChuyenMon);
             this.grbCapnhat.Controls.Add(this.cbbTrinhdo);
             this.grbCapnhat.Controls.Add(this.cbbKinhnghiem);
             this.grbCapnhat.Controls.Add(this.txtSodt);
             this.grbCapnhat.Controls.Add(this.cbbChucvu);
+            this.grbCapnhat.Controls.Add(this.lbChuyenmon);
             this.grbCapnhat.Controls.Add(this.lbTrinhdo);
             this.grbCapnhat.Controls.Add(this.lbKinhnghiem);
             this.grbCapnhat.Controls.Add(this.lbThoidiem);
@@ -396,6 +400,24 @@
             this.btnCancel.TabIndex = 103;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // cmbChuyenMon
+            // 
+            this.cmbChuyenMon.FormattingEnabled = true;
+            this.cmbChuyenMon.Location = new System.Drawing.Point(609, 111);
+            this.cmbChuyenMon.Name = "cmbChuyenMon";
+            this.cmbChuyenMon.Size = new System.Drawing.Size(271, 27);
+            this.cmbChuyenMon.TabIndex = 45;
+            // 
+            // lbChuyenmon
+            // 
+            this.lbChuyenmon.AutoSize = true;
+            this.lbChuyenmon.Location = new System.Drawing.Point(499, 119);
+            this.lbChuyenmon.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lbChuyenmon.Name = "lbChuyenmon";
+            this.lbChuyenmon.Size = new System.Drawing.Size(92, 19);
+            this.lbChuyenmon.TabIndex = 41;
+            this.lbChuyenmon.Text = "Chuyên môn";
             // 
             // NhanVien
             // 
@@ -459,5 +481,7 @@
         private System.Windows.Forms.TextBox txtDiachi;
         private System.Windows.Forms.GroupBox grbCapnhat;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cmbChuyenMon;
+        private System.Windows.Forms.Label lbChuyenmon;
     }
 }

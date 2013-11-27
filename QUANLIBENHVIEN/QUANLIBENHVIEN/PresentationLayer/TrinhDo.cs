@@ -18,6 +18,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
         DataSet ds  = new DataSet();
         int curRecord = 0;
         int totalRecord = 0;
+        String tv = "";
         public TrinhDo()
         {
             InitializeComponent();
@@ -30,14 +31,18 @@ namespace QUANLIBENHVIEN.PresentationLayer
         }
         private void fillControls(DataTable dataTable, int curRec)
         {
-            txtMaTD.Text = dataTable.Rows[curRec][0].ToString();
-            txtTenCM.Text = dataTable.Rows[curRec][1].ToString();
-            cbbTenCM.Text = dataTable.Rows[curRec][1].ToString();
-            txtLoaiTD.Text = dataTable.Rows[curRec][2].ToString();
-            txtTenTochuc.Text = dataTable.Rows[curRec][3].ToString();
+            if (dataTable.Rows.Count!=0)
+            {
+                txtMaTD.Text = dataTable.Rows[curRec][0].ToString();
+               // txtTenCM.Text = dataTable.Rows[curRec][1].ToString();
+                cbbTenCM.Text = dataTable.Rows[curRec][1].ToString();
+                txtLoaiTD.Text = dataTable.Rows[curRec][2].ToString();
+                txtTenTochuc.Text = dataTable.Rows[curRec][3].ToString();
+            }
         }
         private void TrinhDo_Load(object sender, EventArgs e)
         {
+            trinhdo = new BusinessLayer.TrinhDoBsn();
             txtMaTD.Enabled = false;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
@@ -46,7 +51,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
             chuyenmon =new BusinessLayer.ChuyenMonBsn();
             da = chuyenmon.GetDataAdapter();
             da.Fill(ds, "ChuyenMon");
-            cbbTenCM.DataSource = ds;
+            
+            cbbTenCM.DataSource =ds;
             //Nội dung sẽ hiển thị lên combobox
             cbbTenCM.DisplayMember = "ChuyenMon.MaChuyenMon";
             //Giá trị nhận được ứng với từng nội dung được chọn trên combobox
@@ -57,14 +63,26 @@ namespace QUANLIBENHVIEN.PresentationLayer
             curRecord = 0;
             totalRecord = dt.Rows.Count - 1;
             fillControls(dt, 0);
-     
+            //txtTenCM.Text = cbbTenCM.SelectedValue.ToString();
             dgrvTrinhdo.DataSource = dt.DefaultView;
+
             this.Cursor = Cursors.Default;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            DataRow row = dt.NewRow();
+            dt.Rows.Add(row);
+            fillControls(dt, 0);
+            txtLoaiTD.Enabled = true;
+            txtTenTochuc.Enabled = true;
+            txtTenTochuc.Text = "";
+            txtLoaiTD.Text = "";
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
+            tv = "Add";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -85,6 +103,45 @@ namespace QUANLIBENHVIEN.PresentationLayer
             }
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            if ((txtLoaiTD.Text == "") || (txtTenTochuc.Text=="") || trinhdo.MaCM==0)
+            {
+                MessageBox.Show("Mời bạn nhập đầy đủ thông tin!", "Thông báo");
+            }
+            else
+            {
+
+                trinhdo.LoaiTD = txtLoaiTD.Text.ToString();
+                trinhdo.TenTochuc = txtTenTochuc.Text.ToString();
+
+                trinhdo.Insert();
+                dt = trinhdo.Select();
+                dgrvTrinhdo.DataSource = dt.DefaultView;
+                txtLoaiTD.Enabled = false;
+                txtTenTochuc.Enabled = false;
+                btnAdd.Enabled = true;
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
+                btnSave.Enabled = false;
+                btnCancel.Enabled = false;
+                tv = "";
+                
+            }
+        }
+
+        private void cbbTenCM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tv.Equals("Add"))
+            {
+                trinhdo.MaCM = Convert.ToInt32(cbbTenCM.SelectedValue.ToString());
+                MessageBox.Show("" + trinhdo.MaCM);
+                //txtTenCM.Text = cbbTenCM.SelectedValue.ToString();
+            }
+        }
+
+       
        
     }
 }

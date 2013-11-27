@@ -53,6 +53,17 @@ namespace QUANLIBENHVIEN.PresentationLayer
             p.Show();
         }
 
+        private void Capnhapluong_Click(object sender, EventArgs e)
+        {
+            Luong l = new Luong();
+            l.Show();
+        }
+
+        private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
        
     }
 }

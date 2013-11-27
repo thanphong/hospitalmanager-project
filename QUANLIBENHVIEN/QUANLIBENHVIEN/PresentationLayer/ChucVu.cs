@@ -35,8 +35,11 @@ namespace QUANLIBENHVIEN.PresentationLayer
         }
         private void fillControls(DataTable dataTable, int curRec)
         {
-            txtMaCV.Text = dataTable.Rows[curRec][0].ToString();
-            txtTenCV.Text = dataTable.Rows[curRec][1].ToString();
+            if (dataTable.Rows.Count != 0)
+            {
+                txtMaCV.Text = dataTable.Rows[curRec][0].ToString();
+                txtTenCV.Text = dataTable.Rows[curRec][1].ToString();
+            }
         }
         private void dgrvChucVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -110,7 +113,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 btnCancel.Enabled = false;
             }
         }
-
+        //xóa dòng trống khi thêm mà hủy
         public void removeEmptyrow(DataGridView dgv)
         {
             for (int i = 1; i < dgv.RowCount - 1; i++)
@@ -152,6 +155,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
         {
             this.Hide();
         }
-  
+
+        
     }
 }

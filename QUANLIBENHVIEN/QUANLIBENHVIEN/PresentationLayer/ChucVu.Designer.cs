@@ -157,6 +157,7 @@
             this.grbUdChucvu.TabIndex = 25;
             this.grbUdChucvu.TabStop = false;
             this.grbUdChucvu.Text = "Thông tin chức vụ";
+           
             // 
             // txtMaCV
             // 
