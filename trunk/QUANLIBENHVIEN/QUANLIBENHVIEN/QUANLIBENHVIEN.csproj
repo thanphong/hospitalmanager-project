@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\BacSiDiaPhuong.cs" />
+    <Compile Include="BusinessLayer\BNNgoaiTru.cs" />
+    <Compile Include="BusinessLayer\BNNoiTru.cs" />
     <Compile Include="BusinessLayer\BacSiDiaPhuongBsn.cs" />
     <Compile Include="BusinessLayer\BNNgoaiTruBsn.cs" />
     <Compile Include="BusinessLayer\BNNoiTruBsn.cs" />
@@ -57,6 +60,13 @@
     <Compile Include="BusinessLayer\GiuongBsn.cs" />
     <Compile Include="BusinessLayer\HopDongBsn.cs" />
     <Compile Include="BusinessLayer\KinhNghiemBsn.cs" />
+    <Compile Include="BusinessLayer\nhanvienBsn.cs" />
+    <Compile Include="BusinessLayer\LichKham.cs" />
+    <Compile Include="BusinessLayer\Loaithuoc.cs" />
+    <Compile Include="BusinessLayer\LoaiVattu.cs" />
+    <Compile Include="BusinessLayer\LuongBns.cs" />
+    <Compile Include="BusinessLayer\Nhacungcap.cs" />
+    <Compile Include="BusinessLayer\Phong.cs" />
     <Compile Include="BusinessLayer\LichKhamBsn.cs" />
     <Compile Include="BusinessLayer\LoaithuocBsn.cs" />
     <Compile Include="BusinessLayer\LoaiVattuBsn.cs" />
@@ -72,6 +82,7 @@
     <Compile Include="DataLayer\BNNoiTruData.cs" />
     <Compile Include="DataLayer\ChucVuData.cs" />
     <Compile Include="DataLayer\ChuyenMonData.cs" />
+    <Compile Include="DataLayer\CTBenhNhan.cs" />
     <Compile Include="DataLayer\CTBenhNhanData.cs" />
     <Compile Include="DataLayer\CTDonthuocData.cs" />
     <Compile Include="DataLayer\CTPhongData.cs" />
@@ -83,7 +94,9 @@
     <Compile Include="DataLayer\LichKhamData.cs" />
     <Compile Include="DataLayer\LoaithuocData.cs" />
     <Compile Include="DataLayer\LoaivattuData.cs" />
+    <Compile Include="DataLayer\LuongData.cs" />
     <Compile Include="DataLayer\NhacungcapData.cs" />
+    <Compile Include="DataLayer\NhanVienData.cs" />
     <Compile Include="DataLayer\PhongData.cs" />
     <Compile Include="DataLayer\ThanNhanData.cs" />
     <Compile Include="DataLayer\ThuocData.cs" />
@@ -162,12 +175,6 @@
     <Compile Include="PresentationLayer\HopDong.Designer.cs">
       <DependentUpon>HopDong.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\KinhNghiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\KinhNghiem.Designer.cs">
-      <DependentUpon>KinhNghiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\LichKham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,11 +193,11 @@
     <Compile Include="PresentationLayer\LoaiVatTu.Designer.cs">
       <DependentUpon>LoaiVatTu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Nhacungcap.cs">
+    <Compile Include="PresentationLayer\Luong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Nhacungcap.Designer.cs">
-      <DependentUpon>Nhacungcap.cs</DependentUpon>
+    <Compile Include="PresentationLayer\Luong.Designer.cs">
+      <DependentUpon>Luong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\NhanVien.cs">
       <SubType>Form</SubType>
@@ -308,9 +315,6 @@
     <EmbeddedResource Include="PresentationLayer\HopDong.resx">
       <DependentUpon>HopDong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\KinhNghiem.resx">
-      <DependentUpon>KinhNghiem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\LichKham.resx">
       <DependentUpon>LichKham.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,8 +324,8 @@
     <EmbeddedResource Include="PresentationLayer\LoaiVatTu.resx">
       <DependentUpon>LoaiVatTu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Nhacungcap.resx">
-      <DependentUpon>Nhacungcap.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\Luong.resx">
+      <DependentUpon>Luong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>

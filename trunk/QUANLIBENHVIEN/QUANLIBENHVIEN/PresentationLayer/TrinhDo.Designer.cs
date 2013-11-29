@@ -252,6 +252,60 @@
             this.dgrvTrinhdo.Size = new System.Drawing.Size(808, 205);
             this.dgrvTrinhdo.TabIndex = 7;
             // 
+
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(447, 144);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 37);
+            this.btnCancel.TabIndex = 117;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(629, 144);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(92, 37);
+            this.btnDelete.TabIndex = 115;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(538, 144);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(92, 37);
+            this.btnSave.TabIndex = 116;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(356, 144);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(92, 37);
+            this.btnEdit.TabIndex = 114;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(265, 144);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(92, 37);
+            this.btnAdd.TabIndex = 113;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+
+
             // TrinhDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
