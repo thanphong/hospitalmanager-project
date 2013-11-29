@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace QUANLIBENHVIEN.DataLayer
+namespace QUANLIBENHVIEN.BusinessLayer
 {
-    class HopDongData : Data
+    class CTPhongBsn
     {
+        private int maCT, maP, maNV;
+
     }
 }

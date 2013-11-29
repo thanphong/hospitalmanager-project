@@ -21,10 +21,7 @@ namespace QUANLIBENHVIEN.DataLayer
         public DataTable Select()
         {
             try
-            {
-                //string sql = "SELECT * FROM ChucVu";
-                //dt = new DataTable();
-                //dt = data.get(sql);        
+            { 
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "SELECT * FROM ChucVu";
@@ -74,12 +71,12 @@ namespace QUANLIBENHVIEN.DataLayer
                     + chucvu.TenCV + "')";
                 dt = new DataTable();
                 dt = data.GetData(cmd);
-                MessageBox.Show("thêm mới thành công", "Thông báo");
+                MessageBox.Show("Thêm mới thành công", "Thông báo");
                 //conn.Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Bị trùng khóa, thêm mới thất bại", "Thông báo");
+                MessageBox.Show("Thêm mới thất bại", "Thông báo");
             }
             finally
             {

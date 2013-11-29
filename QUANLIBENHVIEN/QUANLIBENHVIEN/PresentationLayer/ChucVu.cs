@@ -20,6 +20,14 @@ namespace QUANLIBENHVIEN.PresentationLayer
             InitializeComponent();
         }
 
+        private void fillControls(DataTable dataTable, int curRec)
+        {
+            if (dataTable.Rows.Count != 0)
+            {
+                txtMaCV.Text = dataTable.Rows[curRec][0].ToString();
+                txtTenCV.Text = dataTable.Rows[curRec][1].ToString();
+            }
+        }
         private void ChucVu_Load(object sender, EventArgs e)
         {         
             txtMaCV.Enabled = false;
@@ -33,14 +41,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             dgrvChucVu.DataSource = dt.DefaultView;
             this.Cursor = Cursors.Default;
         }
-        private void fillControls(DataTable dataTable, int curRec)
-        {
-            if (dataTable.Rows.Count != 0)
-            {
-                txtMaCV.Text = dataTable.Rows[curRec][0].ToString();
-                txtTenCV.Text = dataTable.Rows[curRec][1].ToString();
-            }
-        }
+       
         private void dgrvChucVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ChucVu cv = new ChucVu();

@@ -11,6 +11,7 @@ namespace QUANLIBENHVIEN.BusinessLayer
     {
         private int maTD,maCM;
         private string loaiTD, tenTochuc;
+        DataLayer.TrinhDoData trinhdodata = new DataLayer.TrinhDoData();
         public TrinhDoBsn() 
         { }
         public TrinhDoBsn(int maTD, int maCM, string loaiTD, string tenTochuc)
@@ -20,12 +21,7 @@ namespace QUANLIBENHVIEN.BusinessLayer
             this.loaiTD = loaiTD;
             this.tenTochuc = tenTochuc;
         }
-        //public TrinhDoBsn(int maCM, string loaiTD, string tenTochuc)
-        //{
-        //    this.maCM = maCM;
-        //    this.loaiTD = loaiTD;
-        //    this.tenTochuc = tenTochuc;
-        //}
+
         public int MaTD
         {
             get { return maTD;}
@@ -48,31 +44,26 @@ namespace QUANLIBENHVIEN.BusinessLayer
         }
         public DataTable Select()
         {
-            DataLayer.TrinhDoData trinhdodata = new DataLayer.TrinhDoData();
             trinhdodata.openConnect();
             return trinhdodata.Select();
         }
         public void Update()
         {
-            DataLayer.TrinhDoData trinhdodata = new DataLayer.TrinhDoData();
             trinhdodata.openConnect();
             trinhdodata.Update(this);
         }
         public void Insert()
         {
-            DataLayer.TrinhDoData trinhdodata = new DataLayer.TrinhDoData();
             trinhdodata.openConnect();
             trinhdodata.Insert(this);
         }
         public void Delete(int mcv)
         {
-            DataLayer.TrinhDoData trinhdodata = new DataLayer.TrinhDoData();
             trinhdodata.openConnect();
             trinhdodata.Delete(mcv);
         }
         public SqlDataAdapter GetDataAdapter()
         {
-            DataLayer.TrinhDoData trinhdodata = new DataLayer.TrinhDoData();
             return trinhdodata.GetDataAdapter();
         }
     }

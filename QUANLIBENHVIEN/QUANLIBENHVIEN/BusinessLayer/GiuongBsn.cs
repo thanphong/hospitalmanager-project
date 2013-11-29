@@ -30,31 +30,26 @@ namespace QUANLIBENHVIEN.BusinessLayer
         }
         public DataTable Select()
         {
-            giuongdata = new DataLayer.GiuongData();
             giuongdata.openConnect();
             return giuongdata.Select();
         }
         public void Update()
         {
-            giuongdata = new DataLayer.GiuongData();
             giuongdata.openConnect();
             giuongdata.Update(this);
         }
         public void Insert()
         {
-            giuongdata = new DataLayer.GiuongData();
             giuongdata.openConnect();
             giuongdata.Insert(this);
         }
         public void Delete(int mcv)
         {
-            giuongdata = new DataLayer.GiuongData();
             giuongdata.openConnect();
             giuongdata.Delete(mcv);
         }
         public SqlDataAdapter GetDataAdapter()
         {
-            giuongdata = new DataLayer.GiuongData();
             return giuongdata.GetDataAdapter();
         }
     }

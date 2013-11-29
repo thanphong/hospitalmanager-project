@@ -53,6 +53,7 @@
     <Compile Include="BusinessLayer\ChuyenMonBsn.cs" />
     <Compile Include="BusinessLayer\CTBenhNhanBsn.cs" />
     <Compile Include="BusinessLayer\CTDonthuocBsn.cs" />
+    <Compile Include="BusinessLayer\CTPhongBsn.cs" />
     <Compile Include="BusinessLayer\GiuongBsn.cs" />
     <Compile Include="BusinessLayer\HopDongBsn.cs" />
     <Compile Include="BusinessLayer\KinhNghiemBsn.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="DataLayer\ChuyenMonData.cs" />
     <Compile Include="DataLayer\CTBenhNhanData.cs" />
     <Compile Include="DataLayer\CTDonthuocData.cs" />
+    <Compile Include="DataLayer\CTPhongData.cs" />
     <Compile Include="DataLayer\Data.cs" />
     <Compile Include="DataLayer\DonThuocData.cs" />
     <Compile Include="DataLayer\GiuongData.cs" />
@@ -105,6 +107,12 @@
     </Compile>
     <Compile Include="PresentationLayer\BNNoiTru.Designer.cs">
       <DependentUpon>BNNoiTru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ChiTietPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ChiTietPhong.Designer.cs">
+      <DependentUpon>ChiTietPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ChucVu.cs">
       <SubType>Form</SubType>
@@ -272,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\BNNoiTru.resx">
       <DependentUpon>BNNoiTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ChiTietPhong.resx">
+      <DependentUpon>ChiTietPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ChucVu.resx">
       <DependentUpon>ChucVu.cs</DependentUpon>

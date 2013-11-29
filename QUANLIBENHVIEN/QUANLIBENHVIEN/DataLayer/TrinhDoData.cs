@@ -10,9 +10,6 @@ namespace QUANLIBENHVIEN.DataLayer
 {
     class TrinhDoData:Data
     {
-        //Data data = new Data();
-        //DataTable dt;
-        //SqlCommand cmd;
         public TrinhDoData()
         {
             this.tableName = "TrinhDo";
@@ -25,7 +22,7 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText="SELECT * FROM" + this.tableName;
+                cmd.CommandText = "SELECT MaTrinhDo,TenChuyenMon,LoaiTrinhDo,TenToChuc FROM TrinhDo,ChuyenMon Where TrinhDo.MaChuyenMon=ChuyenMon.MaChuyenMon";
                 dt = new DataTable();
                 dt = GetData(cmd);
             }
@@ -81,7 +78,6 @@ namespace QUANLIBENHVIEN.DataLayer
             finally
             {
                 closeConnect();
-                // conn.Close();
             }
         }
         public void Delete(int ma)

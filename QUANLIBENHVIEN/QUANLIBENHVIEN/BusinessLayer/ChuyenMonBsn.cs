@@ -12,6 +12,7 @@ namespace QUANLIBENHVIEN.BusinessLayer
     {
         private int maCM;
         private string tenCM;
+        DataLayer.ChuyenMonData chuyenmondata = new DataLayer.ChuyenMonData();
         public ChuyenMonBsn()
         { }
         public ChuyenMonBsn(int maCM, string tenCM)
@@ -35,32 +36,26 @@ namespace QUANLIBENHVIEN.BusinessLayer
         }
         public DataTable Select()
         {
-            DataLayer.ChuyenMonData chuyenmondata = new DataLayer.ChuyenMonData();
-            //chuyenmondata.connect();
             chuyenmondata.openConnect();
             return chuyenmondata.Select();
         }
         public void Update()
         {
-            DataLayer.ChuyenMonData ChuyenMonData = new DataLayer.ChuyenMonData();
-            ChuyenMonData.openConnect();
-            ChuyenMonData.Update(this);
+            chuyenmondata.openConnect();
+            chuyenmondata.Update(this);
         }
         public void Insert()
         {
-            DataLayer.ChuyenMonData ChuyenMonData = new DataLayer.ChuyenMonData();
-            ChuyenMonData.openConnect();
-            ChuyenMonData.Insert(this);
+            chuyenmondata.openConnect();
+            chuyenmondata.Insert(this);
         }
         public void Delete(int  mcv)
         {
-            DataLayer.ChuyenMonData ChuyenMonData = new DataLayer.ChuyenMonData();
-            ChuyenMonData.openConnect();
-            ChuyenMonData.Delete(mcv);
+            chuyenmondata.openConnect();
+            chuyenmondata.Delete(mcv);
         }
         public SqlDataAdapter GetDataAdapter()
         {
-            DataLayer.ChuyenMonData chuyenmondata = new DataLayer.ChuyenMonData();
             return chuyenmondata.GetDataAdapter();
         }
     }
