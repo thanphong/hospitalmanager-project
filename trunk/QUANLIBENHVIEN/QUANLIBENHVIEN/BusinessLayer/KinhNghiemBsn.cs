@@ -11,7 +11,7 @@ namespace QUANLIBENHVIEN.BusinessLayer
     {
         private int maKN, maNV, maCM, maTD;
         private DateTime ngayBD, ngayKT;
-
+        DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
         public KinhNghiemBsn()
         { }
         public KinhNghiemBsn(int maKN, int maNV, int maCM, int maTD, DateTime ngayBD, DateTime ngayKT)
@@ -78,11 +78,10 @@ namespace QUANLIBENHVIEN.BusinessLayer
         //    kinhnghiemdata.openConnect();
         //    kinhnghiemdata.Delete(mcv);
         //}
-        //public SqlDataAdapter GetDataAdapter()
-        //{
-        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-        //    return kinhnghiemdata.GetDataAdapter();
-        //}
+        public SqlDataAdapter GetDataAdapter()
+        {
+            return kinhnghiemdata.GetDataAdapter();
+        }
     }
 }
 

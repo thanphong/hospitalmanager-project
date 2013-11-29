@@ -12,6 +12,7 @@ namespace QUANLIBENHVIEN.BusinessLayer
     {
         private int maCV;
         private string tenCV;
+        DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
         public ChucVuBsn()
         {
         }
@@ -40,28 +41,27 @@ namespace QUANLIBENHVIEN.BusinessLayer
         }
         public DataTable Select()
         {
-            DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
-            //chucvudata.connect();
             chucvudata.openConnect();
             return chucvudata.Select();
         }
         public void Update()
         {
-            DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
             chucvudata.openConnect();
             chucvudata.Update(this);
         }
         public void Insert()
         {
-            DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
             chucvudata.openConnect();
             chucvudata.Insert(this);
         }
         public void Delete(int  mcv)
         {
-            DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
             chucvudata.openConnect();
             chucvudata.Delete(mcv);
+        }
+        public SqlDataAdapter GetDataAdapter()
+        {
+            return chucvudata.GetDataAdapter();
         }
     }
 }

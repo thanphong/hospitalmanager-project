@@ -5,7 +5,7 @@ using System.Text;
 
 namespace QUANLIBENHVIEN.DataLayer
 {
-    class HopDongData : Data
+    class NhanVienData
     {
     }
 }

@@ -127,7 +127,7 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                 openConnect();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from " + tableName;
+                cmd.CommandText = "SELECT * FROM " + tableName;
                 da = new SqlDataAdapter(cmd.CommandText, conn);
                 closeConnect();
             }
