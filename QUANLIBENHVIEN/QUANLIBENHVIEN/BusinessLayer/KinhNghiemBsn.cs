@@ -7,14 +7,14 @@ using System.Data.SqlClient;
 
 namespace QUANLIBENHVIEN.BusinessLayer
 {
-    class KinhNghiemBsn
+    class nhanvienBsn
     {
         private int maKN, maNV, maCM, maTD;
         private DateTime ngayBD, ngayKT;
-        DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-        public KinhNghiemBsn()
+        DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+        public nhanvienBsn()
         { }
-        public KinhNghiemBsn(int maKN, int maNV, int maCM, int maTD, DateTime ngayBD, DateTime ngayKT)
+        public nhanvienBsn(int maKN, int maNV, int maCM, int maTD, DateTime ngayBD, DateTime ngayKT)
         {
             this.maKN = maKN;
             this.maNV = maNV;
@@ -54,34 +54,61 @@ namespace QUANLIBENHVIEN.BusinessLayer
             set { ngayKT = value; }
         }
 
-        public DataTable Select()
+        /*public DataTable Select()
         {
-            DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-            kinhnghiemdata.openConnect();
-            return kinhnghiemdata.Select();
+            DataLayer. nhanviendata = new DataLayer.n();
+            nhanviendata.openConnect();
+            return nhanviendata.Select();
+        }*/
+/*<<<<<<< .mine
+
+        public void Update()
+        {
+            DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+            nhanviendata.openConnect();
+            nhanviendata.Update(this);
         }
+       public void Insert()
+        {
+            DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+            nhanviendata.openConnect();
+            nhanviendata.Insert(this);
+        }
+        public void Delete(int mcv)
+        {
+            DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+            nhanviendata.openConnect();
+            nhanviendata.Delete(mcv);
+        }
+        public SqlDataAdapter GetDataAdapter()
+        {
+            DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+            return nhanviendata.GetDataAdapter();
+        }
+=======
         //public void Update()
         //{
-        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-        //    kinhnghiemdata.openConnect();
-        //    kinhnghiemdata.Update(this);
+        //    DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+        //    nhanviendata.openConnect();
+        //    nhanviendata.Update(this);
         //}
         //public void Insert()
         //{
-        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-        //    kinhnghiemdata.openConnect();
-        //    kinhnghiemdata.Insert(this);
+        //    DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+        //    nhanviendata.openConnect();
+        //    nhanviendata.Insert(this);
         //}
         //public void Delete(int mcv)
         //{
-        //    DataLayer.KinhNghiemData kinhnghiemdata = new DataLayer.KinhNghiemData();
-        //    kinhnghiemdata.openConnect();
-        //    kinhnghiemdata.Delete(mcv);
+        //    DataLayer.nhanvienData nhanviendata = new DataLayer.nhanvienData();
+        //    nhanviendata.openConnect();
+        //    nhanviendata.Delete(mcv);
         //}
         public SqlDataAdapter GetDataAdapter()
         {
-            return kinhnghiemdata.GetDataAdapter();
+            return nhanviendata.GetDataAdapter();
         }
+>>>>>>> .r34*/
     }
 }
 

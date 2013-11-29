@@ -7,8 +7,72 @@ namespace QUANLIBENHVIEN.BusinessLayer
 {
     class NhanVienBsn
     {
-    //    private int maNV;
-    //    private string tenNV;
+
+        int maNV, maCV, maLuong, maPhong, maCM, maTD;
+        string tenNV, diachi, dienthoai, soBH;
+        Boolean gioitinh;
+        DateTime ngaysinh;
+        public int MaNV
+        {
+            get { return maNV; }
+            set { maNV = value; }
+        }
+        public int MaCV
+        {
+            get { return maCV; }
+            set { maCV = value; }
+        }
+        public int MaLuong
+        {
+            get { return maLuong; }
+            set { maLuong = value; }
+        }
+        public int MaPhong
+        {
+            get { return maPhong; }
+            set { maPhong = value; }
+        }
+        public int MaCM
+        {
+            get { return maCM; }
+            set { maCM = value; }
+        }
+        public int MaTD
+        {
+            get { return maTD; }
+            set { maTD = value; }
+        }
+        public string TeNV
+        {
+            get { return tenNV; }
+            set { tenNV = value; }
+        }
+        public Boolean Giotinh
+        {
+            get { return gioitinh; }
+            set { gioitinh = value; }
+        }
+        public DateTime Ngaysinh
+        {
+            get { return ngaysinh; }
+            set { ngaysinh = value; }
+        }
+        public string Diachi
+        {
+            get { return diachi; }
+            set { diachi = value; }
+        }
+        public string Dienthoai
+        {
+            get { return dienthoai; }
+            set { dienthoai = value; }
+        }
+        public string SoBH
+        {
+            get { return soBH; }
+            set { soBH = value; }
+        }
+
     //    public ChucVuBsn()
     //    {
     //    }

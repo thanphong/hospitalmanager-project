@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.lbTrinhdo = new System.Windows.Forms.Label();
-            this.lbKinhnghiem = new System.Windows.Forms.Label();
+            this.lbnhanvien = new System.Windows.Forms.Label();
             this.lbThoidiem = new System.Windows.Forms.Label();
             this.lbMucluong = new System.Windows.Forms.Label();
             this.lbTieude = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbbMucluong = new System.Windows.Forms.ComboBox();
             this.cbbTrinhdo = new System.Windows.Forms.ComboBox();
-            this.cbbKinhnghiem = new System.Windows.Forms.ComboBox();
+            this.cbbnhanvien = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -63,15 +63,15 @@
             this.lbTrinhdo.TabIndex = 41;
             this.lbTrinhdo.Text = "Tên thuốc";
             // 
-            // lbKinhnghiem
+            // lbnhanvien
             // 
-            this.lbKinhnghiem.AutoSize = true;
-            this.lbKinhnghiem.Location = new System.Drawing.Point(448, 114);
-            this.lbKinhnghiem.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.lbKinhnghiem.Name = "lbKinhnghiem";
-            this.lbKinhnghiem.Size = new System.Drawing.Size(79, 19);
-            this.lbKinhnghiem.TabIndex = 40;
-            this.lbKinhnghiem.Text = "Tên vật tư";
+            this.lbnhanvien.AutoSize = true;
+            this.lbnhanvien.Location = new System.Drawing.Point(448, 114);
+            this.lbnhanvien.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lbnhanvien.Name = "lbnhanvien";
+            this.lbnhanvien.Size = new System.Drawing.Size(79, 19);
+            this.lbnhanvien.TabIndex = 40;
+            this.lbnhanvien.Text = "Tên vật tư";
             // 
             // lbThoidiem
             // 
@@ -130,13 +130,13 @@
             this.cbbTrinhdo.Size = new System.Drawing.Size(271, 27);
             this.cbbTrinhdo.TabIndex = 45;
             // 
-            // cbbKinhnghiem
+            // cbbnhanvien
             // 
-            this.cbbKinhnghiem.FormattingEnabled = true;
-            this.cbbKinhnghiem.Location = new System.Drawing.Point(565, 111);
-            this.cbbKinhnghiem.Name = "cbbKinhnghiem";
-            this.cbbKinhnghiem.Size = new System.Drawing.Size(271, 27);
-            this.cbbKinhnghiem.TabIndex = 45;
+            this.cbbnhanvien.FormattingEnabled = true;
+            this.cbbnhanvien.Location = new System.Drawing.Point(565, 111);
+            this.cbbnhanvien.Name = "cbbnhanvien";
+            this.cbbnhanvien.Size = new System.Drawing.Size(271, 27);
+            this.cbbnhanvien.TabIndex = 45;
             // 
             // btnThoat
             // 
@@ -224,9 +224,9 @@
             this.grbCapnhat.Controls.Add(this.comboBox1);
             this.grbCapnhat.Controls.Add(this.cbbMucluong);
             this.grbCapnhat.Controls.Add(this.cbbTrinhdo);
-            this.grbCapnhat.Controls.Add(this.cbbKinhnghiem);
+            this.grbCapnhat.Controls.Add(this.cbbnhanvien);
             this.grbCapnhat.Controls.Add(this.lbTrinhdo);
-            this.grbCapnhat.Controls.Add(this.lbKinhnghiem);
+            this.grbCapnhat.Controls.Add(this.lbnhanvien);
             this.grbCapnhat.Controls.Add(this.lbThoidiem);
             this.grbCapnhat.Controls.Add(this.lbMucluong);
             this.grbCapnhat.Controls.Add(this.dTimePThoidiem);
@@ -288,14 +288,14 @@
         #endregion
 
         private System.Windows.Forms.Label lbTrinhdo;
-        private System.Windows.Forms.Label lbKinhnghiem;
+        private System.Windows.Forms.Label lbnhanvien;
         private System.Windows.Forms.Label lbThoidiem;
         private System.Windows.Forms.Label lbMucluong;
         private System.Windows.Forms.Label lbTieude;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cbbMucluong;
         private System.Windows.Forms.ComboBox cbbTrinhdo;
-        private System.Windows.Forms.ComboBox cbbKinhnghiem;
+        private System.Windows.Forms.ComboBox cbbnhanvien;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;

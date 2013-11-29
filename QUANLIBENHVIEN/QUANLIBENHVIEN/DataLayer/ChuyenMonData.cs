@@ -41,6 +41,32 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             return dt;
         }
+        //
+        public DataTable Select(int mcm)
+        {
+            try
+            {
+                //string sql = "SELECT * FROM ChuyenMon";
+                //dt = new DataTable();
+                //dt = data.get(sql);
+                cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM " + this.tableName +" where MaChuyenMon="+mcm;
+                dt = new DataTable();
+                dt = data.GetData(cmd);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi");
+            }
+            finally
+            {
+                data.closeConnect();
+                //       conn.Close();
+            }
+            return dt;
+        }
+        //
         public void Update(BusinessLayer.ChuyenMonBsn chuyenmon)
         {
             try
@@ -107,6 +133,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 data.closeConnect();
             }
         }
+         
       
     }
 }

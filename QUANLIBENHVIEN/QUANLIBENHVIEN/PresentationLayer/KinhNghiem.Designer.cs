@@ -1,6 +1,6 @@
 ﻿namespace QUANLIBENHVIEN.PresentationLayer
 {
-    partial class KinhNghiem
+    partial class nhanvien
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.cbbTenNV = new System.Windows.Forms.ComboBox();
             this.lbNgayKT = new System.Windows.Forms.Label();
             this.grbThongtin = new System.Windows.Forms.GroupBox();
-            this.dgrvKinhnghiem = new System.Windows.Forms.DataGridView();
+            this.dgrvnhanvien = new System.Windows.Forms.DataGridView();
             this.dTimePNgayBT = new System.Windows.Forms.DateTimePicker();
             this.dTimePNgayKT = new System.Windows.Forms.DateTimePicker();
             this.grbCapnhat = new System.Windows.Forms.GroupBox();
@@ -51,7 +51,7 @@
             this.lbTieude = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.grbThongtin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrvKinhnghiem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrvnhanvien)).BeginInit();
             this.grbCapnhat.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,7 +171,7 @@
             // 
             // grbThongtin
             // 
-            this.grbThongtin.Controls.Add(this.dgrvKinhnghiem);
+            this.grbThongtin.Controls.Add(this.dgrvnhanvien);
             this.grbThongtin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grbThongtin.Location = new System.Drawing.Point(18, 305);
             this.grbThongtin.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
@@ -183,14 +183,14 @@
             this.grbThongtin.TabStop = false;
             this.grbThongtin.Text = "Danh sách kinh nghiệm";
             // 
-            // dgrvKinhnghiem
+            // dgrvnhanvien
             // 
-            this.dgrvKinhnghiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrvKinhnghiem.Location = new System.Drawing.Point(12, 21);
-            this.dgrvKinhnghiem.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.dgrvKinhnghiem.Name = "dgrvKinhnghiem";
-            this.dgrvKinhnghiem.Size = new System.Drawing.Size(770, 241);
-            this.dgrvKinhnghiem.TabIndex = 7;
+            this.dgrvnhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrvnhanvien.Location = new System.Drawing.Point(12, 21);
+            this.dgrvnhanvien.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.dgrvnhanvien.Name = "dgrvnhanvien";
+            this.dgrvnhanvien.Size = new System.Drawing.Size(770, 241);
+            this.dgrvnhanvien.TabIndex = 7;
             // 
             // dTimePNgayBT
             // 
@@ -280,7 +280,7 @@
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // KinhNghiem
+            // nhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -297,10 +297,10 @@
             this.Controls.Add(this.grbCapnhat);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "KinhNghiem";
-            this.Text = "KinhNghiem";
+            this.Name = "nhanvien";
+            this.Text = "nhanvien";
             this.grbThongtin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgrvKinhnghiem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrvnhanvien)).EndInit();
             this.grbCapnhat.ResumeLayout(false);
             this.grbCapnhat.PerformLayout();
             this.ResumeLayout(false);
@@ -322,7 +322,7 @@
         private System.Windows.Forms.ComboBox cbbTenNV;
         private System.Windows.Forms.Label lbNgayKT;
         private System.Windows.Forms.GroupBox grbThongtin;
-        private System.Windows.Forms.DataGridView dgrvKinhnghiem;
+        private System.Windows.Forms.DataGridView dgrvnhanvien;
         private System.Windows.Forms.DateTimePicker dTimePNgayBT;
         private System.Windows.Forms.DateTimePicker dTimePNgayKT;
         private System.Windows.Forms.GroupBox grbCapnhat;

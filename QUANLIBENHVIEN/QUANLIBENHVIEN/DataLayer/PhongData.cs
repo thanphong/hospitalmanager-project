@@ -4,19 +4,19 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using QUANLIBENHVIEN.DataLayer;
 namespace QUANLIBENHVIEN.DataLayer
 {
-    class PhongData:Data
+    class PhongData : Data
     {
         public PhongData()
         {
             this.tableName = "Phong";
-            this.fieldList = "TenPhong,TongSoGiuong,SoGiuongTrong,Vitri";
+            this.fieldList = "TenPhong, TongSoGiuong, SoGiuongTrong, Vitri";
         }
-
+        //
         public DataTable Select()
         {
             try

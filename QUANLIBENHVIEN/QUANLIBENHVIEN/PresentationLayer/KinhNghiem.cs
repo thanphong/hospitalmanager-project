@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QUANLIBENHVIEN.PresentationLayer
 {
-    public partial class KinhNghiem : Form
+    public partial class nhanvien : Form
     {
-        public KinhNghiem()
+        public nhanvien()
         {
             InitializeComponent();
         }

@@ -22,7 +22,10 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
+
                 cmd.CommandText = "SELECT MaTrinhDo,TenChuyenMon,LoaiTrinhDo,TenToChuc FROM TrinhDo,ChuyenMon Where TrinhDo.MaChuyenMon=ChuyenMon.MaChuyenMon";
+
+
                 dt = new DataTable();
                 dt = GetData(cmd);
             }
