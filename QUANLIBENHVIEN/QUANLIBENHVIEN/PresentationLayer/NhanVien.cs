@@ -20,7 +20,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
         BusinessLayer.ChucVuBsn chucvu;
         BusinessLayer.LuongBns luong;
         Dictionary<string, int> gioitinh = new Dictionary<string, int>();
-        //Hashtable gioitinh = new Hashtable();
         SqlDataAdapter da;
         DataSet ds = new DataSet();
         DataTable dt;
@@ -41,8 +40,22 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 processControlsEnable(ctrlChild,en);
             }
         }
+        private void processControlsSetText(Control ctrl)
+        {
+            if ((ctrl.GetType() == typeof(TextBox) || ctrl.GetType() == typeof(ComboBox)))
+            {
+                ctrl.Text = ""; ;
+            }
+            //xu ly cac dieu khien theo phuong phap de quy
+            foreach (Control ctrlChild in ctrl.Controls)
+            {
+                processControlsSetText(ctrlChild);
+            }
+        }
         private void NhanVien_Load(object sender, EventArgs e)
         {
+            btnSave.Enabled = false;
+            btnCancel.Enabled = false;
             gioitinh.Add("Nam",1);
             gioitinh.Add("Nữ", 0);
             nhanvien = new BusinessLayer.NhanVienBsn();
@@ -50,13 +63,19 @@ namespace QUANLIBENHVIEN.PresentationLayer
             processControlsEnable(this,false);
             fillDataControl(this);
             dgrvNhanvien.DataSource = dt.DefaultView;
-            
+            fillControls();
             this.Cursor = Cursors.Default;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            btnAdd.Enabled = false;
+            btnCancel.Enabled = true;
+            btnSave.Enabled = true;
+            btnEdit.Enabled = false;
+            btnDelete.Enabled = false;
             processControlsEnable(this, true);
+            processControlsSetText(this);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -75,18 +94,35 @@ namespace QUANLIBENHVIEN.PresentationLayer
             }
             
         }
+        
         //
-        private void fillControls(DataTable dataTable, int curRec)
+        private void fillControls()
         {
-            if (dataTable.Rows.Count != 0)
-            {
-                txtMaNV.Text = dataTable.Rows[curRec][0].ToString();
-                txtTenNV.Text = dataTable.Rows[curRec][1].ToString();
-                //txtSodt.Text.
-                //txtLoaiTD.Text = dataTable.Rows[curRec][1].ToString();
-                //txtTenTochuc.Text = dataTable.Rows[curRec][2].ToString();
-
-            }
+           
+            txtMaNV.DataBindings.Clear();
+            txtMaNV.DataBindings.Add("Text", dgrvNhanvien.DataSource, "MaNhanVien");
+            txtDiachi.DataBindings.Clear();
+            txtDiachi.DataBindings.Add("Text", dgrvNhanvien.DataSource, "DiaChi");
+            txtSobaohiem.DataBindings.Clear();
+            txtSobaohiem.DataBindings.Add("Text", dgrvNhanvien.DataSource, "SoBaoHiem");
+            txtSodt.DataBindings.Clear();
+            txtSodt.DataBindings.Add("Text", dgrvNhanvien.DataSource, "DienThoai");
+            txtTenNV.DataBindings.Clear();
+            txtTenNV.DataBindings.Add("Text", dgrvNhanvien.DataSource, "Ten");
+            dTimePNgaysinh.DataBindings.Clear();
+            dTimePNgaysinh.DataBindings.Add("Value", dgrvNhanvien.DataSource, "NgaySinh");
+            cmbChuyenMon.DataBindings.Clear();
+            cmbChuyenMon.DataBindings.Add("Text", dgrvNhanvien.DataSource, "TenChuyenMon");
+            cbbChucvu.DataBindings.Clear();
+            cbbChucvu.DataBindings.Add("Text", dgrvNhanvien.DataSource, "TenCV");
+            cbbMaphong.DataBindings.Clear();
+            cbbMaphong.DataBindings.Add("Text", dgrvNhanvien.DataSource, "TenPhong");
+            cbbMucluong.DataBindings.Clear();
+            cbbMucluong.DataBindings.Add("Text", dgrvNhanvien.DataSource, "Luong");
+            cbbTrinhdo.DataBindings.Clear();
+            cbbTrinhdo.DataBindings.Add("Text", dgrvNhanvien.DataSource, "LoaiTrinhDo");
+            //cbbGioitinh.DataBindings.Add("Text", dgrvNhanvien.DataSource, "Gioitinh");
+          
         }
         //
         public void fillDataControl(Control ctrl)
@@ -148,6 +184,12 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 }
                 fillDataControl(ctrlChild);
             }
+        }
+
+        private void dgrvNhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fillControls();
+            //int Rcur=dgrvNhanvien.Rows.
         }
         
         

@@ -124,6 +124,7 @@
             this.dgrvNhanvien.Name = "dgrvNhanvien";
             this.dgrvNhanvien.Size = new System.Drawing.Size(848, 158);
             this.dgrvNhanvien.TabIndex = 7;
+            this.dgrvNhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvNhanvien_CellContentClick);
             // 
             // btnSave
             // 
