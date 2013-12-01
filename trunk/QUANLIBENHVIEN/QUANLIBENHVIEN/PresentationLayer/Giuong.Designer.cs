@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbCapnhat = new System.Windows.Forms.GroupBox();
+            this.txtMaG = new System.Windows.Forms.TextBox();
             this.lbMagiuong = new System.Windows.Forms.Label();
             this.cbbTenphong = new System.Windows.Forms.ComboBox();
             this.lbTenphong = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtMaG = new System.Windows.Forms.TextBox();
             this.grbCapnhat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvGiuong)).BeginInit();
             this.grbThongtin.SuspendLayout();
@@ -62,6 +62,13 @@
             this.grbCapnhat.TabIndex = 44;
             this.grbCapnhat.TabStop = false;
             this.grbCapnhat.Text = "Thông tin giường";
+            // 
+            // txtMaG
+            // 
+            this.txtMaG.Location = new System.Drawing.Point(122, 65);
+            this.txtMaG.Name = "txtMaG";
+            this.txtMaG.Size = new System.Drawing.Size(243, 26);
+            this.txtMaG.TabIndex = 26;
             // 
             // lbMagiuong
             // 
@@ -94,9 +101,9 @@
             // 
             // dgrvGiuong
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgrvGiuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgrvGiuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgrvGiuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrvGiuong.Location = new System.Drawing.Point(10, 32);
             this.dgrvGiuong.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
@@ -171,6 +178,7 @@
             this.btnDelete.TabIndex = 52;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -192,13 +200,6 @@
             this.btnCancel.TabIndex = 105;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // txtMaG
-            // 
-            this.txtMaG.Location = new System.Drawing.Point(122, 65);
-            this.txtMaG.Name = "txtMaG";
-            this.txtMaG.Size = new System.Drawing.Size(243, 26);
-            this.txtMaG.TabIndex = 26;
             // 
             // Giuong
             // 
