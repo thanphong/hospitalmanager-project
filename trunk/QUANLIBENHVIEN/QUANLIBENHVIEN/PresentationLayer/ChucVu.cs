@@ -44,7 +44,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
        
         private void dgrvChucVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ChucVu cv = new ChucVu();
             txtMaCV.DataBindings.Clear();
             txtMaCV.DataBindings.Add("Text", dgrvChucVu.DataSource, "MaCV");
             txtTenCV.DataBindings.Clear();

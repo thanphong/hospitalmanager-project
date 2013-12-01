@@ -52,6 +52,7 @@
             this.taoBaoCaothôngKêToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLiVâtTưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.câpNhâtPhongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capnhatchitietphongToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.câpNhâtGiươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.câpNhâtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -262,6 +263,7 @@
             // 
             this.quanLiVâtTưToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.câpNhâtPhongToolStripMenuItem,
+            this.capnhatchitietphongToolStripMenuItem1,
             this.câpNhâtGiươngToolStripMenuItem,
             this.câpNhâtToolStripMenuItem,
             this.toolStripSeparator3,
@@ -279,6 +281,14 @@
             this.câpNhâtPhongToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.câpNhâtPhongToolStripMenuItem.Text = "Cập nhật phòng";
             this.câpNhâtPhongToolStripMenuItem.Click += new System.EventHandler(this.câpNhâtPhongToolStripMenuItem_Click);
+            // 
+            // capnhatchitietphongToolStripMenuItem1
+            // 
+            this.capnhatchitietphongToolStripMenuItem1.Image = global::QUANLIBENHVIEN.Properties.Resources.Cham1;
+            this.capnhatchitietphongToolStripMenuItem1.Name = "capnhatchitietphongToolStripMenuItem1";
+            this.capnhatchitietphongToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.capnhatchitietphongToolStripMenuItem1.Text = "Cập nhật chi tiết phòng";
+            this.capnhatchitietphongToolStripMenuItem1.Click += new System.EventHandler(this.capnhatchitietphongToolStripMenuItem1_Click);
             // 
             // câpNhâtGiươngToolStripMenuItem
             // 
@@ -350,6 +360,7 @@
             this.câpNhâtNhaCungCâpToolStripMenuItem.Name = "câpNhâtNhaCungCâpToolStripMenuItem";
             this.câpNhâtNhaCungCâpToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.câpNhâtNhaCungCâpToolStripMenuItem.Text = "Cập nhật nhà cung cấp";
+            this.câpNhâtNhaCungCâpToolStripMenuItem.Click += new System.EventHandler(this.câpNhâtNhaCungCâpToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -474,5 +485,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem Capnhapluong;
+        private System.Windows.Forms.ToolStripMenuItem capnhatchitietphongToolStripMenuItem1;
     }
 }

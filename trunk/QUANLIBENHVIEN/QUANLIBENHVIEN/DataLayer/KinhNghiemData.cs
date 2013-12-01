@@ -13,7 +13,8 @@ namespace QUANLIBENHVIEN.DataLayer
     class KinhNghiemData :Data
     {
         Data data = new Data(); // Khởi tạo đối tượng connect
-        
+        DataTable dt;
+        SqlCommand cmd;
         public KinhNghiemData()
         {
             this.tableName = "KinhNghiem";

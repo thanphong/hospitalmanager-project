@@ -32,6 +32,7 @@
             this.lbTieude = new System.Windows.Forms.Label();
             this.grbUdTD = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cbbTenCM = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtTenTochuc = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.lbLoaiTD = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtMaTD = new System.Windows.Forms.TextBox();
             this.txtLoaiTD = new System.Windows.Forms.TextBox();
             this.lbTenTochuc = new System.Windows.Forms.Label();
@@ -76,6 +78,7 @@
             // grbUdTD
             // 
             this.grbUdTD.Controls.Add(this.btnCancel);
+            this.grbUdTD.Controls.Add(this.cbbTenCM);
             this.grbUdTD.Controls.Add(this.btnDelete);
             this.grbUdTD.Controls.Add(this.txtTenTochuc);
             this.grbUdTD.Controls.Add(this.btnSave);
@@ -83,6 +86,7 @@
             this.grbUdTD.Controls.Add(this.btnEdit);
             this.grbUdTD.Controls.Add(this.lbLoaiTD);
             this.grbUdTD.Controls.Add(this.btnAdd);
+            this.grbUdTD.Controls.Add(this.label1);
             this.grbUdTD.Controls.Add(this.btnThoat);
             this.grbUdTD.Controls.Add(this.txtMaTD);
             this.grbUdTD.Controls.Add(this.txtLoaiTD);
@@ -107,6 +111,16 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // cbbTenCM
+            // 
+            this.cbbTenCM.FormattingEnabled = true;
+            this.cbbTenCM.Location = new System.Drawing.Point(554, 26);
+            this.cbbTenCM.Name = "cbbTenCM";
+            this.cbbTenCM.Size = new System.Drawing.Size(253, 27);
+            this.cbbTenCM.TabIndex = 25;
+            this.cbbTenCM.Text = "---Chuyên môn----";
+            this.cbbTenCM.SelectedIndexChanged += new System.EventHandler(this.cbbTenCM_SelectedIndexChanged);
+            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(629, 144);
@@ -120,7 +134,7 @@
             // 
             // txtTenTochuc
             // 
-            this.txtTenTochuc.Location = new System.Drawing.Point(148, 74);
+            this.txtTenTochuc.Location = new System.Drawing.Point(148, 98);
             this.txtTenTochuc.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.txtTenTochuc.Name = "txtTenTochuc";
             this.txtTenTochuc.Size = new System.Drawing.Size(659, 26);
@@ -161,7 +175,7 @@
             // lbLoaiTD
             // 
             this.lbLoaiTD.AutoSize = true;
-            this.lbLoaiTD.Location = new System.Drawing.Point(432, 39);
+            this.lbLoaiTD.Location = new System.Drawing.Point(20, 65);
             this.lbLoaiTD.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbLoaiTD.Name = "lbLoaiTD";
             this.lbLoaiTD.Size = new System.Drawing.Size(94, 19);
@@ -179,6 +193,16 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(426, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Chọn chuyên môn";
+            // 
             // txtMaTD
             // 
             this.txtMaTD.Location = new System.Drawing.Point(148, 29);
@@ -189,7 +213,7 @@
             // 
             // txtLoaiTD
             // 
-            this.txtLoaiTD.Location = new System.Drawing.Point(554, 32);
+            this.txtLoaiTD.Location = new System.Drawing.Point(148, 65);
             this.txtLoaiTD.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.txtLoaiTD.Name = "txtLoaiTD";
             this.txtLoaiTD.Size = new System.Drawing.Size(253, 26);
@@ -198,7 +222,7 @@
             // lbTenTochuc
             // 
             this.lbTenTochuc.AutoSize = true;
-            this.lbTenTochuc.Location = new System.Drawing.Point(20, 81);
+            this.lbTenTochuc.Location = new System.Drawing.Point(20, 101);
             this.lbTenTochuc.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.lbTenTochuc.Name = "lbTenTochuc";
             this.lbTenTochuc.Size = new System.Drawing.Size(126, 19);
@@ -268,5 +292,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox grbChuyenmon;
         private System.Windows.Forms.DataGridView dgrvTrinhdo;
+        private System.Windows.Forms.ComboBox cbbTenCM;
+        private System.Windows.Forms.Label label1;
     }
 }

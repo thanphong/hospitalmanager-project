@@ -13,9 +13,8 @@ namespace QUANLIBENHVIEN.BusinessLayer
         DataLayer.GiuongData giuongdata=new DataLayer.GiuongData();
         public GiuongBsn()
         { }
-        public GiuongBsn(int maG, int maP)
+        public GiuongBsn(int maP)
         {
-            this.maG = maG;
             this.maP = maP;
         }
         public int MaG

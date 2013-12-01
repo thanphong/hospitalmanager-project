@@ -55,6 +55,7 @@ E:\hoctap\DH\CD3\THUCHANH\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENH
 E:\hoctap\DH\CD3\THUCHANH\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.tkPhong.resources
 E:\hoctap\DH\CD3\THUCHANH\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Vattudungcu.resources
 E:\hoctap\DH\CD3\THUCHANH\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.YeuCauPhong.resources
+E:\hoctap\DH\CD3\THUCHANH\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Luong.resources
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.BacSiDiaPhuong.resources
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.BNNgoaiTru.resources
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.BNNoiTru.resources
@@ -71,9 +72,4 @@ E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Deb
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Timkiembenhnhan.resources
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Timkiemdungcu.resources
 E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Vattudungcu.resources
-E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.ChiTietPhong.resources
-<<<<<<< .mine
-E:\hoctap\DH\CD3\THUCHANH\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.ChiTietPhong.resources
-E:\hoctap\DH\CD3\THUCHANH\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.Luong.resources
-=======
->>>>>>> .r34
+E:\LEARN\DaiHoc\HK3\ChuyenDe3\ThucHanh\QUANLIBENHVIEN\QUANLIBENHVIEN\obj\x86\Debug\QUANLIBENHVIEN.PresentationLayer.CTPhong.resources
