@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace QUANLIBENHVIEN.BusinessLayer
 {
@@ -11,6 +13,25 @@ namespace QUANLIBENHVIEN.BusinessLayer
         string tenNV, diachi, dienthoai, soBH;
         Boolean gioitinh;
         DateTime ngaysinh;
+        DataLayer.NhanVienData nhanvien=new DataLayer.NhanVienData();
+        public NhanVienBsn()
+        {
+        }
+        public NhanVienBsn(int macv,int maLuong,int maPhong,int maCM,int maTD,string tenNV,string diachi,string dienthoai,string soBH,Boolean gioitinh,DateTime ngaysinh)
+        {
+            this.maCV = macv;
+            this.maLuong = maLuong;
+            this.maPhong = maPhong;
+            this.maCM = maCM;
+            this.maTD = maTD;
+            this.tenNV = tenNV;
+            this.diachi = diachi;
+            this.dienthoai = dienthoai;
+            this.soBH = soBH;
+            this.gioitinh = gioitinh;
+            this.ngaysinh = ngaysinh;
+
+        }
         public int MaNV
         {
             get { return maNV; }
@@ -71,60 +92,33 @@ namespace QUANLIBENHVIEN.BusinessLayer
             get { return soBH; }
             set { soBH = value; }
         }
+        //
+        public DataTable Select()
+        {
+            nhanvien.openConnect();
+            return nhanvien.Select();
+        }
 
-    //    private int maNV;
-    //    private string tenNV;
-    //    public ChucVuBsn()
-    //    {
-    //    }
-    //    public ChucVuBsn(int maCV)
-    //    {
-    //    }
-    //    public ChucVuBsn(int maCV, string tenCV)
-    //    {
-    //        this.maCV = maCV;
-    //        this.tenCV = tenCV;
-    //    }
-
-    //    public ChucVuBsn(string tenCV)
-    //    {
-    //        this.tenCV = tenCV;
-    //    }
-    //    public int MaCV
-    //    {
-    //        get { return maCV; }
-    //        set { maCV = value; }
-    //    }
-    //    public String TenCV
-    //    {
-    //        get { return tenCV; }
-    //        set { tenCV = value; }
-    //    }
-    //    public DataTable Select()
-    //    {
-    //        DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
-    //        //chucvudata.connect();
-    //        chucvudata.openConnect();
-    //        return chucvudata.Select();
-    //    }
-    //    public void Update()
-    //    {
-    //        DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
-    //        chucvudata.openConnect();
-    //        chucvudata.Update(this);
-    //    }
-    //    public void Insert()
-    //    {
-    //        DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
-    //        chucvudata.openConnect();
-    //        chucvudata.Insert(this);
-    //    }
-    //    public void Delete(int  mcv)
-    //    {
-    //        DataLayer.ChucVuData chucvudata = new DataLayer.ChucVuData();
-    //        chucvudata.openConnect();
-    //        chucvudata.Delete(mcv);
-    //    }
+        public void Update()
+        {
+            nhanvien.openConnect();
+            nhanvien.Update(this);
+        }
+        public void Insert()
+        {
+            nhanvien.openConnect();
+            nhanvien.InsertDetail(this);
+        }
+       /* public void Delete(int mcv)
+        {
+            nhanvien.openConnect();
+            nhanvien.Delete(mcv);
+        }*/
+        public SqlDataAdapter GetDataAdapter()
+        {
+            return nhanvien.GetDataAdapter();
+        }
+   
     }
 }
 
