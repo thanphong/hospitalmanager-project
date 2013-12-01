@@ -75,7 +75,7 @@ namespace QUANLIBENHVIEN.DataLayer
                     + nhanvien.TeNV + "','" + nhanvien.Diachi + "','" + nhanvien.Ngaysinh.ToShortDateString() + "'," + Convert.ToInt32(nhanvien.Giotinh) + ",'" + nhanvien.Dienthoai + "'," + nhanvien.MaCV + "," + nhanvien.MaLuong + ",'" + nhanvien.SoBH + "',"+nhanvien.MaPhong+"," + nhanvien.MaCM + "," + nhanvien.MaTD + ")";
                 dt = new DataTable();
                 dt = GetData(cmd);
-                cmd.CommandText = "select MaCT from " + this.tableName + " where DienThoai='" + nhanvien.Dienthoai+"' and SoBaoHiem='"+nhanvien.SoBH+"'";
+                cmd.CommandText = "SELECT MaCT FROM " + this.tableName + " WHERE DienThoai='" + nhanvien.Dienthoai+"' AND SoBaoHiem='"+nhanvien.SoBH+"'";
                 dt = GetData(cmd);
                 int mnv = Convert.ToInt32(dt.Rows[0][0].ToString());
                 
@@ -84,7 +84,7 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             catch (Exception)
             {
-                MessageBox.Show("B? trùng khóa, thêm m?i chi tiêt th?t b?i", "Thông báo");
+                MessageBox.Show("Thêm mới chi tiêt thất bại", "Thông báo");
             }
             finally
             {
@@ -105,11 +105,11 @@ namespace QUANLIBENHVIEN.DataLayer
                     cmd.CommandText = "INSERT INTO NhanVien (MaCT) values(" + mnv + ")";
                     dt = new DataTable();
                     dt = GetData(cmd);
-                    MessageBox.Show("thêm m?i thành công", "Thông báo");
+                    MessageBox.Show("thêm mới thành công", "Thông báo");
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("B? trùng khóa, thêm m?i th?t b?i", "Thông báo");
+                    MessageBox.Show("Thêm mớii thất bại", "Thông báo");
                 }
                 finally
                 {
