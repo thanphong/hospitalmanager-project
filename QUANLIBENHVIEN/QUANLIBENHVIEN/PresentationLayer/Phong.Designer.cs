@@ -46,8 +46,6 @@
             this.lbTieude = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtGiuongtrong = new System.Windows.Forms.TextBox();
             this.grbThongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvPhong)).BeginInit();
             this.grbCapnhat.SuspendLayout();
@@ -55,7 +53,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(347, 282);
+            this.btnAdd.Location = new System.Drawing.Point(360, 257);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(79, 37);
@@ -90,7 +88,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(430, 282);
+            this.btnEdit.Location = new System.Drawing.Point(438, 257);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(79, 37);
@@ -101,7 +99,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(516, 282);
+            this.btnSave.Location = new System.Drawing.Point(516, 257);
             this.btnSave.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 37);
@@ -112,7 +110,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(682, 282);
+            this.btnDelete.Location = new System.Drawing.Point(672, 257);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(79, 37);
@@ -127,10 +125,8 @@
             this.grbCapnhat.Controls.Add(this.txtMaP);
             this.grbCapnhat.Controls.Add(this.txtTenP);
             this.grbCapnhat.Controls.Add(this.label1);
-            this.grbCapnhat.Controls.Add(this.txtGiuongtrong);
             this.grbCapnhat.Controls.Add(this.txtTonggiuong);
             this.grbCapnhat.Controls.Add(this.lbTenphong);
-            this.grbCapnhat.Controls.Add(this.label2);
             this.grbCapnhat.Controls.Add(this.lbTongsogiuong);
             this.grbCapnhat.Controls.Add(this.lbVitri);
             this.grbCapnhat.Location = new System.Drawing.Point(28, 97);
@@ -229,7 +225,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(770, 282);
+            this.btnThoat.Location = new System.Drawing.Point(750, 257);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(79, 37);
@@ -240,7 +236,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(598, 282);
+            this.btnCancel.Location = new System.Drawing.Point(594, 257);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(79, 37);
@@ -248,24 +244,6 @@
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(423, 116);
-            this.label2.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 19);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Giường trống";
-            // 
-            // txtGiuongtrong
-            // 
-            this.txtGiuongtrong.Location = new System.Drawing.Point(540, 108);
-            this.txtGiuongtrong.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.txtGiuongtrong.Name = "txtGiuongtrong";
-            this.txtGiuongtrong.Size = new System.Drawing.Size(261, 26);
-            this.txtGiuongtrong.TabIndex = 29;
             // 
             // Phong
             // 
@@ -315,7 +293,5 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtMaP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtGiuongtrong;
-        private System.Windows.Forms.Label label2;
     }
 }

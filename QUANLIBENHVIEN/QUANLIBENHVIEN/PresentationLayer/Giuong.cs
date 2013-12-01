@@ -16,7 +16,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
         BusinessLayer.PhongBsn phong = new BusinessLayer.PhongBsn();
         DataTable dt;
         DataSet ds = new DataSet();
-        //int curRecord = 0;
+        int curRecord = 0;
         int totalRecord = 0;
         String tv = "";
         public Giuong()
@@ -48,7 +48,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             cbbTenphong.ValueMember = "Phong.MaPhong";
 
             dt = giuong.Select();
-            //curRecord = 0;
+            curRecord = 0;
             totalRecord = dt.Rows.Count - 1;
             fillControls(dt, 0);
             //txtTenCM.Text = cbbTenCM.SelectedValue.ToString();
@@ -97,6 +97,20 @@ namespace QUANLIBENHVIEN.PresentationLayer
             {
                 giuong.MaP= Convert.ToInt32(cbbTenphong.SelectedValue.ToString());
                 MessageBox.Show("" + giuong.MaP);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có muốn xóa dòng này? ",
+               "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                giuong.Delete(int.Parse(txtMaG.Text));
+                totalRecord--;
+                fillControls(dt, 0);
+                dt = giuong.Select();
+                dgrvGiuong.DataSource = dt.DefaultView;
             }
         }
     }

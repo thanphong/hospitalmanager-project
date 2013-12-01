@@ -19,10 +19,7 @@ namespace QUANLIBENHVIEN.DataLayer
         public DataTable Select()
         {
             try
-            {
-                //string sql = "SELECT * FROM ChucVu";
-                //dt = new DataTable();
-                //dt = data.get(sql);        
+            {      
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "SELECT * FROM"+ this.tableName;

@@ -15,11 +15,17 @@ namespace QUANLIBENHVIEN.BusinessLayer
         public PhongBsn()
         {
         }
-        public PhongBsn(string tenP, int tongGiuong,int soGT,string viTri)
+        public PhongBsn(string tenP, int tongGiuong,int soGT, string viTri)
         {
             this.tenP = tenP;
             this.tongGiuong = tongGiuong;
             this.soGT = soGT;
+            this.viTri = viTri;
+        }
+        public PhongBsn(string tenP, int tongGiuong, string viTri)
+        {
+            this.tenP = tenP;
+            this.tongGiuong = tongGiuong;
             this.viTri = viTri;
         }
         public int MaP
