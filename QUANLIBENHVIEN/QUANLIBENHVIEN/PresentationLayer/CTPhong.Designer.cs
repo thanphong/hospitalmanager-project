@@ -80,6 +80,7 @@
             this.dgrvCTPhong.Name = "dgrvCTPhong";
             this.dgrvCTPhong.Size = new System.Drawing.Size(539, 160);
             this.dgrvCTPhong.TabIndex = 7;
+            this.dgrvCTPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvCTPhong_CellContentClick);
             // 
             // btnAdd
             // 
@@ -201,7 +202,7 @@
             this.cbbTenphong.TabIndex = 25;
             this.cbbTenphong.SelectedIndexChanged += new System.EventHandler(this.cbbTenphong_SelectedIndexChanged);
             // 
-            // ChiTietPhong
+            // CTPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,7 +219,7 @@
             this.Controls.Add(this.btnThoat);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ChiTietPhong";
+            this.Name = "CTPhong";
             this.Text = "Chi Tiết Phòng";
             this.Load += new System.EventHandler(this.ChiTietPhong_Load);
             this.groupBox1.ResumeLayout(false);

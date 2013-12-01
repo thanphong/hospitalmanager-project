@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(614, 360);
+            this.btnThoat.Location = new System.Drawing.Point(329, 318);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(9);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(81, 38);
@@ -62,10 +62,10 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(290, 360);
+            this.btnEdit.Location = new System.Drawing.Point(329, 186);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(9);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(81, 38);
+            this.btnEdit.Size = new System.Drawing.Size(80, 33);
             this.btnEdit.TabIndex = 38;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -73,10 +73,10 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(371, 360);
+            this.btnSave.Location = new System.Drawing.Point(329, 252);
             this.btnSave.Margin = new System.Windows.Forms.Padding(9);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 38);
+            this.btnSave.Size = new System.Drawing.Size(80, 35);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -85,10 +85,10 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(209, 360);
+            this.btnAdd.Location = new System.Drawing.Point(329, 154);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(9);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(81, 38);
+            this.btnAdd.Size = new System.Drawing.Size(80, 35);
             this.btnAdd.TabIndex = 37;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -97,10 +97,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(533, 360);
+            this.btnDelete.Location = new System.Drawing.Point(329, 286);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(9);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(81, 38);
+            this.btnDelete.Size = new System.Drawing.Size(81, 33);
             this.btnDelete.TabIndex = 39;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -112,18 +112,18 @@
             this.grbUdCM.Controls.Add(this.lbMaCM);
             this.grbUdCM.Controls.Add(this.lbTenCM);
             this.grbUdCM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbUdCM.Location = new System.Drawing.Point(36, 101);
+            this.grbUdCM.Location = new System.Drawing.Point(14, 126);
             this.grbUdCM.Margin = new System.Windows.Forms.Padding(4);
             this.grbUdCM.Name = "grbUdCM";
             this.grbUdCM.Padding = new System.Windows.Forms.Padding(4);
-            this.grbUdCM.Size = new System.Drawing.Size(409, 219);
+            this.grbUdCM.Size = new System.Drawing.Size(302, 219);
             this.grbUdCM.TabIndex = 36;
             this.grbUdCM.TabStop = false;
             this.grbUdCM.Text = "Thông tin lương";
             // 
             // txtMaluong
             // 
-            this.txtMaluong.Location = new System.Drawing.Point(122, 75);
+            this.txtMaluong.Location = new System.Drawing.Point(17, 63);
             this.txtMaluong.Margin = new System.Windows.Forms.Padding(9);
             this.txtMaluong.Name = "txtMaluong";
             this.txtMaluong.Size = new System.Drawing.Size(270, 26);
@@ -131,7 +131,7 @@
             // 
             // txtMucluong
             // 
-            this.txtMucluong.Location = new System.Drawing.Point(122, 119);
+            this.txtMucluong.Location = new System.Drawing.Point(17, 134);
             this.txtMucluong.Margin = new System.Windows.Forms.Padding(9);
             this.txtMucluong.Name = "txtMucluong";
             this.txtMucluong.Size = new System.Drawing.Size(270, 26);
@@ -141,7 +141,7 @@
             // lbMaCM
             // 
             this.lbMaCM.AutoSize = true;
-            this.lbMaCM.Location = new System.Drawing.Point(28, 75);
+            this.lbMaCM.Location = new System.Drawing.Point(13, 35);
             this.lbMaCM.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.lbMaCM.Name = "lbMaCM";
             this.lbMaCM.Size = new System.Drawing.Size(76, 19);
@@ -151,7 +151,7 @@
             // lbTenCM
             // 
             this.lbTenCM.AutoSize = true;
-            this.lbTenCM.Location = new System.Drawing.Point(28, 119);
+            this.lbTenCM.Location = new System.Drawing.Point(13, 103);
             this.lbTenCM.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.lbTenCM.Name = "lbTenCM";
             this.lbTenCM.Size = new System.Drawing.Size(85, 19);
@@ -166,7 +166,7 @@
             this.lbTieudeCM.Location = new System.Drawing.Point(0, 0);
             this.lbTieudeCM.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.lbTieudeCM.Name = "lbTieudeCM";
-            this.lbTieudeCM.Size = new System.Drawing.Size(963, 92);
+            this.lbTieudeCM.Size = new System.Drawing.Size(899, 98);
             this.lbTieudeCM.TabIndex = 34;
             this.lbTieudeCM.Text = "LƯƠNG";
             this.lbTieudeCM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,24 +174,24 @@
             // dgrvLuong
             // 
             this.dgrvLuong.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgrvLuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgrvLuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgrvLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrvLuong.Location = new System.Drawing.Point(18, 28);
+            this.dgrvLuong.Location = new System.Drawing.Point(10, 28);
             this.dgrvLuong.Margin = new System.Windows.Forms.Padding(9);
             this.dgrvLuong.Name = "dgrvLuong";
-            this.dgrvLuong.Size = new System.Drawing.Size(427, 174);
+            this.dgrvLuong.Size = new System.Drawing.Size(435, 226);
             this.dgrvLuong.TabIndex = 7;
             this.dgrvLuong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvLuong_CellContentClick);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(452, 360);
+            this.btnCancel.Location = new System.Drawing.Point(329, 218);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(9);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(81, 38);
+            this.btnCancel.Size = new System.Drawing.Size(80, 35);
             this.btnCancel.TabIndex = 40;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -200,22 +200,22 @@
             // 
             this.grbChuyenmon.Controls.Add(this.dgrvLuong);
             this.grbChuyenmon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grbChuyenmon.Location = new System.Drawing.Point(458, 101);
+            this.grbChuyenmon.Location = new System.Drawing.Point(427, 126);
             this.grbChuyenmon.Margin = new System.Windows.Forms.Padding(9);
             this.grbChuyenmon.Name = "grbChuyenmon";
             this.grbChuyenmon.Padding = new System.Windows.Forms.Padding(9);
             this.grbChuyenmon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grbChuyenmon.Size = new System.Drawing.Size(463, 219);
+            this.grbChuyenmon.Size = new System.Drawing.Size(454, 268);
             this.grbChuyenmon.TabIndex = 35;
             this.grbChuyenmon.TabStop = false;
-            this.grbChuyenmon.Text = "Danh sách lương";
+            this.grbChuyenmon.Text = "Danh sách chuyên môn";
             // 
             // Luong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(963, 449);
+            this.ClientSize = new System.Drawing.Size(899, 413);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSave);

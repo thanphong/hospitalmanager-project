@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace QUANLIBENHVIEN.DataLayer
 {
-    class CTPhongData : Data
+    class LoaiThuocData : Data
     {
-        public CTPhongData()
+     Data data = new Data(); // Khởi tạo đối tượng connect
+
+     public LoaiThuocData()
         {
-            this.tableName = "CTPhong";
-            this.fieldList = "MaPhong";
+            this.tableName = "LoaiThuoc";
+            this.fieldList = "Ten";
         }
         public DataTable Select()
         {
@@ -21,9 +24,9 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT MaCT, CTPhong.MaPhong, TenPhong FROM "+this.tableName+" , Phong WHERE Phong.MaPhong=CTPhong.MaPhong";
+                cmd.CommandText = "SELECT * FROM " + this.tableName;
                 dt = new DataTable();
-                dt = GetData(cmd);
+                dt = data.GetData(cmd);
             }
             catch (Exception)
             {
@@ -31,22 +34,21 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             finally
             {
-                closeConnect();
-                //       conn.Close();
+                data.closeConnect();
             }
             return dt;
         }
-        public void Update(BusinessLayer.CTPhongBsn ctphong)
+        public void Update(BusinessLayer.LoaiThuocBsn loaithuoc)
         {
             try
             {
-                cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE " + this.tableName
-                    + " SET MaPhong = '" + ctphong.MaP + "' WHERE MaCT= '"
-                    + ctphong.MaCT + "' ";
-                dt = new DataTable();
-                dt = GetData(cmd);
+                    + " SET Ten= '" + loaithuoc.TenLT + "' WHERE MaLoai = '"
+                    + loaithuoc.MaLT+ "' ";
+                DataTable dt = new DataTable();
+                dt = data.GetData(cmd);
                 MessageBox.Show("Sửa thành công");
             }
             catch (Exception)
@@ -55,29 +57,31 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             finally
             {
-                closeConnect();
+                data.closeConnect();
             }
         }
-        public void Insert(BusinessLayer.CTPhongBsn ctphong)
+        public void Insert(BusinessLayer.LoaiThuocBsn loaithuoc)
         {
             try
             {
-                cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO " + this.tableName
-                    + "(" + this.fieldList + ") VALUES ('"
-                    + ctphong.MaP + "')";
+                    + "(" + this.fieldList + ") values ('"
+                    + loaithuoc.TenLT + "')";
                 dt = new DataTable();
-                dt = GetData(cmd);
-                MessageBox.Show("Thêm mới thành công", "Thông báo");
+                dt = data.GetData(cmd);
+                MessageBox.Show("thêm mới thành công", "Thông báo");
+                //conn.Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Thêm mới thất bại", "Thông báo");
+                MessageBox.Show("Bị trùng khóa, thêm mới thất bại", "Thông báo");
             }
             finally
             {
-                closeConnect();
+                data.closeConnect();
+                // conn.Close();
             }
         }
         public void Delete(int ma)
@@ -87,9 +91,9 @@ namespace QUANLIBENHVIEN.DataLayer
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "DELETE FROM " + this.tableName
-                    + " WHERE MaCT='" + ma + "'";
+                    + " WHERE MaLoai='" + ma + "'";
                 dt = new DataTable();
-                dt = GetData(cmd);
+                dt = data.GetData(cmd);
             }
             catch (Exception)
             {
@@ -97,9 +101,9 @@ namespace QUANLIBENHVIEN.DataLayer
             }
             finally
             {
-                closeConnect();
+                data.closeConnect();
             }
         }
+      
     }
 }
-

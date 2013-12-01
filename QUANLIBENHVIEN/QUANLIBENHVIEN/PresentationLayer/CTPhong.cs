@@ -30,7 +30,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             if (dataTable.Rows.Count != 0)
             {
                 txtMaCTP.Text = dataTable.Rows[curRec][0].ToString();
-                cbbTenphong.Text = dataTable.Rows[curRec][1].ToString();
+                cbbTenphong.Text = dataTable.Rows[curRec][2].ToString();
             }
         }
         private void ChiTietPhong_Load(object sender, EventArgs e)
@@ -56,6 +56,14 @@ namespace QUANLIBENHVIEN.PresentationLayer
             dgrvCTPhong.DataSource = dt.DefaultView;
 
             this.Cursor = Cursors.Default;
+        }
+
+        private void dgrvCTPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaCTP.DataBindings.Clear();
+            txtMaCTP.DataBindings.Add("Text", dgrvCTPhong.DataSource, "MaPhong");
+            cbbTenphong.DataBindings.Clear();
+            cbbTenphong.DataBindings.Add("Text", dgrvCTPhong.DataSource, "TenPhong");
         }
 
         private void processControls(Control ctrl)
@@ -174,5 +182,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
             //    MessageBox.Show("" + ctphong.MaP);
             }
         }
+    
     }
 }
