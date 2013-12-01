@@ -107,7 +107,7 @@ namespace QUANLIBENHVIEN.BusinessLayer
         public void Insert()
         {
             nhanvien.openConnect();
-            nhanvien.InsertDetail(this);
+            nhanvien.insert(this);
         }
        /* public void Delete(int mcv)
         {
