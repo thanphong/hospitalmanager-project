@@ -13,7 +13,7 @@ namespace QUANLIBENHVIEN.DataLayer
         public TrinhDoData()
         {
             this.tableName = "TrinhDo";
-            this.fieldList = "LoaiTrinhDo, TenToChuc, MaChuyenMon";
+            this.fieldList = "LoaiTrinhDo, TenToChuc";
         }
   
         public DataTable Select()
@@ -22,8 +22,10 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-          //      cmd.CommandText = "SELECT MaTrinhDo,TenChuyenMon,LoaiTrinhDo,TenToChuc FROM TrinhDo,ChuyenMon Where TrinhDo.MaChuyenMon=ChuyenMon.MaChuyenMon";
                 cmd.CommandText = "SELECT * FROM TrinhDo";
+
+
+                dt = new DataTable();
                 dt = GetData(cmd);
             }
             catch
@@ -43,7 +45,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE " + this.tableName
-                    + " SET MaChuyenMon= '" + trinhdo.MaCM+"', LoaiTrinhDo= '"+trinhdo.LoaiTD+"' , TenToChuc ='"+trinhdo.TenTochuc+"' WHERE MaTrinhDo = '"
+                    + " SET  LoaiTrinhDo= '"+trinhdo.LoaiTD+"' , TenToChuc ='"+trinhdo.TenTochuc+"' WHERE MaTrinhDo = '"
                     + trinhdo.MaTD+ "' ";
                 dt = new DataTable();
                 dt = GetData(cmd);
@@ -65,7 +67,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO " + this.tableName
-                    + "(" + this.fieldList + ") values ( '"+trinhdo.LoaiTD+"','"+trinhdo.TenTochuc+"',"+trinhdo.MaCM+")";
+                    + "(" + this.fieldList + ") values ( '"+trinhdo.LoaiTD+"','"+trinhdo.TenTochuc+"')";
                 dt = new DataTable();
                 dt = GetData(cmd);
                 MessageBox.Show("thêm mới thành công", "Thông báo");

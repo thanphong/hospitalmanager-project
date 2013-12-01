@@ -58,10 +58,10 @@
     <Compile Include="BusinessLayer\HopDongBsn.cs" />
     <Compile Include="BusinessLayer\KinhNghiemBsn.cs" />
     <Compile Include="BusinessLayer\LichKhamBsn.cs" />
-    <Compile Include="BusinessLayer\LoaiThuocBsn.cs" />
+    <Compile Include="BusinessLayer\LoaithuocBsn.cs" />
     <Compile Include="BusinessLayer\LoaiVattuBsn.cs" />
     <Compile Include="BusinessLayer\LuongBns.cs" />
-    <Compile Include="BusinessLayer\NhaCungCapBsn.cs" />
+    <Compile Include="BusinessLayer\NhacungcapBsn.cs" />
     <Compile Include="BusinessLayer\NhanVienBsn.cs" />
     <Compile Include="BusinessLayer\PhongBsn.cs" />
     <Compile Include="BusinessLayer\ThanNhanBsn.cs" />
@@ -83,10 +83,10 @@
     <Compile Include="DataLayer\HopDongData.cs" />
     <Compile Include="DataLayer\KinhNghiemData.cs" />
     <Compile Include="DataLayer\LichKhamData.cs" />
-    <Compile Include="DataLayer\LoaiThuocData.cs" />
+    <Compile Include="DataLayer\LoaithuocData.cs" />
     <Compile Include="DataLayer\LoaivattuData.cs" />
     <Compile Include="DataLayer\LuongData.cs" />
-    <Compile Include="DataLayer\NhaCungCapData.cs" />
+    <Compile Include="DataLayer\NhacungcapData.cs" />
     <Compile Include="DataLayer\NhanVienData.cs" />
     <Compile Include="DataLayer\PhongData.cs" />
     <Compile Include="DataLayer\ThanNhanData.cs" />
@@ -112,11 +112,11 @@
     <Compile Include="PresentationLayer\BNNoiTru.Designer.cs">
       <DependentUpon>BNNoiTru.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\CTPhong.cs">
+    <Compile Include="PresentationLayer\ChiTietPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\CTPhong.Designer.cs">
-      <DependentUpon>CTPhong.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ChiTietPhong.Designer.cs">
+      <DependentUpon>ChiTietPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ChucVu.cs">
       <SubType>Form</SubType>
@@ -189,6 +189,12 @@
     </Compile>
     <Compile Include="PresentationLayer\LoaiVatTu.Designer.cs">
       <DependentUpon>LoaiVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Luong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Luong.Designer.cs">
+      <DependentUpon>Luong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Nhacungcap.cs">
       <SubType>Form</SubType>
@@ -285,8 +291,8 @@
     <EmbeddedResource Include="PresentationLayer\BNNoiTru.resx">
       <DependentUpon>BNNoiTru.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\CTPhong.resx">
-      <DependentUpon>CTPhong.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ChiTietPhong.resx">
+      <DependentUpon>ChiTietPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ChucVu.resx">
       <DependentUpon>ChucVu.cs</DependentUpon>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\LoaiVatTu.resx">
       <DependentUpon>LoaiVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Luong.resx">
+      <DependentUpon>Luong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Nhacungcap.resx">
       <DependentUpon>Nhacungcap.cs</DependentUpon>

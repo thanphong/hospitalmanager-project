@@ -16,6 +16,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             InitializeComponent();
         }
 
+        
       
     }
 }

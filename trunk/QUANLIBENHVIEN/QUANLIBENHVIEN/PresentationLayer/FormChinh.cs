@@ -55,8 +55,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
 
         private void Capnhapluong_Click(object sender, EventArgs e)
         {
-            //Luong l = new Luong();
-            //l.Show();
+            Luong l = new Luong();
+            l.Show();
         }
 
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,17 +70,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
             g.Show();
         }
 
-        private void capnhatchitietphongToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            CTPhong ctp = new CTPhong();
-            ctp.Show();
-        }
-
-        private void câpNhâtNhaCungCâpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Nhacungcap ncc = new Nhacungcap();
-            ncc.Show();
-        }
-  
+       
     }
 }

@@ -299,6 +299,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KinhNghiem";
             this.Text = "KinhNghiem";
+            
             this.grbThongtin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgrvKinhnghiem)).EndInit();
             this.grbCapnhat.ResumeLayout(false);
