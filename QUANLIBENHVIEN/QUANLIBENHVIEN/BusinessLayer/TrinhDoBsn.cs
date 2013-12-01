@@ -9,15 +9,15 @@ namespace QUANLIBENHVIEN.BusinessLayer
 {
     class TrinhDoBsn
     {
-        private int maTD,maCM;
+        private int maTD;
         private string loaiTD, tenTochuc;
         DataLayer.TrinhDoData trinhdodata = new DataLayer.TrinhDoData();
         public TrinhDoBsn() 
         { }
-        public TrinhDoBsn(int maTD, int maCM, string loaiTD, string tenTochuc)
+        public TrinhDoBsn(int maTD, string loaiTD, string tenTochuc)
         {
             this.maTD = maTD;
-            this.maCM = maCM;
+            
             this.loaiTD = loaiTD;
             this.tenTochuc = tenTochuc;
         }
@@ -27,11 +27,7 @@ namespace QUANLIBENHVIEN.BusinessLayer
             get { return maTD;}
             set { maTD = value;}
         }
-        public int MaCM
-        {
-            get { return maCM;}
-            set { maCM = value; }
-        }
+        
         public string LoaiTD
         {
             get { return loaiTD; }

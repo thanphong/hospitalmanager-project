@@ -28,14 +28,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
             txtTenCM.DataBindings.Add("Text", dgrvChuyenmon.DataSource, "TenChuyenMon");
         }
 
-        private void fillControls(DataTable dataTable, int curRec)
-        {
-            if (dataTable.Rows.Count != 0)
-            {
-                txtMaCM.Text = dataTable.Rows[0][0].ToString();
-                txtTenCM.Text = dataTable.Rows[0][1].ToString();
-            }
-        }
         private void ChuyenMon_Load(object sender, EventArgs e)
         {
             txtMaCM.Enabled = false;
@@ -49,23 +41,21 @@ namespace QUANLIBENHVIEN.PresentationLayer
             dgrvChuyenmon.DataSource = dt.DefaultView;
             this.Cursor = Cursors.Default;
         }
-       
+        private void fillControls(DataTable dataTable, int curRec)
+        {
+            if (dataTable.Rows.Count != 0)
+            {
+                txtMaCM.Text = dataTable.Rows[0][0].ToString();
+                txtTenCM.Text = dataTable.Rows[0][1].ToString();
+            }
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
-             DialogResult dr = MessageBox.Show("Bạn có muốn sửa dòng này? ",
-                "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
             chuyenmon = new BusinessLayer.ChuyenMonBsn(int.Parse(txtMaCM.Text),txtTenCM.Text);
             chuyenmon.Update();
             dt = chuyenmon.Select();
             dgrvChuyenmon.DataSource = dt.DefaultView;
-            }
-            if (dr == DialogResult.No)
-            {
-                dt = chuyenmon.Select();
-                dgrvChuyenmon.DataSource = dt.DefaultView;
-            }
         }
         private void processControls(Control ctrl)
         {

@@ -15,14 +15,14 @@ namespace QUANLIBENHVIEN.PresentationLayer
         BusinessLayer.TrinhDoBsn trinhdo = new BusinessLayer.TrinhDoBsn();
         BusinessLayer.ChuyenMonBsn chuyenmon =new BusinessLayer.ChuyenMonBsn();
         DataTable dt;
-        DataSet ds  = new DataSet();
-        int curRecord = 0;
+        DataSet ds = new DataSet();
+        //int curRecord = 0;
         int totalRecord = 0;
-        String tv = "";
+        //String tv = "";
         public TrinhDo()
         {
             InitializeComponent();
-   
+
         }
 
         private void dgrvTrinhdo_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,68 +31,65 @@ namespace QUANLIBENHVIEN.PresentationLayer
         }
         private void fillControls(DataTable dataTable, int curRec)
         {
-            if (dataTable.Rows.Count!=0)
+            if (dataTable.Rows.Count != 0)
             {
                 txtMaTD.Text = dataTable.Rows[curRec][0].ToString();
-               // txtTenCM.Text = dataTable.Rows[curRec][1].ToString();
-                cbbTenCM.Text = dataTable.Rows[curRec][1].ToString();
-                txtLoaiTD.Text = dataTable.Rows[curRec][2].ToString();
-                txtTenTochuc.Text = dataTable.Rows[curRec][3].ToString();
+              // txtTenCM.Text = dataTable.Rows[curRec][1].ToString();
+                // cbbTenCM.Text = dataTable.Rows[curRec][3].ToString();
+                txtLoaiTD.Text = dataTable.Rows[curRec][1].ToString();
+                txtTenTochuc.Text = dataTable.Rows[curRec][2].ToString();
+
             }
         }
         private void TrinhDo_Load(object sender, EventArgs e)
         {
             trinhdo = new BusinessLayer.TrinhDoBsn();
             txtMaTD.Enabled = false;
+            txtMaTD.Enabled = false;
+            txtTenTochuc.Enabled = false;
+            txtLoaiTD.Enabled = false;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
-
+           
             SqlDataAdapter da;
-            chuyenmon =new BusinessLayer.ChuyenMonBsn();
+            chuyenmon = new BusinessLayer.ChuyenMonBsn();
             da = chuyenmon.GetDataAdapter();
             da.Fill(ds, "ChuyenMon");
+
             
-            cbbTenCM.DataSource =ds;
+            /*cbbTenCM.DataSource =ds;
+
+            cbbTenCM.DataSource = ds;
+
             //Nội dung sẽ hiển thị lên combobox
             cbbTenCM.DisplayMember = "ChuyenMon.TenChuyenMon";
             //Giá trị nhận được ứng với từng nội dung được chọn trên combobox
-            cbbTenCM.ValueMember = "ChuyenMon.MaChuyenMon";
+            cbbTenCM.ValueMember = "ChuyenMon.MaChuyenMon";*/
 
             dt = trinhdo.Select();
-            curRecord = 0;
+            //curRecord = 0;
             totalRecord = dt.Rows.Count - 1;
             fillControls(dt, 0);
-            //txtTenCM.Text = cbbTenCM.SelectedValue.ToString();
             dgrvTrinhdo.DataSource = dt.DefaultView;
 
             this.Cursor = Cursors.Default;
         }
 
-        private void processControls(Control ctrl)
-        {
-            if (ctrl.GetType() == typeof(TextBox))
-            {
-                ctrl.Text = "";
-            }
-            //xu ly cac dieu khien theo phuong phap de quy
-            foreach (Control ctrlChild in ctrl.Controls)
-            {
-                processControls(ctrlChild);
-            }
-        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            processControls(this);
             DataRow row = dt.NewRow();
             dt.Rows.Add(row);
             fillControls(dt, 0);
             txtLoaiTD.Enabled = true;
             txtTenTochuc.Enabled = true;
+           
+            txtTenTochuc.Text = "";
+            txtLoaiTD.Text = "";
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
-            tv = "Add";
+            //tv = "Add";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -101,7 +98,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
                "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                trinhdo = new BusinessLayer.TrinhDoBsn(int.Parse(txtMaTD.Text), int.Parse(cbbTenCM.ValueMember), txtLoaiTD.Text, txtTenTochuc.Text);
+                trinhdo = new BusinessLayer.TrinhDoBsn(int.Parse(txtMaTD.Text), txtLoaiTD.Text, txtTenTochuc.Text);
                 trinhdo.Update();
                 dt = trinhdo.Select();
                 dgrvTrinhdo.DataSource = dt.DefaultView;
@@ -116,7 +113,9 @@ namespace QUANLIBENHVIEN.PresentationLayer
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if ((txtLoaiTD.Text == "") || (txtTenTochuc.Text=="") || trinhdo.MaCM==0)
+
+            if ((txtLoaiTD.Text == "") || (txtTenTochuc.Text=="") )
+
             {
                 MessageBox.Show("Mời bạn nhập đầy đủ thông tin!", "Thông báo");
             }
@@ -136,20 +135,19 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 btnDelete.Enabled = true;
                 btnSave.Enabled = false;
                 btnCancel.Enabled = false;
-                tv = "";
-                
+                //tv = "";
+
             }
         }
 
-        private void cbbTenCM_SelectedIndexChanged(object sender, EventArgs e)
+       /* private void cbbTenCM_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tv.Equals("Add"))
             {
                 trinhdo.MaCM = Convert.ToInt32(cbbTenCM.SelectedValue.ToString());
-                MessageBox.Show("" + trinhdo.MaCM);
-                //txtTenCM.Text = cbbTenCM.SelectedValue.ToString();
             }
-        }
+        }*/
+
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -192,5 +190,6 @@ namespace QUANLIBENHVIEN.PresentationLayer
             int curRow = dgrvTrinhdo.RowCount - 2;
             fillControls(dt, curRow);
         }      
+
     }
 }
