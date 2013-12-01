@@ -23,10 +23,7 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select NhanVien.MaNhanVien,Ten,DiaChi,NgaySinh,Gioitinh,DienThoai,TenCV,Luong,SoBaoHiem,TenPhong,TenChuyenMon,LoaiTrinhDo "
-                + " from CTNhanVien, Luong, Phong, ChuyenMon, TrinhDo,ChucVu,NhanVien"
-                + " where CTNhanVien.MaCv=ChucVu.MaCv and CTNhanVien.MaLuong=Luong.MaLuong and CTNhanVien.MaPhong=Phong.MaPhong "
-                +" and CTNhanVien.MaChuyenMon=ChuyenMon.MaChuyenMon and CTNhanVien.MaTrinhDo=TrinhDo.MaTrinhDo and NhanVien.MaCT=CTNhanVien.MaCT ";
+                cmd.CommandText = "SELECT * FROM " + this.tableName ;
                 dt = new DataTable();
                 dt = GetData(cmd);
             }
@@ -64,59 +61,29 @@ namespace QUANLIBENHVIEN.DataLayer
             }
         }
         //
-        public int InsertDetail(BusinessLayer.NhanVienBsn nhanvien)
+        public void InsertDetail(BusinessLayer.NhanVienBsn nhanvien)
         {
             try
             {
-                cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO " + this.tableName
                     + "(" + this.fieldList + ") VALUES ('"
                     + nhanvien.TeNV + "','" + nhanvien.Diachi + "','" + nhanvien.Ngaysinh.ToShortDateString() + "'," + Convert.ToInt32(nhanvien.Giotinh) + ",'" + nhanvien.Dienthoai + "'," + nhanvien.MaCV + "," + nhanvien.MaLuong + ",'" + nhanvien.SoBH + "',"+nhanvien.MaPhong+"," + nhanvien.MaCM + "," + nhanvien.MaTD + ")";
                 dt = new DataTable();
                 dt = GetData(cmd);
-                cmd.CommandText = "SELECT MaCT FROM " + this.tableName + " WHERE DienThoai='" + nhanvien.Dienthoai+"' AND SoBaoHiem='"+nhanvien.SoBH+"'";
-                dt = GetData(cmd);
-                int mnv = Convert.ToInt32(dt.Rows[0][0].ToString());
-                
-                return mnv;
+               
+                MessageBox.Show("thêm m?i thành công", "Thông báo");
                 //conn.Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Thêm mới chi tiêt thất bại", "Thông báo");
+                MessageBox.Show("B? trùng khóa, thêm m?i th?t b?i", "Thông báo");
             }
             finally
             {
                 closeConnect();
                 // conn.Close();
-            }
-            return -1;
-        }
-        public void insert(BusinessLayer.NhanVienBsn nhanvien)
-        {
-            int mnv = InsertDetail(nhanvien);
-            if (mnv > 0)
-            {
-                try
-                {
-                    cmd = new SqlCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO NhanVien (MaCT) values(" + mnv + ")";
-                    dt = new DataTable();
-                    dt = GetData(cmd);
-                    MessageBox.Show("thêm mới thành công", "Thông báo");
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Thêm mớii thất bại", "Thông báo");
-                }
-                finally
-                {
-                    closeConnect();
-                    // conn.Close();
-                }
-                
             }
         }
     }
