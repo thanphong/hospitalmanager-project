@@ -23,7 +23,7 @@ namespace QUANLIBENHVIEN.DataLayer
             {
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM" + this.tableName;
+                cmd.CommandText = "SELECT * FROM " + this.tableName;
                 dt = new DataTable();
                 dt = GetData(cmd);
             }
@@ -44,9 +44,9 @@ namespace QUANLIBENHVIEN.DataLayer
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE " + this.tableName
-                    + " SET TenPhong = '" + phong.TenP + "',TongSoGiuong = '" + phong.TongGiuong + "',SoGiuongTrong = '" + phong.TongGiuong
-                    + "',ViTri = '" + phong.Vitri + "' WHERE MaPhong = '"
-                    + phong.MaP + "' ";
+                    + " SET TenPhong = '" + phong.TenP + "',TongSoGiuong = " + phong.TongGiuong + ",SoGiuongTrong = " + phong.SoGT
+                    + ",ViTri = '" + phong.Vitri + "' WHERE MaPhong = "
+                    + phong.MaP ;
                 dt = new DataTable();
                 dt = GetData(cmd);
                 MessageBox.Show("Sửa thành công");
@@ -68,7 +68,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO " + this.tableName
                     + "(" + this.fieldList + ") VALUES ('"
-                    + phong.TenP + "','"+phong.TongGiuong+"','"+phong.SoGT+ "','"+phong.Vitri+ "')";
+                    + phong.TenP + "',"+phong.TongGiuong+","+phong.SoGT+ ",'"+phong.Vitri+ "')";
                 dt = new DataTable();
                 dt = GetData(cmd);
                 MessageBox.Show("thêm mới thành công", "Thông báo");

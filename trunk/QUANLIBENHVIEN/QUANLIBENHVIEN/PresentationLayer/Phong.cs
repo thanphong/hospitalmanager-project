@@ -30,7 +30,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 txtMaP.Text = dataTable.Rows[curRec][0].ToString();
                 txtTenP.Text = dataTable.Rows[curRec][1].ToString();
                 txtTonggiuong.Text = dataTable.Rows[curRec][2].ToString();
-                txtVitri.Text = dataTable.Rows[curRec][2].ToString();
+                txtGiuongtrong.Text = dataTable.Rows[curRec][3].ToString();
+                txtVitri.Text = dataTable.Rows[curRec][4].ToString();
             }
         }
 
@@ -58,6 +59,8 @@ namespace QUANLIBENHVIEN.PresentationLayer
             txtTonggiuong.DataBindings.Add("Text", dgrvPhong.DataSource, "TongSoGiuong");
             txtVitri.DataBindings.Clear();
             txtVitri.DataBindings.Add("Text", dgrvPhong.DataSource, "ViTri");
+            txtGiuongtrong.DataBindings.Clear();
+            txtGiuongtrong.DataBindings.Add("Text", dgrvPhong.DataSource, "SoGiuongTrong");
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                phong = new BusinessLayer.PhongBsn(txtTenP.Text, int.Parse(txtTonggiuong.Text),txtVitri.Text);
+                phong = new BusinessLayer.PhongBsn(txtTenP.Text, int.Parse(txtTonggiuong.Text),int.Parse(txtGiuongtrong.Text),txtVitri.Text);
                 phong.Update();
                 dt = phong.Select();
                 dgrvPhong.DataSource = dt.DefaultView;
@@ -106,13 +109,13 @@ namespace QUANLIBENHVIEN.PresentationLayer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtTenP.Text == "" || txtVitri.Text == "" || txtTonggiuong.Text == "")
+            if (txtTenP.Text == "" || txtVitri.Text == "" || txtTonggiuong.Text == "" || txtGiuongtrong.Text=="")
             {
                 MessageBox.Show("Mời bạn nhập đủ thông tin!", "Thông báo");
             }
             else
             {
-                phong = new BusinessLayer.PhongBsn(txtTenP.Text, int.Parse(txtTonggiuong.Text), txtVitri.Text);
+                phong = new BusinessLayer.PhongBsn(txtTenP.Text, int.Parse(txtTonggiuong.Text),int.Parse(txtGiuongtrong.Text), txtVitri.Text);
                 phong.Insert();
                 dt = phong.Select();
                 dgrvPhong.DataSource = dt.DefaultView;

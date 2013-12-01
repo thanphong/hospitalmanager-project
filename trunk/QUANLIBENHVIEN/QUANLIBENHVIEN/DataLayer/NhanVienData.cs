@@ -69,7 +69,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO " + this.tableName
                     + "(" + this.fieldList + ") VALUES ('"
-                    + nhanvien.TeNV + "','" + nhanvien.Diachi + "','" + nhanvien.Ngaysinh + "'," + nhanvien.Giotinh + ",'" + nhanvien.Dienthoai + "'," + nhanvien.MaCV + "," + nhanvien.MaLuong + ",'" + nhanvien.SoBH + "'," + nhanvien.MaCM + "," + nhanvien.MaTD + ")";
+                    + nhanvien.TeNV + "','" + nhanvien.Diachi + "','" + nhanvien.Ngaysinh.ToShortDateString() + "'," + Convert.ToInt32(nhanvien.Giotinh) + ",'" + nhanvien.Dienthoai + "'," + nhanvien.MaCV + "," + nhanvien.MaLuong + ",'" + nhanvien.SoBH + "',"+nhanvien.MaPhong+"," + nhanvien.MaCM + "," + nhanvien.MaTD + ")";
                 dt = new DataTable();
                 dt = GetData(cmd);
                

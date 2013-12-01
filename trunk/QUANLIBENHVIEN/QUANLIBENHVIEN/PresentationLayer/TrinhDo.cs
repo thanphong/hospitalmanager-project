@@ -16,9 +16,9 @@ namespace QUANLIBENHVIEN.PresentationLayer
         BusinessLayer.ChuyenMonBsn chuyenmon =new BusinessLayer.ChuyenMonBsn();
         DataTable dt;
         DataSet ds = new DataSet();
-        int curRecord = 0;
+        //int curRecord = 0;
         int totalRecord = 0;
-        String tv = "";
+        //String tv = "";
         public TrinhDo()
         {
             InitializeComponent();
@@ -67,7 +67,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             cbbTenCM.ValueMember = "ChuyenMon.MaChuyenMon";*/
 
             dt = trinhdo.Select();
-            curRecord = 0;
+            //curRecord = 0;
             totalRecord = dt.Rows.Count - 1;
             fillControls(dt, 0);
             dgrvTrinhdo.DataSource = dt.DefaultView;
@@ -89,7 +89,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
             btnDelete.Enabled = false;
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
-            tv = "Add";
+            //tv = "Add";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace QUANLIBENHVIEN.PresentationLayer
                 btnDelete.Enabled = true;
                 btnSave.Enabled = false;
                 btnCancel.Enabled = false;
-                tv = "";
+                //tv = "";
 
             }
         }
