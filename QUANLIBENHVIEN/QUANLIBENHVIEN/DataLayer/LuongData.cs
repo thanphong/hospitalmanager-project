@@ -91,7 +91,7 @@ namespace QUANLIBENHVIEN.DataLayer
                 cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "DELETE FROM " + this.tableName
-                    + " where  MaLuong=" + luong.MaLuong;
+                    + " WHERE  MaLuong=" + luong.MaLuong;
                 dt = new DataTable();
                 dt = GetData(cmd);
             }

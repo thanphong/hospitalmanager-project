@@ -190,6 +190,12 @@
     <Compile Include="PresentationLayer\LoaiVatTu.Designer.cs">
       <DependentUpon>LoaiVatTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Luong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Luong.Designer.cs">
+      <DependentUpon>Luong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Nhacungcap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,7 +205,7 @@
     <Compile Include="PresentationLayer\NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\NhanVien.Designer.cs">
+    <Compile Include="PresentationLayer\NhanVien.designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Phong.cs">
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\LoaiVatTu.resx">
       <DependentUpon>LoaiVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Luong.resx">
+      <DependentUpon>Luong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Nhacungcap.resx">
       <DependentUpon>Nhacungcap.cs</DependentUpon>

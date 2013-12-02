@@ -54,7 +54,7 @@
             this.lbLoaithuoc.ForeColor = System.Drawing.Color.DarkOrange;
             this.lbLoaithuoc.Location = new System.Drawing.Point(0, 0);
             this.lbLoaithuoc.Name = "lbLoaithuoc";
-            this.lbLoaithuoc.Size = new System.Drawing.Size(888, 104);
+            this.lbLoaithuoc.Size = new System.Drawing.Size(888, 91);
             this.lbLoaithuoc.TabIndex = 0;
             this.lbLoaithuoc.Text = "LOẠI THUỐC";
             this.lbLoaithuoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
