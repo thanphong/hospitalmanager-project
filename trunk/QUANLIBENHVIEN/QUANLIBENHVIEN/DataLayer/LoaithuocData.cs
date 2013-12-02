@@ -71,12 +71,12 @@ namespace QUANLIBENHVIEN.DataLayer
                     + loaithuoc.TenLT + "')";
                 dt = new DataTable();
                 dt = data.GetData(cmd);
-                MessageBox.Show("thêm mới thành công", "Thông báo");
+                MessageBox.Show("Thêm mới thành công", "Thông báo");
                 //conn.Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Bị trùng khóa, thêm mới thất bại", "Thông báo");
+                MessageBox.Show("Thêm mới thất bại", "Thông báo");
             }
             finally
             {
